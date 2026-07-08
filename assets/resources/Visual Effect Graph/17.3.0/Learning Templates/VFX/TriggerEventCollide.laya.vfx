@@ -1,0 +1,3362 @@
+{
+  "autoID": 173,
+  "events": [
+    {
+      "id": 4,
+      "typeId": "gpuEvent",
+      "uiData": {
+        "x": 2882,
+        "y": -1734
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 5,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "typeId": "gpuEvent",
+      "uiData": {
+        "x": 7402,
+        "y": 1320
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 10,
+          "targetSlotId": "input"
+        }
+      }
+    }
+  ],
+  "contexts": [
+    {
+      "id": 1,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 1190,
+        "y": 529
+      },
+      "blocks": [
+        {
+          "id": 130,
+          "typeId": "periodicBurst",
+          "enabled": true,
+          "props": {
+            "count": {
+              "x": 1,
+              "y": 1
+            },
+            "delay": {
+              "x": 0.4000000059604645,
+              "y": 1
+            },
+            "spawnMode": "Constant",
+            "countRange": {
+              "x": 5,
+              "y": 15
+            },
+            "delayMode": "Constant",
+            "delayRange": {
+              "x": 0.5,
+              "y": 2
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 8,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 2,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 1190,
+        "y": 826
+      },
+      "blocks": [
+        {
+          "id": 131,
+          "typeId": "setPositionShape",
+          "enabled": true,
+          "props": {
+            "shape": "Circle",
+            "positionMode": "Volume",
+            "positionComposition": "Overwrite",
+            "directionComposition": "Overwrite",
+            "axesComposition": "Overwrite",
+            "spawnMode": "Random",
+            "arcCircle": {
+              "circle": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": -0.4424701929092407,
+                    "z": -3.5005764961242676
+                  },
+                  "angles": {
+                    "x": 0,
+                    "y": -180,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 0.02500000037252903
+              },
+              "arc": 6.28000020980835
+            },
+            "thickness": 0.1,
+            "heightMode": "Volume",
+            "heightSequencer": 0.5,
+            "arcSequencer": 0,
+            "lineSequencer": 0.5,
+            "applyOrientation": 1,
+            "arcSphere": {
+              "sphere": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "orientedBox": {
+              "center": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "angle": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "size": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "arcCone": {
+              "cone": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "baseRadius": 1,
+                "topRadius": 0,
+                "height": 1
+              },
+              "arc": 6.2831853
+            },
+            "arcTorus": {
+              "torus": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "majorRadius": 1,
+                "minorRadius": 0.3
+              },
+              "arc": 6.2831853
+            },
+            "line": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "planeCenter": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "planeNormal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "planeSize": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        },
+        {
+          "id": 132,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "velocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": -1.5,
+              "y": 2,
+              "z": 5,
+              "b_x": 1.5,
+              "b_y": 5,
+              "b_z": 15
+            }
+          }
+        },
+        {
+          "id": 133,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angle",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 4,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": -360,
+              "b_x": 0,
+              "b_y": 0,
+              "b_z": 360
+            }
+          }
+        },
+        {
+          "id": 134,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.7,
+              "value": 0.7
+            }
+          }
+        },
+        {
+          "id": 135,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "sampleMode": "Random",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "gradient": {
+              "_mode": 0,
+              "_alphaElements": [
+                0.10000763088464737,
+                1,
+                0.1109330877661705,
+                1,
+                0.3033646047115326,
+                1,
+                0.6814373731613159,
+                1,
+                0.9961242079734802,
+                1
+              ],
+              "_colorAlphaKeysCount": 5,
+              "_rgbElements": [
+                0.10000763088464737,
+                0.5943396091461182,
+                0,
+                0,
+                0.1109330877661705,
+                0.5943396091461182,
+                0,
+                0,
+                0.3033646047115326,
+                0.5943396091461182,
+                0,
+                0,
+                0.6814373731613159,
+                0.0741494286559613,
+                0.6792452751744182,
+                0.0741494129357179,
+                0.9961242079734802,
+                0,
+                0.11043690890073776,
+                0.6132075786590576
+              ],
+              "_colorRGBKeysCount": 5,
+              "stops": [
+                {
+                  "t": 0.10000763088464737,
+                  "color": {
+                    "r": 0.5943396091461182,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.1109330877661705,
+                  "color": {
+                    "r": 0.5943396091461182,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.3033646047115326,
+                  "color": {
+                    "r": 0.5943396091461182,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.6814373731613159,
+                  "color": {
+                    "r": 0.0741494286559613,
+                    "g": 0.6792452751744182,
+                    "b": 0.0741494129357179,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.9961242079734802,
+                  "color": {
+                    "r": 0,
+                    "g": 0.11043690890073776,
+                    "b": 0.6132075786590576,
+                    "a": 1
+                  }
+                }
+              ]
+            },
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                1,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0.333,
+                0.333,
+                0
+              ]
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 5,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 3,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "typeId": "update",
+      "uiData": {
+        "x": 1190,
+        "y": 1792
+      },
+      "blocks": [
+        {
+          "id": 136,
+          "typeId": "gravity",
+          "enabled": true,
+          "props": {
+            "force": {
+              "x": 0,
+              "y": -9.8100004196167,
+              "z": 0
+            },
+            "_space_force": "Local"
+          }
+        },
+        {
+          "id": 137,
+          "typeId": "collisionCone",
+          "enabled": true,
+          "props": {
+            "mode": "Solid",
+            "center": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "baseRadius": 1,
+            "topRadius": 0,
+            "height": 2,
+            "bounce": 0,
+            "friction": 0,
+            "lifetimeLoss": 0
+          }
+        },
+        {
+          "id": 138,
+          "typeId": "triggerEvent",
+          "enabled": true,
+          "props": {
+            "eventType": "OnDie",
+            "param": 1
+          }
+        },
+        {
+          "id": 139,
+          "typeId": "triggerEvent",
+          "enabled": true,
+          "props": {
+            "eventType": "OnDie",
+            "param": 1
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 13,
+          "targetSlotId": "input"
+        },
+        "block_138_evt": {
+          "targetId": 8,
+          "targetSlotId": "evt"
+        },
+        "block_139_evt": {
+          "targetId": 4,
+          "targetSlotId": "evt"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 3822,
+        "y": 226
+      },
+      "blocks": [
+        {
+          "id": 140,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "source": "Source",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": 141,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angle",
+            "source": "Source",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 4,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 142,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "direction",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          }
+        },
+        {
+          "id": 143,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 1,
+              "value": 1,
+              "y": 3,
+              "b_value": 3
+            }
+          }
+        },
+        {
+          "id": 144,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0.10000000149011612
+            }
+          }
+        },
+        {
+          "id": 344,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "velocity",
+            "source": "Source",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 32,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 6,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "typeId": "update",
+      "uiData": {
+        "x": 3366,
+        "y": 0
+      },
+      "blocks": [],
+      "props": {
+        "updatePosition": false,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 14,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 7900,
+        "y": 4292
+      },
+      "blocks": [
+        {
+          "id": 145,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.1,
+              "value": 0.1
+            }
+          }
+        },
+        {
+          "id": 146,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Face Camera Plane",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 5,
+          "y": 5
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://87374172-99a0-480a-8dcf-62b456a8cb90"
+      }
+    },
+    {
+      "id": 9,
+      "typeId": "update",
+      "uiData": {
+        "x": 7886,
+        "y": 3805
+      },
+      "blocks": [
+        {
+          "id": 147,
+          "typeId": "linearDrag",
+          "enabled": true,
+          "props": {
+            "dragCoefficient": 3,
+            "useParticleSize": false
+          }
+        },
+        {
+          "id": 148,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": 149,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "alpha",
+            "sampleMode": "OverLife",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                1,
+                0,
+                -2.8367927074432373,
+                -2.8367927074432373,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": [
+          {
+            "targetId": 7,
+            "targetSlotId": "input"
+          },
+          {
+            "targetId": 12,
+            "targetSlotId": "input"
+          },
+          {
+            "targetId": 11,
+            "targetSlotId": "input"
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 7868,
+        "y": 3050
+      },
+      "blocks": [
+        {
+          "id": 150,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 151,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.5,
+              "value": 0.5,
+              "y": 0.75,
+              "b_value": 0.75
+            }
+          }
+        },
+        {
+          "id": 152,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "velocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 153,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 10,
+              "value": 10
+            }
+          }
+        },
+        {
+          "id": 154,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "distance",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.5,
+              "value": 0.5
+            }
+          }
+        },
+        {
+          "id": 155,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Add",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0.30000001192092896
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 32,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 9,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 7971,
+        "y": 4809
+      },
+      "blocks": [
+        {
+          "id": 156,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Face Camera Plane",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 157,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "pivot",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": -0.25,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 158,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 2,
+              "value": 2
+            }
+          }
+        },
+        {
+          "id": 159,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "alive",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 1,
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": 160,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.15,
+              "value": 0.15
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 5,
+          "y": 5
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://87374172-99a0-480a-8dcf-62b456a8cb90"
+      }
+    },
+    {
+      "id": 12,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 9179,
+        "y": 4133
+      },
+      "blocks": [
+        {
+          "id": 161,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Face Camera Plane",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 162,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "alive",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 1,
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": 163,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "pivot",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": -0.5,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 164,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.1,
+              "value": 0.1
+            }
+          }
+        },
+        {
+          "id": 165,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 4,
+          "y": 1
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5
+      }
+    },
+    {
+      "id": 13,
+      "typeId": "outputShaderGraphMesh",
+      "uiData": {
+        "x": 1194,
+        "y": 2382
+      },
+      "blocks": [
+        {
+          "id": 166,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Along Velocity",
+            "axes": "ZY",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 167,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.8,
+              "value": 0.8
+            }
+          }
+        },
+        {
+          "id": 168,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "alpha",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0
+            }
+          }
+        }
+      ],
+      "props": {
+        "shaderName": "SG_Dart",
+        "shaderRes": "res://f757a495-005f-4221-8aa6-3e21335abe93",
+        "shaderPropertyDefaults": {
+          "mesh": "res://0ca1a4fc-1ecb-4f2b-a565-91bcc9f103f0"
+        },
+        "shaderPropertyExpressions": {
+          "subMeshMask": {
+            "rootNodeId": "c0",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 4294967295
+              }
+            }
+          },
+          "_Color": {
+            "rootNodeId": "c0",
+            "outputType": "vec4",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "vec4",
+                "value": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1,
+                  "a": 1
+                },
+                "slotName": "attrDefault_color"
+              }
+            }
+          }
+        },
+        "shaderBindingLinks": {
+          "_Color": 18
+        },
+        "mesh": "res://0ca1a4fc-1ecb-4f2b-a565-91bcc9f103f0",
+        "blendMode": "Alpha",
+        "mainTexture": "",
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "softParticleFade": 0,
+        "uvMode": "Default",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "cameraSort": false,
+        "frustumCull": false
+      }
+    },
+    {
+      "id": 14,
+      "typeId": "outputShaderGraphMesh",
+      "uiData": {
+        "x": 2905,
+        "y": 19
+      },
+      "blocks": [
+        {
+          "id": 169,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.8,
+              "value": 0.8
+            }
+          }
+        },
+        {
+          "id": 170,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Along Velocity",
+            "axes": "ZY",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 171,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angle",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 3,
+            "_values": {
+              "x": -7.300000190734863,
+              "y": -7.420000076293945,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 172,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "alpha",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0
+            }
+          }
+        }
+      ],
+      "props": {
+        "shaderName": "SG_Dart",
+        "shaderRes": "res://f757a495-005f-4221-8aa6-3e21335abe93",
+        "shaderPropertyDefaults": {
+          "mesh": "res://0ca1a4fc-1ecb-4f2b-a565-91bcc9f103f0"
+        },
+        "shaderPropertyExpressions": {
+          "subMeshMask": {
+            "rootNodeId": "c0",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 4294967295
+              }
+            }
+          },
+          "_Color": {
+            "rootNodeId": "c0",
+            "outputType": "vec4",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "vec4",
+                "value": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1,
+                  "a": 1
+                },
+                "slotName": "attrDefault_color"
+              }
+            }
+          }
+        },
+        "shaderBindingLinks": {
+          "_Color": 19
+        },
+        "mesh": "res://0ca1a4fc-1ecb-4f2b-a565-91bcc9f103f0",
+        "blendMode": "Alpha",
+        "mainTexture": "",
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "softParticleFade": 0,
+        "uvMode": "Default",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "cameraSort": false,
+        "frustumCull": false
+      }
+    }
+  ],
+  "operators": [
+    {
+      "id": 15,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 3623,
+        "y": 546
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 5,
+              "slotId": "block_142_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "velocity",
+        "location": "Source"
+      }
+    },
+    {
+      "id": 16,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2902,
+        "y": 739
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 17,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "direction",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 17,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 3166,
+        "y": 781
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 14,
+              "slotId": "block_170_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": -1
+        },
+        "_type": "vec3"
+      }
+    },
+    {
+      "id": 18,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 903,
+        "y": 2558
+      },
+      "output": {},
+      "props": {
+        "attribute": "color",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 19,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 3302,
+        "y": 801
+      },
+      "output": {},
+      "props": {
+        "attribute": "color",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 20,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 3623,
+        "y": 888
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 5,
+              "slotId": "block_144_value_z"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "min": -0.025,
+          "max": -0.05,
+          "seed": 126
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 21,
+      "typeId": "sineWave",
+      "uiData": {
+        "x": 7107,
+        "y": 4532
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 32,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "frequency": 4,
+          "min": 0.15,
+          "max": 0.22
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 22,
+      "typeId": "ageOverLifetime",
+      "uiData": {
+        "x": 6897,
+        "y": 4532
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 21,
+              "slotId": "x"
+            }
+          ]
+        }
+      },
+      "props": {}
+    },
+    {
+      "id": 23,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 50,
+        "y": 2005
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 26,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "position",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 24,
+      "typeId": "distance",
+      "uiData": {
+        "x": 526,
+        "y": 2182
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 25,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 25,
+      "typeId": "compare",
+      "uiData": {
+        "x": 896,
+        "y": 2102
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "b": 0.599
+        },
+        "operator": "LessOrEqual",
+        "_type": "bool"
+      }
+    },
+    {
+      "id": 26,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 230,
+        "y": 2102
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 24,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": {
+            "x": 1,
+            "y": 1,
+            "z": 0
+          }
+        },
+        "_type": "vec3"
+      }
+    },
+    {
+      "id": 27,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 7021,
+        "y": 3305
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 28,
+              "slotId": "x"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "position",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 28,
+      "typeId": "normalize",
+      "uiData": {
+        "x": 7273,
+        "y": 3339
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 29,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "vec3"
+      }
+    },
+    {
+      "id": 29,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 7549,
+        "y": 3339
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 10,
+              "slotId": "block_152_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 0.5
+        },
+        "_type": "vec3"
+      }
+    },
+    {
+      "id": 30,
+      "typeId": "sampleGradient",
+      "uiData": {
+        "x": 7237,
+        "y": 3987
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 45,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "gradient": {
+          "stops": [
+            {
+              "t": 0,
+              "color": {
+                "r": 0.31128525733947754,
+                "g": 1,
+                "b": 0.07142853736877441,
+                "a": 1
+              }
+            },
+            {
+              "t": 0.330006867647171,
+              "color": {
+                "r": 0.31128525733947754,
+                "g": 1,
+                "b": 0.07142853736877441,
+                "a": 1
+              }
+            },
+            {
+              "t": 0.6599984765052795,
+              "color": {
+                "r": 0.9999999791293263,
+                "g": 0.2375211350711871,
+                "b": 2.164556103800841e-9,
+                "a": 1
+              }
+            },
+            {
+              "t": 1,
+              "color": {
+                "r": 1,
+                "g": 0,
+                "b": 0.07590818405151367,
+                "a": 1
+              }
+            }
+          ]
+        },
+        "property": ""
+      }
+    },
+    {
+      "id": 31,
+      "typeId": "lerp",
+      "uiData": {
+        "x": 7143,
+        "y": 4368
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 32,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "x": 1,
+          "y": 2
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 32,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 7338,
+        "y": 4436
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 7,
+              "slotId": "block_145_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 33,
+      "typeId": "ceiling",
+      "uiData": {
+        "x": 8838,
+        "y": 4191
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 12,
+              "slotId": "block_162_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 34,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 2679,
+        "y": 1298
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 36,
+              "slotId": "d"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            1,
+            -6.369237422943115,
+            -6.369237422943115,
+            0.333,
+            0.333,
+            0,
+            0.17041994631290436,
+            0.17030395567417145,
+            -1.5833566188812256,
+            -1.5833566188812256,
+            0.333,
+            0.333,
+            0,
+            0.5,
+            0,
+            0,
+            0,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 35,
+      "typeId": "weightedSelector",
+      "uiData": {
+        "x": 2704,
+        "y": 954
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 36,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "value0": {
+            "x": 1,
+            "y": 0
+          },
+          "weight0": 1,
+          "value1": {
+            "x": 0,
+            "y": 1
+          },
+          "weight1": 1,
+          "seed": 0
+        },
+        "count": 2,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 36,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2976,
+        "y": 1082
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 14,
+              "slotId": "block_171_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "vec2"
+      }
+    },
+    {
+      "id": 37,
+      "typeId": "sine",
+      "uiData": {
+        "x": 2742,
+        "y": 1162
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 36,
+              "slotId": "c"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 38,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2576,
+        "y": 1162
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 37,
+              "slotId": "x"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 60
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 39,
+      "typeId": "ageOverLifetime",
+      "uiData": {
+        "x": 2483,
+        "y": 1318
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 34,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {}
+    },
+    {
+      "id": 40,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 2768,
+        "y": 1050
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 36,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "min": 7,
+          "max": 15,
+          "seed": 573
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 41,
+      "typeId": "rectangularToPolar",
+      "uiData": {
+        "x": 7260,
+        "y": 3642
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 84,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 42,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      }
+    },
+    {
+      "id": 42,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 7580,
+        "y": 3684
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 10,
+              "slotId": "block_154_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            0,
+            0,
+            1,
+            0.333,
+            0.333,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 43,
+      "typeId": "ceiling",
+      "uiData": {
+        "x": 7553,
+        "y": 5328
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "block_159_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 44,
+      "typeId": "lerp",
+      "uiData": {
+        "x": 7568,
+        "y": 5414
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "block_160_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "x": 0.15,
+          "y": 0.3
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 45,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 7525,
+        "y": 3993
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 9,
+              "slotId": "block_148_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "vec4"
+      }
+    },
+    {
+      "id": 46,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 7085,
+        "y": 4153
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 48,
+              "slotId": "s"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            0,
+            20.258310317993164,
+            20.258310317993164,
+            0.333,
+            0.333,
+            0,
+            0.08648326992988586,
+            1,
+            0,
+            0,
+            0.333,
+            0.333,
+            0,
+            0.5,
+            0,
+            0,
+            0,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 47,
+      "typeId": "ageOverLifetime",
+      "uiData": {
+        "x": 6879,
+        "y": 4173
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 46,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {}
+    },
+    {
+      "id": 48,
+      "typeId": "lerp",
+      "uiData": {
+        "x": 7341,
+        "y": 4113
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 45,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "x": 1,
+          "y": 50
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 49,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 8449,
+        "y": 4441
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 51,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "texIndex",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 50,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 7020,
+        "y": 3663
+      },
+      "output": {
+        "value_x": {
+          "infoArr": [
+            {
+              "nodeId": 41,
+              "slotId": "xy_x"
+            }
+          ]
+        },
+        "value_y": {
+          "infoArr": [
+            {
+              "nodeId": 41,
+              "slotId": "xy_y"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "position",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 51,
+      "typeId": "compare",
+      "uiData": {
+        "x": 8699,
+        "y": 4441
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 52,
+              "slotId": "index"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 8
+        },
+        "operator": "GreaterOrEqual",
+        "_type": "bool"
+      }
+    },
+    {
+      "id": 52,
+      "typeId": "switchOp",
+      "uiData": {
+        "x": 8887,
+        "y": 4441
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 12,
+              "slotId": "block_163_value_x"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "input0": -1.04,
+          "input1": -1.18,
+          "default": 0
+        },
+        "_type": "float",
+        "count": 4
+      }
+    },
+    {
+      "id": 53,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 7549,
+        "y": 5186
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "block_158_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 2
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 54,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 6884,
+        "y": 4803
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 55,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "texIndex",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 55,
+      "typeId": "compare",
+      "uiData": {
+        "x": 7160,
+        "y": 4803
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 56,
+              "slotId": "index"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 8
+        },
+        "operator": "GreaterOrEqual",
+        "_type": "bool"
+      }
+    },
+    {
+      "id": 56,
+      "typeId": "switchOp",
+      "uiData": {
+        "x": 7346,
+        "y": 4803
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 57,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "input0": -0.85,
+          "input1": -1,
+          "default": 0
+        },
+        "_type": "float",
+        "count": 4
+      }
+    },
+    {
+      "id": 57,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 7570,
+        "y": 4839
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "block_157_value_x"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 58,
+      "typeId": "lerp",
+      "uiData": {
+        "x": 7346,
+        "y": 4975
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 57,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "x": 1,
+          "y": 0.75
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 59,
+      "typeId": "floor",
+      "uiData": {
+        "x": 7174,
+        "y": 5015
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 58,
+              "slotId": "s"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 60,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 7600,
+        "y": 3207
+      },
+      "output": {
+        "value_x": {
+          "infoArr": [
+            {
+              "nodeId": 10,
+              "slotId": "block_150_value_x"
+            }
+          ]
+        },
+        "value_y": {
+          "infoArr": [
+            {
+              "nodeId": 10,
+              "slotId": "block_150_value_y"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "position",
+        "location": "Source"
+      }
+    },
+    {
+      "id": 61,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 8588,
+        "y": 4157
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 33,
+              "slotId": "x"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "distance",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 62,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 7025,
+        "y": 4013
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 30,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "distance",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 63,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 6949,
+        "y": 4374
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 31,
+              "slotId": "s"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "distance",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 64,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 7302,
+        "y": 5370
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 43,
+              "slotId": "x"
+            },
+            {
+              "nodeId": 44,
+              "slotId": "s"
+            },
+            {
+              "nodeId": 53,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "distance",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 65,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 6916,
+        "y": 4981
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 59,
+              "slotId": "x"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "distance",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 66,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 3491,
+        "y": 776
+      },
+      "output": {
+        "value_x": {
+          "infoArr": [
+            {
+              "nodeId": 5,
+              "slotId": "block_144_value_x"
+            }
+          ]
+        },
+        "value_y": {
+          "infoArr": [
+            {
+              "nodeId": 5,
+              "slotId": "block_144_value_y"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "collisionEventPosition",
+        "location": "Source"
+      }
+    },
+    {
+      "id": 67,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 783,
+        "y": 2677
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 68,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "velocity",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 68,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 1003,
+        "y": 2681
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 13,
+              "slotId": "block_166_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": -1
+        },
+        "_type": "vec3"
+      }
+    },
+    {
+      "id": 74,
+      "typeId": "add",
+      "uiData": {
+        "x": 5794,
+        "y": 4104
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 75,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 9
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 75,
+      "typeId": "divide",
+      "uiData": {
+        "x": 5980.5,
+        "y": 4104.5
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 76,
+              "slotId": "x"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 18
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 76,
+      "typeId": "absolute",
+      "uiData": {
+        "x": 6150.5,
+        "y": 4104.5
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 77,
+              "slotId": "x"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 77,
+      "typeId": "floor",
+      "uiData": {
+        "x": 6314.5,
+        "y": 4104.5
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 78,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 78,
+      "typeId": "modulo",
+      "uiData": {
+        "x": 6468.5,
+        "y": 4104.5
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 79,
+              "slotId": "index"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 20
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 79,
+      "typeId": "switchOp",
+      "uiData": {
+        "x": 6636.5,
+        "y": 4104.5
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 80,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "input0": 11,
+          "input1": 14,
+          "input2": 9,
+          "input3": 12,
+          "value4": 5,
+          "value5": 20,
+          "value6": 1,
+          "value7": 18,
+          "value8": 4,
+          "value9": 13,
+          "value10": 6,
+          "value11": 10,
+          "value12": 15,
+          "value13": 2,
+          "value14": 17,
+          "value15": 3,
+          "value16": 19,
+          "value17": 7,
+          "value18": 16,
+          "value19": 8,
+          "default": 11
+        },
+        "_type": "float",
+        "count": 4
+      }
+    },
+    {
+      "id": 80,
+      "typeId": "subtract",
+      "uiData": {
+        "x": 6832,
+        "y": 4104
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 10,
+              "slotId": "block_153_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 1
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 81,
+      "typeId": "inlineFloat",
+      "uiData": {
+        "x": 5325,
+        "y": 4199
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 82,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "value": 3.141592653589793
+      }
+    },
+    {
+      "id": 82,
+      "typeId": "divide",
+      "uiData": {
+        "x": 5438,
+        "y": 4103
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 83,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "a": 0
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 83,
+      "typeId": "modulo",
+      "uiData": {
+        "x": 5614,
+        "y": 4103
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 74,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 360
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 84,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 5262,
+        "y": 4079
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 82,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "a": 0,
+          "b": 180
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 127,
+      "typeId": "builtinTotalTime",
+      "uiData": {
+        "x": 2409,
+        "y": 1170
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 38,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {}
+    },
+    {
+      "id": 128,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 937,
+        "y": 1740
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_137_value"
+            },
+            {
+              "nodeId": 24,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "DartBoard_Collider"
+      }
+    },
+    {
+      "id": 129,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 937,
+        "y": 1804
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 30,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "Score_Colors"
+      }
+    }
+  ],
+  "props": {
+    "fixedDeltaTime": false,
+    "exactFixedTime": false,
+    "ignoreTimeScale": false,
+    "preWarmTotalTime": 0,
+    "preWarmStepCount": 0,
+    "preWarmDeltaTime": 0,
+    "initialEventName": "OnPlay"
+  },
+  "properties": [
+    {
+      "name": "DartBoard_Collider",
+      "type": "float",
+      "exposed": false,
+      "group": "m_Min:",
+      "default": {
+        "transform": {
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angles": {
+            "x": -90,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "baseRadius": 0.800000011920929,
+        "topRadius": 0.800000011920929,
+        "height": 0.9095744490623474
+      }
+    },
+    {
+      "name": "Score_Colors",
+      "type": "Gradient",
+      "exposed": false,
+      "group": "m_Min:",
+      "default": {
+        "stops": [
+          {
+            "t": 0,
+            "color": {
+              "r": 0.31128525733947754,
+              "g": 1,
+              "b": 0.07142853736877441,
+              "a": 1
+            }
+          },
+          {
+            "t": 0.330006867647171,
+            "color": {
+              "r": 0.31128525733947754,
+              "g": 1,
+              "b": 0.07142853736877441,
+              "a": 1
+            }
+          },
+          {
+            "t": 0.6599984765052795,
+            "color": {
+              "r": 0.9999999791293263,
+              "g": 0.2375211350711871,
+              "b": 2.164556103800841e-9,
+              "a": 1
+            }
+          },
+          {
+            "t": 1,
+            "color": {
+              "r": 1,
+              "g": 0,
+              "b": 0.07590818405151367,
+              "a": 1
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "customAttributes": [
+    {
+      "name": "distance",
+      "type": "float"
+    }
+  ]
+}

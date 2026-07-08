@@ -1,0 +1,231 @@
+{
+  "arr": [
+    {
+      "x": 600,
+      "y": 100,
+      "constDataID": "vertex",
+      "id": 1,
+      "inputList": [
+        {
+          "type": "vec3",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "vec3",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "vec4",
+          "defVal": "_remove_"
+        }
+      ],
+      "outputList": [],
+      "select": false
+    },
+    {
+      "x": 600,
+      "y": 400,
+      "ver": 1,
+      "constDataID": "PBR_fragment",
+      "id": 2,
+      "inputList": [
+        {
+          "type": "float",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "vec3",
+          "defVal": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          }
+        },
+        {
+          "type": "vec3",
+          "defVal": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        {
+          "type": "float"
+        },
+        {
+          "type": "float",
+          "defVal": 0.5
+        },
+        {
+          "type": "vec3",
+          "defVal": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        {
+          "type": "float"
+        },
+        {
+          "type": "float",
+          "defVal": 1,
+          "info": {
+            "id": 4,
+            "index": 0
+          }
+        },
+        {
+          "type": "vec3",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "float",
+          "defVal": 1
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "vec3",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "vec3",
+          "defVal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 1.3
+        },
+        {
+          "type": "float",
+          "defVal": 400
+        }
+      ],
+      "outputList": [],
+      "select": false
+    },
+    {
+      "x": -611.3333740234375,
+      "y": 410,
+      "constDataID": "inputdata/vertex/VertexColor",
+      "id": 3,
+      "inputList": [],
+      "outputList": [
+        {
+          "type": "vec4",
+          "infoList": [
+            {
+              "id": 4,
+              "index": 0
+            }
+          ]
+        }
+      ],
+      "select": false
+    },
+    {
+      "x": -411.3333740234375,
+      "y": 410,
+      "ver": 1,
+      "constDataID": "basic/Vector4",
+      "id": 4,
+      "inputList": [
+        {
+          "type": "vec4",
+          "info": {
+            "id": 3,
+            "index": 0
+          }
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        }
+      ],
+      "outputList": [
+        {
+          "name": "XYZW",
+          "type": "vec4",
+          "infoList": [
+            {
+              "id": 2,
+              "index": 7
+            }
+          ]
+        }
+      ],
+      "select": false
+    }
+  ],
+  "x": 0,
+  "y": 0,
+  "scale": 1,
+  "bluePrintNum": 4,
+  "material": {
+    "twoSided": false,
+    "blendModes": 0,
+    "materialType": 0,
+    "anisotropy": false,
+    "clear coat": false,
+    "sheen": false,
+    "transmission": false,
+    "iridescence": false,
+    "scene fog": false,
+    "alpha test": false,
+    "supportReflectionProbe": true,
+    "enableInstancing": true,
+    "supportVFX": true
+  },
+  "uniformData": {
+    "uniformArr": []
+  },
+  "customInclude": null,
+  "version": 1783416155444
+}

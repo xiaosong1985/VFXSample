@@ -1,0 +1,564 @@
+{
+  "autoID": 24,
+  "events": [],
+  "contexts": [
+    {
+      "id": 1,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 50,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": 15,
+          "typeId": "constantRate",
+          "enabled": true,
+          "props": {
+            "rate": 64
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Infinite",
+        "loopDuration": -1,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 2,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 50,
+        "y": 288
+      },
+      "blocks": [
+        {
+          "id": 16,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.8,
+              "value": 0.8,
+              "y": 1.2,
+              "b_value": 1.2
+            }
+          }
+        },
+        {
+          "id": 17,
+          "typeId": "setPositionShape",
+          "enabled": true,
+          "props": {
+            "shape": "Sphere",
+            "positionMode": "Surface",
+            "positionComposition": "Overwrite",
+            "directionComposition": "Overwrite",
+            "axesComposition": "Overwrite",
+            "spawnMode": "Random",
+            "arcSphere": {
+              "sphere": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "angles": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 0.029999999329447746
+              },
+              "arc": 6.28000020980835
+            },
+            "thickness": 0.1,
+            "heightMode": "Volume",
+            "heightSequencer": 0.5,
+            "arcSequencer": 0,
+            "lineSequencer": 0.5,
+            "applyOrientation": 1,
+            "orientedBox": {
+              "center": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "angle": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "size": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "arcCone": {
+              "cone": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "baseRadius": 1,
+                "topRadius": 0,
+                "height": 1
+              },
+              "arc": 6.2831853
+            },
+            "arcTorus": {
+              "torus": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "majorRadius": 1,
+                "minorRadius": 0.3
+              },
+              "arc": 6.2831853
+            },
+            "arcCircle": {
+              "circle": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "line": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "planeCenter": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "planeNormal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "planeSize": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        },
+        {
+          "id": 18,
+          "typeId": "velNewDirection",
+          "enabled": true,
+          "props": {
+            "direction": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "speed": 4.8,
+            "blendDirection": 7.5,
+            "speedMode": "Constant",
+            "composition": "Overwrite",
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "blendVelocity": 0.5
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 37,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 3,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "typeId": "update",
+      "uiData": {
+        "x": 50,
+        "y": 1186
+      },
+      "blocks": [
+        {
+          "id": 19,
+          "typeId": "gravity",
+          "enabled": true,
+          "props": {
+            "force": {
+              "x": 0,
+              "y": -9.8100004196167,
+              "z": 0
+            },
+            "_space_force": "World"
+          }
+        },
+        {
+          "id": 20,
+          "typeId": "linearDrag",
+          "enabled": true,
+          "props": {
+            "dragCoefficient": 0.5,
+            "useParticleSize": false
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 4,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 60,
+        "y": 1588
+      },
+      "blocks": [
+        {
+          "id": 21,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Face Camera Plane",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 22,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "sampleMode": "OverLife",
+            "composition": "Multiply",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0.75,
+                0,
+                1.25,
+                0.333,
+                0.333,
+                0,
+                1,
+                2,
+                1.25,
+                2,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": 23,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "sampleMode": "OverLife",
+            "composition": "Multiply",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "gradient": {
+              "_mode": 0,
+              "_alphaElements": [
+                0.3852902948856354,
+                1,
+                0.5970550179481506,
+                1,
+                0.6823529601097107,
+                1,
+                0.8970626592636108,
+                0.32406203920968957,
+                1,
+                0
+              ],
+              "_colorAlphaKeysCount": 5,
+              "_rgbElements": [
+                0.3852902948856354,
+                0.973445475101471,
+                0.5209956765174866,
+                0.0021246890537440777,
+                0.5970550179481506,
+                0.973445475101471,
+                0.5209956765174866,
+                0.0021246890537440777,
+                0.6823529601097107,
+                0.7580495127525938,
+                0.5681044620760484,
+                0.2858398215989526,
+                0.8970626592636108,
+                0.2158605307340622,
+                0.6866854429244995,
+                1,
+                1,
+                0.2158605307340622,
+                0.6866854429244995,
+                1
+              ],
+              "_colorRGBKeysCount": 5,
+              "stops": [
+                {
+                  "t": 0.3852902948856354,
+                  "color": {
+                    "r": 0.973445475101471,
+                    "g": 0.5209956765174866,
+                    "b": 0.0021246890537440777,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.5970550179481506,
+                  "color": {
+                    "r": 0.973445475101471,
+                    "g": 0.5209956765174866,
+                    "b": 0.0021246890537440777,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.6823529601097107,
+                  "color": {
+                    "r": 0.7580495127525938,
+                    "g": 0.5681044620760484,
+                    "b": 0.2858398215989526,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.8970626592636108,
+                  "color": {
+                    "r": 0.2158605307340622,
+                    "g": 0.6866854429244995,
+                    "b": 1,
+                    "a": 0.32406203920968957
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 0.2158605307340622,
+                    "g": 0.6866854429244995,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            },
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                1,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0.333,
+                0.333,
+                0
+              ]
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Default",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://b5b7c012-384e-41df-8435-0bdc82b05a88"
+      }
+    }
+  ],
+  "operators": [],
+  "props": {
+    "fixedDeltaTime": false,
+    "exactFixedTime": false,
+    "ignoreTimeScale": false,
+    "preWarmTotalTime": 0,
+    "preWarmStepCount": 0,
+    "preWarmDeltaTime": 0,
+    "initialEventName": "OnPlay"
+  },
+  "properties": [],
+  "customAttributes": []
+}

@@ -1,0 +1,357 @@
+{
+  "arr": [
+    {
+      "x": 600,
+      "y": 100,
+      "constDataID": "vertex",
+      "id": 1,
+      "inputList": [
+        {
+          "type": "vec3",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "vec3",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "vec4",
+          "defVal": "_remove_"
+        }
+      ],
+      "outputList": [],
+      "select": false
+    },
+    {
+      "x": 600,
+      "y": 400,
+      "constDataID": "Unlit_fragment",
+      "id": 2,
+      "inputList": [
+        {
+          "type": "vec3",
+          "defVal": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          }
+        },
+        {
+          "type": "vec3",
+          "defVal": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        {
+          "type": "float",
+          "defVal": 1,
+          "info": {
+            "id": 3,
+            "index": 0
+          }
+        }
+      ],
+      "outputList": [],
+      "select": false
+    },
+    {
+      "x": -229.3333740234375,
+      "y": -144.00003051757812,
+      "constDataID": "math/common/clamp",
+      "id": 3,
+      "inputList": [
+        {
+          "type": "float",
+          "defVal": "_remove_",
+          "info": {
+            "id": 4,
+            "index": 0
+          }
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 1
+        }
+      ],
+      "outputList": [
+        {
+          "type": "float",
+          "infoList": [
+            {
+              "id": 2,
+              "index": 2
+            }
+          ]
+        }
+      ],
+      "select": false
+    },
+    {
+      "x": -393.3333740234375,
+      "y": -144.00003051757812,
+      "constDataID": "math/basic/multiply",
+      "id": 4,
+      "inputList": [
+        {
+          "type": "float",
+          "defVal": "_remove_",
+          "info": {
+            "id": 5,
+            "index": 0
+          }
+        },
+        {
+          "type": "float",
+          "defVal": 2
+        }
+      ],
+      "outputList": [
+        {
+          "type": "float",
+          "infoList": [
+            {
+              "id": 3,
+              "index": 0
+            }
+          ]
+        }
+      ],
+      "select": false
+    },
+    {
+      "x": -583.3334350585938,
+      "y": -144.00003051757812,
+      "constDataID": "math/basic/minus",
+      "id": 5,
+      "inputList": [
+        {
+          "type": "float",
+          "defVal": "_remove_",
+          "info": {
+            "id": 6,
+            "index": 0
+          }
+        },
+        {
+          "type": "float",
+          "defVal": 0.3100000023841858
+        }
+      ],
+      "outputList": [
+        {
+          "type": "float",
+          "infoList": [
+            {
+              "id": 4,
+              "index": 0
+            }
+          ]
+        }
+      ],
+      "select": false
+    },
+    {
+      "x": -744.0001220703125,
+      "y": -144.00003051757812,
+      "constDataID": "math/basic/oneMinus",
+      "id": 6,
+      "inputList": [
+        {
+          "type": "float",
+          "defVal": "_remove_",
+          "info": {
+            "id": 7,
+            "index": 0
+          }
+        }
+      ],
+      "outputList": [
+        {
+          "type": "float",
+          "infoList": [
+            {
+              "id": 5,
+              "index": 0
+            }
+          ]
+        }
+      ],
+      "select": false
+    },
+    {
+      "x": -884.0000610351562,
+      "y": -144.00003051757812,
+      "constDataID": "math/basic/multiply",
+      "id": 7,
+      "inputList": [
+        {
+          "type": "float",
+          "defVal": "_remove_",
+          "info": {
+            "id": 8,
+            "index": 0
+          }
+        },
+        {
+          "type": "float",
+          "defVal": 1.4299999475479126
+        }
+      ],
+      "outputList": [
+        {
+          "type": "float",
+          "infoList": [
+            {
+              "id": 6,
+              "index": 0
+            }
+          ]
+        }
+      ],
+      "select": false
+    },
+    {
+      "x": -1060.0001220703125,
+      "y": -144.00003051757812,
+      "constDataID": "math/common/abs",
+      "id": 8,
+      "inputList": [
+        {
+          "type": "float",
+          "defVal": "_remove_",
+          "info": {
+            "id": 9,
+            "index": 0
+          }
+        }
+      ],
+      "outputList": [
+        {
+          "type": "float",
+          "infoList": [
+            {
+              "id": 7,
+              "index": 0
+            }
+          ]
+        }
+      ],
+      "select": false
+    },
+    {
+      "x": -1209.33349609375,
+      "y": -144.00003051757812,
+      "constDataID": "math/basic/add",
+      "id": 9,
+      "inputList": [
+        {
+          "type": "float",
+          "defVal": "_remove_",
+          "info": {
+            "id": 10,
+            "index": 0
+          }
+        },
+        {
+          "type": "float",
+          "defVal": -0.5
+        }
+      ],
+      "outputList": [
+        {
+          "type": "float",
+          "infoList": [
+            {
+              "id": 8,
+              "index": 0
+            }
+          ]
+        }
+      ],
+      "select": false
+    },
+    {
+      "x": -1394.0001220703125,
+      "y": -114.00003051757812,
+      "constDataID": "math/expression/mask",
+      "id": 10,
+      "inputList": [
+        {
+          "type": "vec2",
+          "defVal": "_remove_",
+          "info": {
+            "id": 11,
+            "index": 0
+          }
+        }
+      ],
+      "outputList": [
+        {
+          "type": "float",
+          "infoList": [
+            {
+              "id": 9,
+              "index": 0
+            }
+          ]
+        }
+      ],
+      "propertyVal": {
+        "R": true,
+        "G": false,
+        "B": false,
+        "A": false
+      },
+      "select": false
+    },
+    {
+      "x": -1564.666748046875,
+      "y": -144.00003051757812,
+      "constDataID": "inputdata/vertex/uv",
+      "id": 11,
+      "inputList": [],
+      "outputList": [
+        {
+          "type": "vec2",
+          "infoList": [
+            {
+              "id": 10,
+              "index": 0
+            }
+          ]
+        }
+      ],
+      "select": false
+    }
+  ],
+  "x": 0,
+  "y": 0,
+  "scale": 1,
+  "bluePrintNum": 11,
+  "material": {
+    "twoSided": false,
+    "blendModes": 0,
+    "materialType": 2,
+    "anisotropy": false,
+    "clear coat": false,
+    "sheen": false,
+    "transmission": false,
+    "iridescence": false,
+    "scene fog": false,
+    "alpha test": false,
+    "supportReflectionProbe": true,
+    "enableInstancing": true,
+    "supportVFX": true
+  },
+  "uniformData": {
+    "uniformArr": []
+  },
+  "customInclude": null,
+  "version": 1783416155441
+}

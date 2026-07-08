@@ -1,0 +1,948 @@
+{
+  "autoID": 61,
+  "events": [],
+  "contexts": [
+    {
+      "id": 1,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 3299,
+        "y": 68
+      },
+      "blocks": [
+        {
+          "id": 41,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Constant",
+            "count": 1,
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "countRange": {
+              "x": 0,
+              "y": 10
+            },
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Infinite",
+        "loopDuration": -1,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 2,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 3299,
+        "y": 438
+      },
+      "blocks": [
+        {
+          "id": 42,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": -0.5,
+              "y": 2.25,
+              "z": 0
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 1,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 3,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "typeId": "update",
+      "uiData": {
+        "x": 3299,
+        "y": 902
+      },
+      "blocks": [
+        {
+          "id": 43,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 6.38,
+              "value": 6.38
+            }
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": [
+          {
+            "targetId": 4,
+            "targetSlotId": "input"
+          },
+          {
+            "targetId": 9,
+            "targetSlotId": "input"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 2803,
+        "y": 1278
+      },
+      "blocks": [
+        {
+          "id": 44,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.4,
+              "value": 0.4
+            }
+          }
+        },
+        {
+          "id": 45,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Add",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.7599999904632568,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 46,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Advanced",
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Opaque",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 5,
+          "y": 2
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": true,
+        "alphaThreshold": 0.7,
+        "mainTexture": "res://9cf21367-367c-4f69-870b-4c4f35e0a68c"
+      }
+    },
+    {
+      "id": 5,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 1093,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": 47,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Constant",
+            "count": 9,
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "countRange": {
+              "x": 0,
+              "y": 10
+            },
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Infinite",
+        "loopDuration": -1,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 6,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 1093,
+        "y": 370
+      },
+      "blocks": [
+        {
+          "id": 48,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 49,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Add",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 50,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.5,
+              "value": 0.5
+            }
+          }
+        },
+        {
+          "id": 51,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 9,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 60,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 603,
+        "y": 1260
+      },
+      "blocks": [
+        {
+          "id": 52,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.17,
+              "value": 0.17
+            }
+          }
+        },
+        {
+          "id": 53,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Add",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0.10000000149011612
+            }
+          }
+        },
+        {
+          "id": 54,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Advanced",
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Opaque",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 5,
+          "y": 2
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": true,
+        "alphaThreshold": 0.7,
+        "mainTexture": "res://9cf21367-367c-4f69-870b-4c4f35e0a68c"
+      }
+    },
+    {
+      "id": 8,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 168,
+        "y": 1260
+      },
+      "blocks": [
+        {
+          "id": 55,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "r": 0.14150941371917725,
+              "g": 0.14150941371917725,
+              "b": 0.14150941371917725,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": 56,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Advanced",
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Default",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://f2f980bf-45d1-470d-8bdc-a58e6163b58a"
+      }
+    },
+    {
+      "id": 9,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 4172,
+        "y": 1294
+      },
+      "blocks": [
+        {
+          "id": 57,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.6,
+              "value": 0.6
+            }
+          }
+        },
+        {
+          "id": 58,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Advanced",
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Opaque",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 3,
+          "y": 3
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": true,
+        "alphaThreshold": 0.65,
+        "mainTexture": "res://6cb01ca3-be6a-44bb-a9e6-c0e266b7d7e1"
+      }
+    },
+    {
+      "id": 10,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 1984,
+        "y": 1203
+      },
+      "blocks": [
+        {
+          "id": 59,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Advanced",
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Opaque",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 3,
+          "y": 3
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://6cb01ca3-be6a-44bb-a9e6-c0e266b7d7e1"
+      }
+    },
+    {
+      "id": 60,
+      "typeId": "update",
+      "uiData": {
+        "x": 1193,
+        "y": 470
+      },
+      "blocks": [],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": [
+          {
+            "targetId": 8,
+            "targetSlotId": "input"
+          },
+          {
+            "targetId": 7,
+            "targetSlotId": "input"
+          },
+          {
+            "targetId": 10,
+            "targetSlotId": "input"
+          }
+        ]
+      }
+    }
+  ],
+  "operators": [
+    {
+      "id": 11,
+      "typeId": "modulo",
+      "uiData": {
+        "x": 3137,
+        "y": 984
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_43_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 9
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 12,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 850,
+        "y": 827
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 6,
+              "slotId": "block_51_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "particleId",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 13,
+      "typeId": "sequential3D",
+      "uiData": {
+        "x": 324,
+        "y": 574
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 15,
+              "slotId": "x"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "countX": 3,
+          "countY": 3,
+          "countZ": 1,
+          "origin": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "axisX": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0
+          },
+          "axisY": {
+            "x": 0,
+            "y": 0.5,
+            "z": 0
+          },
+          "axisZ": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          }
+        },
+        "mode": "Clamp"
+      }
+    },
+    {
+      "id": 14,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 50,
+        "y": 574
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 13,
+              "slotId": "index"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "particleId",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 15,
+      "typeId": "remap",
+      "uiData": {
+        "x": 684,
+        "y": 610
+      },
+      "output": {
+        "out_x": {
+          "infoArr": [
+            {
+              "nodeId": 6,
+              "slotId": "block_48_value_x"
+            }
+          ]
+        },
+        "out_y": {
+          "infoArr": [
+            {
+              "nodeId": 6,
+              "slotId": "block_48_value_y"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "oldMin": -0.5,
+          "oldMax": 0.5,
+          "newMin": 0.5,
+          "newMax": -0.5
+        },
+        "_type": "vec3"
+      }
+    },
+    {
+      "id": 40,
+      "typeId": "builtinTotalTime",
+      "uiData": {
+        "x": 2975,
+        "y": 982
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {}
+    }
+  ],
+  "props": {
+    "fixedDeltaTime": false,
+    "exactFixedTime": false,
+    "ignoreTimeScale": false,
+    "preWarmTotalTime": 0,
+    "preWarmStepCount": 0,
+    "preWarmDeltaTime": 0,
+    "initialEventName": "OnPlay"
+  },
+  "properties": [],
+  "customAttributes": []
+}

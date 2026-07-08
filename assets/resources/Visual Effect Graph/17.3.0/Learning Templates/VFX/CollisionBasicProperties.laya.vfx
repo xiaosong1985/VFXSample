@@ -1,0 +1,2752 @@
+{
+  "autoID": 160,
+  "events": [],
+  "contexts": [
+    {
+      "id": 1,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 832,
+        "y": 34
+      },
+      "blocks": [
+        {
+          "id": 102,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Random",
+            "count": 0,
+            "countRange": {
+              "x": 6,
+              "y": 10
+            },
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 6,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 12
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 2,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 832,
+        "y": 460
+      },
+      "blocks": [
+        {
+          "id": 103,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 3.5,
+              "value": 3.5,
+              "y": 5,
+              "b_value": 5
+            }
+          }
+        },
+        {
+          "id": 104,
+          "typeId": "setPositionShape",
+          "enabled": true,
+          "props": {
+            "shape": "Cone",
+            "positionMode": "Volume",
+            "positionComposition": "Overwrite",
+            "directionComposition": "Overwrite",
+            "axesComposition": "Overwrite",
+            "spawnMode": "Random",
+            "arcCone": {
+              "cone": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 1.7999999523162842,
+                    "z": 0
+                  },
+                  "angles": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "baseRadius": 0.699999988079071,
+                "topRadius": 0.699999988079071,
+                "height": 1.3483425378799438
+              },
+              "arc": 6.2831854820251465
+            },
+            "thickness": 0.1,
+            "heightMode": "Volume",
+            "heightSequencer": 0.5,
+            "arcSequencer": 0,
+            "lineSequencer": 0.5,
+            "applyOrientation": 1,
+            "arcSphere": {
+              "sphere": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "orientedBox": {
+              "center": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "angle": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "size": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "arcTorus": {
+              "torus": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "majorRadius": 1,
+                "minorRadius": 0.3
+              },
+              "arc": 6.2831853
+            },
+            "arcCircle": {
+              "circle": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "line": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "planeCenter": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "planeNormal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "planeSize": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        },
+        {
+          "id": 105,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "mass",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.145,
+              "value": 0.145
+            }
+          }
+        },
+        {
+          "id": 106,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angularVelocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": -360,
+              "y": -360,
+              "z": -360,
+              "b_x": 360,
+              "b_y": 360,
+              "b_z": 360
+            }
+          }
+        },
+        {
+          "id": 107,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.1575,
+              "value": 0.1575
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 10,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 3,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "typeId": "update",
+      "uiData": {
+        "x": 832,
+        "y": 1560
+      },
+      "blocks": [
+        {
+          "id": 108,
+          "typeId": "gravity",
+          "enabled": true,
+          "props": {
+            "force": {
+              "x": 0,
+              "y": -9.8100004196167,
+              "z": 0
+            },
+            "_space_force": "World"
+          }
+        },
+        {
+          "id": 109,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angularVelocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 110,
+          "typeId": "collisionPlane",
+          "enabled": true,
+          "props": {
+            "mode": "Solid",
+            "planePosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "planeNormal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "bounce": 0.1,
+            "friction": 0,
+            "lifetimeLoss": 0
+          }
+        },
+        {
+          "id": 111,
+          "typeId": "collisionCone",
+          "enabled": true,
+          "props": {
+            "mode": "Solid",
+            "center": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "baseRadius": 1,
+            "topRadius": 0,
+            "height": 2,
+            "bounce": 0,
+            "friction": 0,
+            "lifetimeLoss": 0
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 19,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 3513,
+        "y": 492
+      },
+      "blocks": [
+        {
+          "id": 112,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 3.5,
+              "value": 3.5,
+              "y": 5,
+              "b_value": 5
+            }
+          }
+        },
+        {
+          "id": 113,
+          "typeId": "setPositionShape",
+          "enabled": true,
+          "props": {
+            "shape": "Cone",
+            "positionMode": "Volume",
+            "positionComposition": "Overwrite",
+            "directionComposition": "Overwrite",
+            "axesComposition": "Overwrite",
+            "spawnMode": "Random",
+            "arcCone": {
+              "cone": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 1.7999999523162842,
+                    "z": 0
+                  },
+                  "angles": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "baseRadius": 0.699999988079071,
+                "topRadius": 0.699999988079071,
+                "height": 1.3483425378799438
+              },
+              "arc": 6.2831854820251465
+            },
+            "thickness": 0.1,
+            "heightMode": "Volume",
+            "heightSequencer": 0.5,
+            "arcSequencer": 0,
+            "lineSequencer": 0.5,
+            "applyOrientation": 1,
+            "arcSphere": {
+              "sphere": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "orientedBox": {
+              "center": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "angle": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "size": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "arcTorus": {
+              "torus": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "majorRadius": 1,
+                "minorRadius": 0.3
+              },
+              "arc": 6.2831853
+            },
+            "arcCircle": {
+              "circle": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "line": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "planeCenter": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "planeNormal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "planeSize": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        },
+        {
+          "id": 114,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "mass",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.0027,
+              "value": 0.0027
+            }
+          }
+        },
+        {
+          "id": 115,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angularVelocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": -360,
+              "y": -360,
+              "z": -360,
+              "b_x": 360,
+              "b_y": 360,
+              "b_z": 360
+            }
+          }
+        },
+        {
+          "id": 116,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.076,
+              "value": 0.076
+            }
+          }
+        },
+        {
+          "id": 117,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "sampleMode": "RandomConstantPerParticle",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "gradient": {
+              "_mode": 0,
+              "_alphaElements": [
+                0,
+                1,
+                0.5048447251319885,
+                1,
+                1,
+                1
+              ],
+              "_colorAlphaKeysCount": 3,
+              "_rgbElements": [
+                0,
+                0.5943396091461182,
+                0.5943396091461182,
+                0.5943396091461182,
+                0.5048447251319885,
+                0.5943396091461182,
+                0.5943396091461182,
+                0.5943396091461182,
+                1,
+                1,
+                0.15543422102928162,
+                0
+              ],
+              "_colorRGBKeysCount": 3,
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 0.5943396091461182,
+                    "g": 0.5943396091461182,
+                    "b": 0.5943396091461182,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.5048447251319885,
+                  "color": {
+                    "r": 0.5943396091461182,
+                    "g": 0.5943396091461182,
+                    "b": 0.5943396091461182,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 0.15543422102928162,
+                    "b": 0,
+                    "a": 1
+                  }
+                }
+              ]
+            },
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                1,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0.333,
+                0.333,
+                0
+              ]
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 10,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 5,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "typeId": "update",
+      "uiData": {
+        "x": 3517,
+        "y": 1488
+      },
+      "blocks": [
+        {
+          "id": 118,
+          "typeId": "gravity",
+          "enabled": true,
+          "props": {
+            "force": {
+              "x": 0,
+              "y": -9.8100004196167,
+              "z": 0
+            },
+            "_space_force": "Local"
+          }
+        },
+        {
+          "id": 119,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angularVelocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 120,
+          "typeId": "collisionPlane",
+          "enabled": true,
+          "props": {
+            "mode": "Solid",
+            "planePosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "planeNormal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "bounce": 0.1,
+            "friction": 0,
+            "lifetimeLoss": 0
+          }
+        },
+        {
+          "id": 121,
+          "typeId": "collisionCone",
+          "enabled": true,
+          "props": {
+            "mode": "Solid",
+            "center": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "baseRadius": 1,
+            "topRadius": 0,
+            "height": 2,
+            "bounce": 0,
+            "friction": 0,
+            "lifetimeLoss": 0
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 21,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 3513,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": 122,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Random",
+            "count": 0,
+            "countRange": {
+              "x": 6,
+              "y": 10
+            },
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 6,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 12,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 4,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 2269,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": 123,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Random",
+            "count": 0,
+            "countRange": {
+              "x": 2,
+              "y": 4
+            },
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 6,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 6,
+        "delayAfterLoop": 6
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 9,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "typeId": "update",
+      "uiData": {
+        "x": 2269,
+        "y": 1538
+      },
+      "blocks": [
+        {
+          "id": 124,
+          "typeId": "gravity",
+          "enabled": true,
+          "props": {
+            "force": {
+              "x": 0,
+              "y": -9.8100004196167,
+              "z": 0
+            },
+            "_space_force": "World"
+          }
+        },
+        {
+          "id": 125,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angularVelocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 126,
+          "typeId": "collisionPlane",
+          "enabled": true,
+          "props": {
+            "mode": "Solid",
+            "planePosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "planeNormal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "bounce": 0.1,
+            "friction": 0,
+            "lifetimeLoss": 0
+          }
+        },
+        {
+          "id": 127,
+          "typeId": "collisionCone",
+          "enabled": true,
+          "props": {
+            "mode": "Solid",
+            "center": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "baseRadius": 1,
+            "topRadius": 0,
+            "height": 2,
+            "bounce": 0,
+            "friction": 0,
+            "lifetimeLoss": 0
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 20,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 2269,
+        "y": 499
+      },
+      "blocks": [
+        {
+          "id": 128,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 3.5,
+              "value": 3.5,
+              "y": 5,
+              "b_value": 5
+            }
+          }
+        },
+        {
+          "id": 129,
+          "typeId": "setPositionShape",
+          "enabled": true,
+          "props": {
+            "shape": "Cone",
+            "positionMode": "Volume",
+            "positionComposition": "Overwrite",
+            "directionComposition": "Overwrite",
+            "axesComposition": "Overwrite",
+            "spawnMode": "Random",
+            "arcCone": {
+              "cone": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 1.7999999523162842,
+                    "z": 0
+                  },
+                  "angles": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "baseRadius": 0.699999988079071,
+                "topRadius": 0.699999988079071,
+                "height": 1.3483425378799438
+              },
+              "arc": 6.2831854820251465
+            },
+            "thickness": 0.1,
+            "heightMode": "Volume",
+            "heightSequencer": 0.5,
+            "arcSequencer": 0,
+            "lineSequencer": 0.5,
+            "applyOrientation": 1,
+            "arcSphere": {
+              "sphere": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "orientedBox": {
+              "center": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "angle": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "size": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "arcTorus": {
+              "torus": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "majorRadius": 1,
+                "minorRadius": 0.3
+              },
+              "arc": 6.2831853
+            },
+            "arcCircle": {
+              "circle": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "line": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "planeCenter": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "planeNormal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "planeSize": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        },
+        {
+          "id": 130,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "mass",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.4,
+              "value": 0.4
+            }
+          }
+        },
+        {
+          "id": 131,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angularVelocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": -360,
+              "y": -360,
+              "z": -360,
+              "b_x": 360,
+              "b_y": 360,
+              "b_z": 360
+            }
+          }
+        },
+        {
+          "id": 132,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.38,
+              "value": 0.38
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 4,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 8,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 2805,
+        "y": 3702
+      },
+      "blocks": [
+        {
+          "id": 133,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Constant",
+            "count": 2,
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "countRange": {
+              "x": 0,
+              "y": 10
+            },
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        },
+        {
+          "id": 134,
+          "typeId": "setSpawnEventAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "mass",
+            "value": 1,
+            "useLoopIndex": true,
+            "loopIndexModulo": 3,
+            "valueX": 0,
+            "valueY": 0,
+            "valueZ": 0,
+            "valueW": 0
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 6,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 11,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 2805,
+        "y": 4120
+      },
+      "blocks": [
+        {
+          "id": 135,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 6,
+              "value": 6
+            }
+          }
+        },
+        {
+          "id": 236,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "mass",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 0,
+              "value": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 2,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 13,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 2369,
+        "y": 4785
+      },
+      "blocks": [
+        {
+          "id": 137,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.15,
+              "value": 0.15
+            }
+          }
+        },
+        {
+          "id": 138,
+          "typeId": "positionSequential",
+          "enabled": true,
+          "props": {
+            "mode": "Line",
+            "composition": "Overwrite",
+            "countPerLine": 2,
+            "start": {
+              "x": 0,
+              "y": 2,
+              "z": 0
+            },
+            "end": {
+              "x": -0.12999999523162842,
+              "y": 2,
+              "z": 0
+            },
+            "center": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "radius": 1,
+            "axis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "origin": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "stepSize": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "countX": 16,
+            "countY": 1,
+            "countZ": 1
+          }
+        },
+        {
+          "id": 139,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Add",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": -0.1217041015625,
+              "y": 0.43037572503089905,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 140,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Advanced",
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            }
+          }
+        },
+        {
+          "id": 141,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 3,
+              "value": 3
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Opaque",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 5,
+          "y": 2
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": true,
+        "alphaThreshold": 0.7,
+        "mainTexture": "res://9cf21367-367c-4f69-870b-4c4f35e0a68c"
+      }
+    },
+    {
+      "id": 13,
+      "typeId": "update",
+      "uiData": {
+        "x": 2805,
+        "y": 4512
+      },
+      "blocks": [],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": [
+          {
+            "targetId": 12,
+            "targetSlotId": "input"
+          },
+          {
+            "targetId": 15,
+            "targetSlotId": "input"
+          },
+          {
+            "targetId": 14,
+            "targetSlotId": "input"
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 3255,
+        "y": 5212
+      },
+      "blocks": [
+        {
+          "id": 142,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.15,
+              "value": 0.15
+            }
+          }
+        },
+        {
+          "id": 143,
+          "typeId": "positionSequential",
+          "enabled": true,
+          "props": {
+            "mode": "Line",
+            "composition": "Overwrite",
+            "countPerLine": 2,
+            "start": {
+              "x": 0,
+              "y": 1.399999976158142,
+              "z": 0
+            },
+            "end": {
+              "x": -0.12999999523162842,
+              "y": 1.399999976158142,
+              "z": 0
+            },
+            "center": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "radius": 1,
+            "axis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "origin": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "stepSize": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "countX": 16,
+            "countY": 1,
+            "countZ": 1
+          }
+        },
+        {
+          "id": 144,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Advanced",
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            }
+          }
+        },
+        {
+          "id": 145,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Add",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": -0.1217041015625,
+              "y": 0.662645161151886,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 146,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 3,
+              "value": 3
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Opaque",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 5,
+          "y": 2
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": true,
+        "alphaThreshold": 0.7,
+        "mainTexture": "res://9cf21367-367c-4f69-870b-4c4f35e0a68c"
+      }
+    },
+    {
+      "id": 15,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 2805,
+        "y": 4992
+      },
+      "blocks": [
+        {
+          "id": 147,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.15,
+              "value": 0.15
+            }
+          }
+        },
+        {
+          "id": 148,
+          "typeId": "positionSequential",
+          "enabled": true,
+          "props": {
+            "mode": "Line",
+            "composition": "Overwrite",
+            "countPerLine": 2,
+            "start": {
+              "x": 0,
+              "y": 1.7000000476837158,
+              "z": 0
+            },
+            "end": {
+              "x": -0.12999999523162842,
+              "y": 1.7000000476837158,
+              "z": 0
+            },
+            "center": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "radius": 1,
+            "axis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "origin": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "stepSize": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "countX": 16,
+            "countY": 1,
+            "countZ": 1
+          }
+        },
+        {
+          "id": 149,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Advanced",
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            }
+          }
+        },
+        {
+          "id": 150,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Add",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": -0.1217041015625,
+              "y": 0.5516939163208008,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 151,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 3,
+              "value": 3
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Opaque",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 5,
+          "y": 2
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": true,
+        "alphaThreshold": 0.7,
+        "mainTexture": "res://9cf21367-367c-4f69-870b-4c4f35e0a68c"
+      }
+    },
+    {
+      "id": 16,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 916,
+        "y": 3606
+      },
+      "blocks": [
+        {
+          "id": 152,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Constant",
+            "count": 1,
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "countRange": {
+              "x": 0,
+              "y": 10
+            },
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 6,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 17,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 17,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 916,
+        "y": 4080
+      },
+      "blocks": [],
+      "props": {
+        "space": "Local",
+        "capacity": 1,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 159,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 18,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 916,
+        "y": 4370
+      },
+      "blocks": [
+        {
+          "id": 153,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "alpha",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.3,
+              "value": 0.3
+            }
+          }
+        },
+        {
+          "id": 154,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": 155,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "scale",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 6.610000133514404,
+              "y": 3.9100000858306885,
+              "z": 1
+            }
+          }
+        },
+        {
+          "id": 156,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.22600555419921875,
+              "y": 2.2119760513305664,
+              "z": -0.011934667825698853
+            }
+          }
+        },
+        {
+          "id": 157,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.2,
+              "value": 0.2
+            }
+          }
+        },
+        {
+          "id": 158,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Advanced",
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": -1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Default",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://1b9f0a64-fa97-4995-86f3-ca5d8b5faeb1"
+      }
+    },
+    {
+      "id": 19,
+      "typeId": "outputShaderGraphMesh",
+      "uiData": {
+        "x": 832,
+        "y": 2376
+      },
+      "blocks": [],
+      "props": {
+        "shaderName": "SG_Baseball",
+        "shaderRes": "res://eef0462b-4828-478e-b3bb-9ae21a9bf137",
+        "shaderPropertyDefaults": {
+          "mesh": "res://b6f005cb-98fa-48d6-856f-bf1d24739d0a"
+        },
+        "shaderPropertyExpressions": {
+          "subMeshMask": {
+            "rootNodeId": "c0",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 4294967295
+              }
+            }
+          }
+        },
+        "mesh": "res://b6f005cb-98fa-48d6-856f-bf1d24739d0a",
+        "blendMode": "Alpha",
+        "mainTexture": "",
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "softParticleFade": 0,
+        "uvMode": "Default",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "cameraSort": false,
+        "frustumCull": false
+      }
+    },
+    {
+      "id": 20,
+      "typeId": "outputShaderGraphMesh",
+      "uiData": {
+        "x": 2269,
+        "y": 2407
+      },
+      "blocks": [],
+      "props": {
+        "shaderName": "SG_SoccerBall",
+        "shaderRes": "res://06a283e8-0a69-4567-ae2a-346b78626f39",
+        "shaderPropertyDefaults": {
+          "mesh": "res://a13dc174-a60b-4072-8440-25703f0cd3c1"
+        },
+        "shaderPropertyExpressions": {
+          "subMeshMask": {
+            "rootNodeId": "c0",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 4294967295
+              }
+            }
+          }
+        },
+        "mesh": "res://a13dc174-a60b-4072-8440-25703f0cd3c1",
+        "blendMode": "Alpha",
+        "mainTexture": "",
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "softParticleFade": 0,
+        "uvMode": "Default",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "cameraSort": false,
+        "frustumCull": false
+      }
+    },
+    {
+      "id": 21,
+      "typeId": "outputMesh",
+      "uiData": {
+        "x": 3759,
+        "y": 2326
+      },
+      "blocks": [],
+      "props": {
+        "mesh": "builtin:Capsule",
+        "mainTexture": "",
+        "blendMode": "Alpha",
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "softParticleFade": 0,
+        "uvMode": "Default",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "cameraSort": false,
+        "frustumCull": false
+      }
+    },
+    {
+      "id": 159,
+      "typeId": "update",
+      "uiData": {
+        "x": 1016,
+        "y": 4180
+      },
+      "blocks": [],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 18,
+          "targetSlotId": "input"
+        }
+      }
+    }
+  ],
+  "operators": [
+    {
+      "id": 22,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 1936,
+        "y": 5688
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 33,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "spawnIndex",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 23,
+      "typeId": "spawnState",
+      "uiData": {
+        "x": 2492,
+        "y": 3978
+      },
+      "output": {
+        "out_loopIndex": {
+          "infoArr": [
+            {
+              "nodeId": 24,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {}
+    },
+    {
+      "id": 24,
+      "typeId": "modulo",
+      "uiData": {
+        "x": 2637,
+        "y": 3978
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "block_236_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 3
+        },
+        "_type": "int"
+      }
+    },
+    {
+      "id": 25,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 1780,
+        "y": 5466
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 26,
+              "slotId": "index"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "mass",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 26,
+      "typeId": "switchOp",
+      "uiData": {
+        "x": 1966,
+        "y": 5466
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 33,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "input0": 4,
+          "input1": 6,
+          "input2": 8,
+          "default": 4
+        },
+        "_type": "float",
+        "count": 4
+      }
+    },
+    {
+      "id": 27,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2397,
+        "y": 5916
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 34,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "spawnIndex",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 28,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2257,
+        "y": 5786
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 29,
+              "slotId": "index"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "mass",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 29,
+      "typeId": "switchOp",
+      "uiData": {
+        "x": 2437,
+        "y": 5820
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 34,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "input0": 5,
+          "input1": 8,
+          "input2": 2,
+          "default": 4
+        },
+        "_type": "float",
+        "count": 4
+      }
+    },
+    {
+      "id": 30,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2774,
+        "y": 6214
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 35,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "spawnIndex",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 31,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2592,
+        "y": 6088
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 32,
+              "slotId": "index"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "mass",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 32,
+      "typeId": "switchOp",
+      "uiData": {
+        "x": 2846,
+        "y": 6124
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 35,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "input0": 1,
+          "input1": 2,
+          "input2": 3,
+          "default": 4
+        },
+        "_type": "float",
+        "count": 4
+      }
+    },
+    {
+      "id": 33,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2161,
+        "y": 5594
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 12,
+              "slotId": "block_141_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 34,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2618,
+        "y": 5854
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 15,
+              "slotId": "block_151_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 35,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 3054,
+        "y": 6162
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 14,
+              "slotId": "block_146_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 100,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 769
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_110_value"
+            },
+            {
+              "nodeId": 5,
+              "slotId": "block_120_value"
+            },
+            {
+              "nodeId": 8,
+              "slotId": "block_126_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "Collision_Plane"
+      }
+    },
+    {
+      "id": 101,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 833
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 2,
+              "slotId": "block_104_value"
+            },
+            {
+              "nodeId": 4,
+              "slotId": "block_113_value"
+            },
+            {
+              "nodeId": 9,
+              "slotId": "block_129_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "Init_Spawn_Cone"
+      }
+    }
+  ],
+  "props": {
+    "fixedDeltaTime": false,
+    "exactFixedTime": false,
+    "ignoreTimeScale": false,
+    "preWarmTotalTime": 0,
+    "preWarmStepCount": 0,
+    "preWarmDeltaTime": 0,
+    "initialEventName": "OnPlay"
+  },
+  "properties": [
+    {
+      "name": "Collision_Plane",
+      "type": "float",
+      "exposed": false,
+      "group": "m_Min:",
+      "default": {
+        "position": {
+          "x": 0,
+          "y": 0.5079570412635803,
+          "z": 0
+        },
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      }
+    },
+    {
+      "name": "Init_Spawn_Cone",
+      "type": "float",
+      "exposed": false,
+      "group": "m_Min:",
+      "default": {
+        "cone": {
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.7999999523162842,
+              "z": 0
+            },
+            "angles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "baseRadius": 0.699999988079071,
+          "topRadius": 0.699999988079071,
+          "height": 1.3483425378799438
+        },
+        "arc": 6.2831854820251465
+      }
+    }
+  ],
+  "customAttributes": []
+}

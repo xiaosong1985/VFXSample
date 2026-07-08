@@ -1,0 +1,5407 @@
+{
+  "autoID": 205,
+  "events": [
+    {
+      "id": 8,
+      "typeId": "event",
+      "uiData": {
+        "x": 2226,
+        "y": -1039
+      },
+      "props": {
+        "eventName": "in"
+      },
+      "flowLinks": {
+        "evt": [
+          {
+            "targetId": 1,
+            "targetSlotId": "start"
+          },
+          {
+            "targetId": 7,
+            "targetSlotId": "start"
+          },
+          {
+            "targetId": 10,
+            "targetSlotId": "start"
+          },
+          {
+            "targetId": 13,
+            "targetSlotId": "start"
+          }
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "typeId": "event",
+      "uiData": {
+        "x": 5359,
+        "y": -838
+      },
+      "props": {
+        "eventName": "out"
+      },
+      "flowLinks": {
+        "evt": [
+          {
+            "targetId": 17,
+            "targetSlotId": "start"
+          },
+          {
+            "targetId": 21,
+            "targetSlotId": "start"
+          },
+          {
+            "targetId": 10,
+            "targetSlotId": "start"
+          },
+          {
+            "targetId": 22,
+            "targetSlotId": "start"
+          }
+        ]
+      }
+    }
+  ],
+  "contexts": [
+    {
+      "id": 1,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 991,
+        "y": 268
+      },
+      "blocks": [
+        {
+          "id": 154,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Constant",
+            "count": 1,
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "countRange": {
+              "x": 0,
+              "y": 10
+            },
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Infinite",
+        "loopDuration": -1,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 2,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 991.3827,
+        "y": 644.57214
+      },
+      "blocks": [
+        {
+          "id": 155,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 4,
+              "value": 4
+            }
+          }
+        },
+        {
+          "id": 156,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 1,
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": 157,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 1,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        },
+        "shaderBindingLinks": {
+          "Bounds": 127
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 3,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "typeId": "update",
+      "uiData": {
+        "x": 991,
+        "y": 1324
+      },
+      "blocks": [],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 23,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "typeId": "update",
+      "uiData": {
+        "x": 2165,
+        "y": 1835
+      },
+      "blocks": [
+        {
+          "id": 158,
+          "typeId": "turbulence",
+          "enabled": true,
+          "props": {
+            "mode": "Relative",
+            "noiseType": "Value",
+            "fieldTransform": {
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "angles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "intensity": 0.5,
+            "drag": 1,
+            "frequency": 4,
+            "octaves": 1,
+            "roughness": 0.5,
+            "lacunarity": 2
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 5,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 2165,
+        "y": 2318
+      },
+      "blocks": [
+        {
+          "id": 159,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Along Velocity",
+            "axes": "YX",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 160,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "alpha",
+            "sampleMode": "OverLife",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                0.5,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                1,
+                0,
+                -6.265404224395752,
+                -6.265404224395752,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": 161,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "sampleMode": "OverLife",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 0.3745098,
+                    "g": 0.21372549,
+                    "b": 0.015686275,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.2,
+                  "color": {
+                    "r": 5.992157,
+                    "g": 3.4196079,
+                    "b": 0.2509804,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.4,
+                  "color": {
+                    "r": 5.2164745,
+                    "g": 0.49444160000000004,
+                    "b": 0,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.749996,
+                  "color": {
+                    "r": 0.7264174764799716,
+                    "g": 0.006395509311142522,
+                    "b": 0,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 0.7264151,
+                    "g": 0.006395251,
+                    "b": 0,
+                    "a": 1
+                  }
+                }
+              ]
+            },
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                1,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0.333,
+                0.333,
+                0
+              ]
+            }
+          }
+        },
+        {
+          "id": 162,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "sampleMode": "OverLife",
+            "composition": "Multiply",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                3.1327006816864014,
+                3.1327006816864014,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 2,
+          "y": 2
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": true,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://5832dd69-ea04-4e08-808a-217716f48539"
+      }
+    },
+    {
+      "id": 6,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 2165,
+        "y": 767
+      },
+      "blocks": [
+        {
+          "id": 163,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.6,
+              "value": 0.6
+            }
+          }
+        },
+        {
+          "id": 164,
+          "typeId": "setPositionMesh",
+          "enabled": true,
+          "props": {
+            "sampleMode": "Surface",
+            "mesh": "res://e38d2d0d-ea52-4bc0-ae3f-09506c2cde20@lm0",
+            "pointCount": 1024,
+            "composition": "Overwrite",
+            "meshScale": 0.01
+          }
+        },
+        {
+          "id": 165,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.03999999910593033,
+              "value": 0.03999999910593033,
+              "y": 0.07999999821186066,
+              "b_value": 0.07999999821186066
+            }
+          }
+        },
+        {
+          "id": 166,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "scale",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 1,
+              "y": 0.25,
+              "z": 1,
+              "b_x": 1.25,
+              "b_y": 1,
+              "b_z": 1
+            }
+          }
+        },
+        {
+          "id": 167,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0,
+              "y": 3,
+              "b_value": 3
+            }
+          }
+        },
+        {
+          "id": 168,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angle",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 4,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "b_x": 0,
+              "b_y": 0,
+              "b_z": 360
+            }
+          }
+        },
+        {
+          "id": 169,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "velocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": -0.6000000238418579,
+              "y": 0.30000001192092896,
+              "z": 0.6000000238418579,
+              "b_x": 0.6000000238418579,
+              "b_y": 0.6000000238418579,
+              "b_z": -0.6000000238418579
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 1024,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        },
+        "shaderBindingLinks": {
+          "Bounds": 127
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 4,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 2164,
+        "y": 267
+      },
+      "blocks": [
+        {
+          "id": 170,
+          "typeId": "constantRate",
+          "enabled": true,
+          "props": {
+            "rate": 896
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 2.4,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Constant",
+        "loopCount": 1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 6,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "typeId": "update",
+      "uiData": {
+        "x": 3117,
+        "y": 2176
+      },
+      "blocks": [
+        {
+          "id": 171,
+          "typeId": "flipbookPlay",
+          "enabled": true,
+          "props": {
+            "mode": "Constant",
+            "frameRate": 25,
+            "frameCount": 64
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 12,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 3117,
+        "y": 261
+      },
+      "blocks": [
+        {
+          "id": 172,
+          "typeId": "constantRate",
+          "enabled": true,
+          "props": {
+            "rate": 128
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 2,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Constant",
+        "loopCount": 1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 11,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 3117,
+        "y": 815
+      },
+      "blocks": [
+        {
+          "id": 173,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.5,
+              "value": 0.5,
+              "y": 2,
+              "b_value": 2
+            }
+          }
+        },
+        {
+          "id": 174,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.20000000298023224,
+              "value": 0.20000000298023224,
+              "y": 0.4000000059604645,
+              "b_value": 0.4000000059604645
+            }
+          }
+        },
+        {
+          "id": 175,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "scale",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.800000011920929,
+              "y": 0.800000011920929,
+              "z": 1,
+              "b_x": 1.2000000476837158,
+              "b_y": 1.2000000476837158,
+              "b_z": 1
+            }
+          }
+        },
+        {
+          "id": 176,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "velocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": -0.20000000298023224,
+              "y": 0.30000001192092896,
+              "z": 0.20000000298023224,
+              "b_x": 0.20000000298023224,
+              "b_y": 0.5,
+              "b_z": -0.20000000298023224
+            }
+          }
+        },
+        {
+          "id": 177,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0,
+              "y": 63,
+              "b_value": 63
+            }
+          }
+        },
+        {
+          "id": 178,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angle",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 4,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "b_x": 0,
+              "b_y": 0,
+              "b_z": 360
+            }
+          }
+        },
+        {
+          "id": 179,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "sampleMode": "Random",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "gradient": {
+              "_mode": 0,
+              "_alphaElements": [
+                0,
+                1,
+                1,
+                1
+              ],
+              "_colorAlphaKeysCount": 2,
+              "_rgbElements": [
+                0,
+                0.250980406999588,
+                0.250980406999588,
+                0.250980406999588,
+                1,
+                0,
+                0,
+                0
+              ],
+              "_colorRGBKeysCount": 2,
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 0.250980406999588,
+                    "g": 0.250980406999588,
+                    "b": 0.250980406999588,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                  }
+                }
+              ]
+            },
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                1,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0.333,
+                0.333,
+                0
+              ]
+            }
+          }
+        },
+        {
+          "id": 180,
+          "typeId": "setPositionMesh",
+          "enabled": true,
+          "props": {
+            "sampleMode": "Surface",
+            "mesh": "res://e38d2d0d-ea52-4bc0-ae3f-09506c2cde20@lm0",
+            "pointCount": 1024,
+            "composition": "Overwrite",
+            "meshScale": 0.01
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 128,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        },
+        "shaderBindingLinks": {
+          "Bounds": 127
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 9,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 3117,
+        "y": 2512
+      },
+      "blocks": [
+        {
+          "id": 181,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Face Camera Plane",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 182,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "alpha",
+            "sampleMode": "OverLife",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                0.25,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": 183,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "sampleMode": "OverLife",
+            "composition": "Multiply",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                3.1327006816864014,
+                3.1327006816864014,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "FlipbookBlend",
+        "flipbookSize": {
+          "x": 8,
+          "y": 8
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://4b266159-cdb8-47d6-8d8b-eaa3114d3491"
+      }
+    },
+    {
+      "id": 13,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 4461,
+        "y": 261
+      },
+      "blocks": [
+        {
+          "id": 184,
+          "typeId": "constantRate",
+          "enabled": true,
+          "props": {
+            "rate": 128
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 2.6,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Constant",
+        "loopCount": 1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 14,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 14,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 4461,
+        "y": 815
+      },
+      "blocks": [
+        {
+          "id": 185,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.5,
+              "value": 0.5,
+              "y": 2,
+              "b_value": 2
+            }
+          }
+        },
+        {
+          "id": 186,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.20000000298023224,
+              "value": 0.20000000298023224,
+              "y": 0.4000000059604645,
+              "b_value": 0.4000000059604645
+            }
+          }
+        },
+        {
+          "id": 187,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "scale",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.800000011920929,
+              "y": 0.800000011920929,
+              "z": 1,
+              "b_x": 1.2000000476837158,
+              "b_y": 1.2000000476837158,
+              "b_z": 1
+            }
+          }
+        },
+        {
+          "id": 188,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "velocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": -0.4000000059604645,
+              "y": 0.10000000149011612,
+              "z": 0.4000000059604645,
+              "b_x": 0.4000000059604645,
+              "b_y": 0.30000001192092896,
+              "b_z": -0.4000000059604645
+            }
+          }
+        },
+        {
+          "id": 189,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": -0.25,
+              "z": 0,
+              "b_x": 0,
+              "b_y": 0.25,
+              "b_z": 0
+            }
+          }
+        },
+        {
+          "id": 190,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0,
+              "y": 63,
+              "b_value": 63
+            }
+          }
+        },
+        {
+          "id": 191,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angle",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 4,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "b_x": 0,
+              "b_y": 0,
+              "b_z": 360
+            }
+          }
+        },
+        {
+          "id": 192,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "sampleMode": "Random",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "gradient": {
+              "_mode": 0,
+              "_alphaElements": [
+                0,
+                1,
+                1,
+                1
+              ],
+              "_colorAlphaKeysCount": 2,
+              "_rgbElements": [
+                0,
+                0.250980406999588,
+                0.250980406999588,
+                0.250980406999588,
+                1,
+                0,
+                0,
+                0
+              ],
+              "_colorRGBKeysCount": 2,
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 0.250980406999588,
+                    "g": 0.250980406999588,
+                    "b": 0.250980406999588,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                  }
+                }
+              ]
+            },
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                1,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0.333,
+                0.333,
+                0
+              ]
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 128,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        },
+        "shaderBindingLinks": {
+          "Bounds": 127
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 15,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 15,
+      "typeId": "update",
+      "uiData": {
+        "x": 4461,
+        "y": 2176
+      },
+      "blocks": [
+        {
+          "id": 193,
+          "typeId": "flipbookPlay",
+          "enabled": true,
+          "props": {
+            "mode": "Constant",
+            "frameRate": 25,
+            "frameCount": 64
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 16,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 16,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 4461,
+        "y": 2512
+      },
+      "blocks": [
+        {
+          "id": 194,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Face Camera Plane",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 195,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "alpha",
+            "sampleMode": "OverLife",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                0.25,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": 196,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "sampleMode": "OverLife",
+            "composition": "Multiply",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                3.1327006816864014,
+                3.1327006816864014,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "FlipbookBlend",
+        "flipbookSize": {
+          "x": 8,
+          "y": 8
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://4b266159-cdb8-47d6-8d8b-eaa3114d3491"
+      }
+    },
+    {
+      "id": 17,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 6056,
+        "y": 268
+      },
+      "blocks": [
+        {
+          "id": 197,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Constant",
+            "count": 1,
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "countRange": {
+              "x": 0,
+              "y": 10
+            },
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Infinite",
+        "loopDuration": -1,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 18,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 18,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 6056,
+        "y": 645
+      },
+      "blocks": [
+        {
+          "id": 198,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 4,
+              "value": 4
+            }
+          }
+        },
+        {
+          "id": 199,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 1,
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": 200,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 1,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        },
+        "shaderBindingLinks": {
+          "Bounds": 127
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 19,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 19,
+      "typeId": "update",
+      "uiData": {
+        "x": 6055,
+        "y": 1324
+      },
+      "blocks": [],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 24,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 21,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 2588,
+        "y": 7
+      },
+      "blocks": [
+        {
+          "id": 201,
+          "typeId": "constantRate",
+          "enabled": true,
+          "props": {
+            "rate": 896
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 2.4,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Constant",
+        "loopCount": 1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0.4,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 6,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 22,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 4885,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": 202,
+          "typeId": "constantRate",
+          "enabled": true,
+          "props": {
+            "rate": 128
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 2.6,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Constant",
+        "loopCount": 1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 1,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 14,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 23,
+      "typeId": "outputShaderGraphMesh",
+      "uiData": {
+        "x": 991,
+        "y": 1618
+      },
+      "blocks": [
+        {
+          "id": 704,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "_meshSizeFix": 0.2,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Multiply",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.2,
+              "value": 0.2
+            }
+          }
+        },
+        {
+          "id": 203,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "source": "Slot",
+            "composition": "Blend",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "shaderName": "UNI_materialize",
+        "shaderRes": "res://71bffac6-c618-47c6-a6c3-d5836589159f",
+        "shaderPropertyBindings": {
+          "Mesh": "mesh",
+          "MeshTexture": "_Texture",
+          "PatternTexture": "_MaterializePattern",
+          "OverlayTexture": "_MaterializeOverlay",
+          "MeshNormalMap": "_NormalMap",
+          "UseMetalicSmoothnessTexture": "_UseMetalicSmoothnessTexture",
+          "MetalicSmoothnessTexture": "_MetalicSmoothnessTexture",
+          "Smoothness": "_Smoothness",
+          "UseAmbientOcclusionTexture": "_UseAmbientOcclusionTexture",
+          "AmbientOcclusionTexture": "_AmbientOcclusionTexture",
+          "UseEmissionMap": "_UseEmissionMap",
+          "EmissionMap": "_EmissionMap",
+          "EmissionMapColor": "_EmissionMapColor",
+          "MaterializeFuzzyness": "_MaterializeProgressFuzzyness",
+          "MaterializeGradient": "_MaterializeGradient",
+          "OverlayAnimationOffsetMultiplier": "_MaterializeOverlayAnimationMultiplier",
+          "PatternSpeedXY": "_MaterializePatternSpeed",
+          "DisplacementNoiseScale": "_DisplacementNoiseScale"
+        },
+        "shaderPropertyExpressions": {
+          "subMeshMask": {
+            "rootNodeId": "c0",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 4294967295
+              }
+            }
+          },
+          "_UseMetalicSmoothnessTexture": {
+            "rootNodeId": "p0",
+            "outputType": "bool",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "bool",
+                "exposedName": "UseMetalicSmoothnessTexture",
+                "defaultValue": true
+              }
+            }
+          },
+          "_Smoothness": {
+            "rootNodeId": "p0",
+            "outputType": "float",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "float",
+                "exposedName": "Smoothness",
+                "defaultValue": 0.5
+              }
+            }
+          },
+          "_UseAmbientOcclusionTexture": {
+            "rootNodeId": "p0",
+            "outputType": "bool",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "bool",
+                "exposedName": "UseAmbientOcclusionTexture",
+                "defaultValue": true
+              }
+            }
+          },
+          "_UseEmissionMap": {
+            "rootNodeId": "p0",
+            "outputType": "bool",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "bool",
+                "exposedName": "UseEmissionMap",
+                "defaultValue": true
+              }
+            }
+          },
+          "_EmissionMapColor": {
+            "rootNodeId": "p0",
+            "outputType": "vec4",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "vec4",
+                "exposedName": "EmissionMapColor",
+                "defaultValue": {
+                  "r": 0,
+                  "g": 7.0331497,
+                  "b": 25.992073,
+                  "a": 1
+                }
+              }
+            }
+          },
+          "_MaterializeProgress": {
+            "rootNodeId": "n2",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "Curve",
+                "value": {
+                  "frames": [
+                    {
+                      "time": 0,
+                      "value": 0,
+                      "inTangent": 0.20467734336853027,
+                      "outTangent": 0.20467734336853027,
+                      "tangentMode": 0,
+                      "leftTangentMode": 0,
+                      "rightTangentMode": 0,
+                      "broken": false
+                    },
+                    {
+                      "time": 1,
+                      "value": 1,
+                      "inTangent": 0.7694374322891235,
+                      "outTangent": 0.7694374322891235,
+                      "tangentMode": 0,
+                      "leftTangentMode": 0,
+                      "rightTangentMode": 0,
+                      "broken": false
+                    }
+                  ],
+                  "preWrapMode": 8,
+                  "postWrapMode": 8,
+                  "version": 1
+                },
+                "slotName": "curve"
+              },
+              "c1": {
+                "kind": "GlobalTimeRatio",
+                "outputType": "float",
+                "duration": 4,
+                "continuous": false
+              },
+              "n2": {
+                "kind": "SampleCurve",
+                "outputType": "float",
+                "inputs": [
+                  "c0",
+                  "c1"
+                ]
+              }
+            }
+          },
+          "_MaterializeProgressFuzzyness": {
+            "rootNodeId": "p0",
+            "outputType": "float",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "float",
+                "exposedName": "MaterializeFuzzyness",
+                "defaultValue": 0.5
+              }
+            }
+          },
+          "_MaterializeOverlayColor": {
+            "rootNodeId": "n2",
+            "outputType": "vec3",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "Gradient",
+                "exposedName": "ColorOverLife",
+                "defaultValue": {
+                  "colorKeys": [
+                    {
+                      "color": {
+                        "r": 2.9960784912109375,
+                        "g": 1.7087767124176025,
+                        "b": 0.10980395972728729,
+                        "a": 1
+                      },
+                      "time": 0
+                    },
+                    {
+                      "color": {
+                        "r": 5.992156982421875,
+                        "g": 3.4196078777313232,
+                        "b": 0.250980406999588,
+                        "a": 1
+                      },
+                      "time": 0.20000000298023224
+                    },
+                    {
+                      "color": {
+                        "r": 5.216474533081055,
+                        "g": 0.49444159865379333,
+                        "b": 0,
+                        "a": 1
+                      },
+                      "time": 0.4000000059604645
+                    },
+                    {
+                      "color": {
+                        "r": 0.7264150977134705,
+                        "g": 0.006395251024514437,
+                        "b": 0,
+                        "a": 1
+                      },
+                      "time": 0.7499961853027344
+                    }
+                  ],
+                  "alphaKeys": [
+                    {
+                      "alpha": 1,
+                      "time": 0
+                    },
+                    {
+                      "alpha": 1,
+                      "time": 1
+                    }
+                  ],
+                  "gradientMode": 0
+                }
+              },
+              "c1": {
+                "kind": "GlobalTimeRatio",
+                "outputType": "float",
+                "duration": 4,
+                "continuous": false
+              },
+              "n2": {
+                "kind": "SampleGradient",
+                "outputType": "vec4",
+                "inputs": [
+                  "p0",
+                  "c1"
+                ]
+              }
+            }
+          },
+          "_MaterializeOverlayAdditive": {
+            "rootNodeId": "c0",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 0
+              }
+            }
+          },
+          "_MaterializeOverlayAnimationMultiplier": {
+            "rootNodeId": "p0",
+            "outputType": "float",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "float",
+                "exposedName": "OverlayAnimationOffsetMultiplier",
+                "defaultValue": -0.03
+              }
+            }
+          },
+          "_MaterializeEdgeThickness": {
+            "rootNodeId": "n4",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "Curve",
+                "value": {
+                  "frames": [
+                    {
+                      "time": 0,
+                      "value": 0.10000000149011612,
+                      "inTangent": 0,
+                      "outTangent": 0,
+                      "tangentMode": 0,
+                      "leftTangentMode": 0,
+                      "rightTangentMode": 0,
+                      "broken": false
+                    },
+                    {
+                      "time": 1,
+                      "value": 1,
+                      "inTangent": 2.139594554901123,
+                      "outTangent": 2.139594554901123,
+                      "tangentMode": 0,
+                      "leftTangentMode": 0,
+                      "rightTangentMode": 0,
+                      "broken": false
+                    }
+                  ],
+                  "preWrapMode": 8,
+                  "postWrapMode": 8,
+                  "version": 1
+                },
+                "slotName": "curve"
+              },
+              "c1": {
+                "kind": "GlobalTimeRatio",
+                "outputType": "float",
+                "duration": 4,
+                "continuous": false
+              },
+              "n2": {
+                "kind": "SampleCurve",
+                "outputType": "float",
+                "inputs": [
+                  "c0",
+                  "c1"
+                ]
+              },
+              "p3": {
+                "kind": "VFXParameter",
+                "outputType": "float",
+                "exposedName": "EdgeThickness",
+                "defaultValue": 0.6
+              },
+              "n4": {
+                "kind": "Mul",
+                "outputType": "float",
+                "inputs": [
+                  "n2",
+                  "p3"
+                ]
+              }
+            }
+          },
+          "_MaterializeEdgeColor": {
+            "rootNodeId": "n2",
+            "outputType": "vec4",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "Gradient",
+                "exposedName": "ColorOverLife",
+                "defaultValue": {
+                  "colorKeys": [
+                    {
+                      "color": {
+                        "r": 2.9960784912109375,
+                        "g": 1.7087767124176025,
+                        "b": 0.10980395972728729,
+                        "a": 1
+                      },
+                      "time": 0
+                    },
+                    {
+                      "color": {
+                        "r": 5.992156982421875,
+                        "g": 3.4196078777313232,
+                        "b": 0.250980406999588,
+                        "a": 1
+                      },
+                      "time": 0.20000000298023224
+                    },
+                    {
+                      "color": {
+                        "r": 5.216474533081055,
+                        "g": 0.49444159865379333,
+                        "b": 0,
+                        "a": 1
+                      },
+                      "time": 0.4000000059604645
+                    },
+                    {
+                      "color": {
+                        "r": 0.7264150977134705,
+                        "g": 0.006395251024514437,
+                        "b": 0,
+                        "a": 1
+                      },
+                      "time": 0.7499961853027344
+                    }
+                  ],
+                  "alphaKeys": [
+                    {
+                      "alpha": 1,
+                      "time": 0
+                    },
+                    {
+                      "alpha": 1,
+                      "time": 1
+                    }
+                  ],
+                  "gradientMode": 0
+                }
+              },
+              "c1": {
+                "kind": "GlobalTimeRatio",
+                "outputType": "float",
+                "duration": 4,
+                "continuous": false
+              },
+              "n2": {
+                "kind": "SampleGradient",
+                "outputType": "vec4",
+                "inputs": [
+                  "p0",
+                  "c1"
+                ]
+              }
+            }
+          },
+          "_MaterializePatternSpeed": {
+            "rootNodeId": "p0",
+            "outputType": "vec2",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "vec2",
+                "exposedName": "PatternSpeedXY",
+                "defaultValue": {
+                  "x": 0.20000000298023224,
+                  "y": -0.4000000059604645
+                }
+              }
+            }
+          },
+          "_MaterializePatternOffset": {
+            "rootNodeId": "n8",
+            "outputType": "vec2",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 0,
+                "slotName": "Min"
+              },
+              "c1": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 1,
+                "slotName": "Max"
+              },
+              "c2": {
+                "kind": "Constant",
+                "outputType": "int",
+                "value": 101,
+                "slotName": "seed"
+              },
+              "c3": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 0.5,
+                "slotName": "constRandom"
+              },
+              "c4": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 0,
+                "slotName": "Min"
+              },
+              "c5": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 1,
+                "slotName": "Max"
+              },
+              "c6": {
+                "kind": "Constant",
+                "outputType": "int",
+                "value": 102,
+                "slotName": "seed"
+              },
+              "c7": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 0.5,
+                "slotName": "constRandom"
+              },
+              "n8": {
+                "kind": "CombineVec2",
+                "outputType": "vec2",
+                "inputs": [
+                  "c3",
+                  "c7"
+                ]
+              }
+            }
+          },
+          "_DisplacementMultiplier": {
+            "rootNodeId": "n4",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "Curve",
+                "value": {
+                  "frames": [
+                    {
+                      "time": 0,
+                      "value": 1,
+                      "inTangent": -2.8264994621276855,
+                      "outTangent": -2.8264994621276855,
+                      "tangentMode": 0,
+                      "leftTangentMode": 0,
+                      "rightTangentMode": 0,
+                      "broken": false
+                    },
+                    {
+                      "time": 1,
+                      "value": 0,
+                      "inTangent": 0.03938144072890282,
+                      "outTangent": 0.03938144072890282,
+                      "tangentMode": 0,
+                      "leftTangentMode": 0,
+                      "rightTangentMode": 0,
+                      "broken": false
+                    }
+                  ],
+                  "preWrapMode": 8,
+                  "postWrapMode": 8,
+                  "version": 1
+                },
+                "slotName": "curve"
+              },
+              "c1": {
+                "kind": "GlobalTimeRatio",
+                "outputType": "float",
+                "duration": 4,
+                "continuous": false
+              },
+              "n2": {
+                "kind": "SampleCurve",
+                "outputType": "float",
+                "inputs": [
+                  "c0",
+                  "c1"
+                ]
+              },
+              "p3": {
+                "kind": "VFXParameter",
+                "outputType": "float",
+                "exposedName": "DisplacementMultiplier",
+                "defaultValue": 0
+              },
+              "n4": {
+                "kind": "Mul",
+                "outputType": "float",
+                "inputs": [
+                  "n2",
+                  "p3"
+                ]
+              }
+            }
+          },
+          "_DisplacementNoiseScale": {
+            "rootNodeId": "p0",
+            "outputType": "float",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "float",
+                "exposedName": "DisplacementNoiseScale",
+                "defaultValue": 1
+              }
+            }
+          }
+        },
+        "shaderBindingLinks": {
+          "Mesh": 123,
+          "MeshTexture": 124,
+          "PatternTexture": 139,
+          "OverlayTexture": 138,
+          "MeshNormalMap": 125,
+          "UseMetalicSmoothnessTexture": 126,
+          "MetalicSmoothnessTexture": 128,
+          "Smoothness": 129,
+          "UseAmbientOcclusionTexture": 130,
+          "AmbientOcclusionTexture": 131,
+          "UseEmissionMap": 132,
+          "EmissionMap": 133,
+          "EmissionMapColor": 134,
+          "_MaterializeProgress": 30,
+          "MaterializeFuzzyness": 143,
+          "MaterializeGradient": 142,
+          "_MaterializeOverlayColor": 43,
+          "OverlayAnimationOffsetMultiplier": 135,
+          "_MaterializeEdgeThickness": 42,
+          "_MaterializeEdgeColor": 40,
+          "PatternSpeedXY": 140,
+          "_MaterializePatternOffset": [
+            28,
+            29
+          ],
+          "_DisplacementMultiplier": 27,
+          "DisplacementNoiseScale": 141
+        },
+        "_meshProperty": "Mesh",
+        "blendMode": "Alpha",
+        "mainTexture": "",
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "softParticleFade": 0,
+        "uvMode": "Default",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "cameraSort": false,
+        "frustumCull": false,
+        "mesh": "res://f042c66d-1de8-44b5-af1b-0058442f1316@lm0",
+        "shaderPropertyDefaults": {
+          "_Texture": "res://64acda2d-b3c1-4241-9fc0-1987014dfc11",
+          "_MaterializePattern": "res://7aa85175-cbe6-4e7e-9f3f-eb37f70e3164",
+          "_MaterializeOverlay": "res://8dc3dde4-ca90-44bb-8732-3488f0772fba",
+          "_NormalMap": "res://b2c377bc-a64b-4b66-a06c-f9921196e978",
+          "_MetalicSmoothnessTexture": "res://d61f8f3f-4184-4510-98fa-642e1ab005f0",
+          "_AmbientOcclusionTexture": "res://2d38c12e-adc0-48af-8c0f-c8a0272b0bf3",
+          "_EmissionMap": "res://6196ad29-048f-43ff-bc58-77ae1b6c4485",
+          "_MaterializeGradient": "res://496186cb-ae50-48e1-bf1e-e4fed898a014"
+        }
+      }
+    },
+    {
+      "id": 24,
+      "typeId": "outputShaderGraphMesh",
+      "uiData": {
+        "x": 6055,
+        "y": 1618
+      },
+      "blocks": [
+        {
+          "id": 1204,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "_meshSizeFix": 0.2,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Multiply",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.2,
+              "value": 0.2
+            }
+          }
+        },
+        {
+          "id": 204,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "source": "Slot",
+            "composition": "Blend",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "shaderName": "UNI_materialize",
+        "shaderRes": "res://71bffac6-c618-47c6-a6c3-d5836589159f",
+        "shaderPropertyBindings": {
+          "Mesh": "mesh",
+          "MeshTexture": "_Texture",
+          "PatternTexture": "_MaterializePattern",
+          "OverlayTexture": "_MaterializeOverlay",
+          "MeshNormalMap": "_NormalMap",
+          "UseMetalicSmoothnessTexture": "_UseMetalicSmoothnessTexture",
+          "MetalicSmoothnessTexture": "_MetalicSmoothnessTexture",
+          "Smoothness": "_Smoothness",
+          "UseAmbientOcclusionTexture": "_UseAmbientOcclusionTexture",
+          "AmbientOcclusionTexture": "_AmbientOcclusionTexture",
+          "UseEmissionMap": "_UseEmissionMap",
+          "EmissionMap": "_EmissionMap",
+          "EmissionMapColor": "_EmissionMapColor",
+          "MaterializeFuzzyness": "_MaterializeProgressFuzzyness",
+          "MaterializeGradient": "_MaterializeGradient",
+          "OverlayAnimationOffsetMultiplier": "_MaterializeOverlayAnimationMultiplier",
+          "PatternSpeedXY": "_MaterializePatternSpeed",
+          "DisplacementNoiseScale": "_DisplacementNoiseScale"
+        },
+        "shaderPropertyExpressions": {
+          "subMeshMask": {
+            "rootNodeId": "c0",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 4294967295
+              }
+            }
+          },
+          "_UseMetalicSmoothnessTexture": {
+            "rootNodeId": "p0",
+            "outputType": "bool",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "bool",
+                "exposedName": "UseMetalicSmoothnessTexture",
+                "defaultValue": true
+              }
+            }
+          },
+          "_Smoothness": {
+            "rootNodeId": "p0",
+            "outputType": "float",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "float",
+                "exposedName": "Smoothness",
+                "defaultValue": 0.5
+              }
+            }
+          },
+          "_UseAmbientOcclusionTexture": {
+            "rootNodeId": "p0",
+            "outputType": "bool",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "bool",
+                "exposedName": "UseAmbientOcclusionTexture",
+                "defaultValue": true
+              }
+            }
+          },
+          "_UseEmissionMap": {
+            "rootNodeId": "p0",
+            "outputType": "bool",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "bool",
+                "exposedName": "UseEmissionMap",
+                "defaultValue": true
+              }
+            }
+          },
+          "_EmissionMapColor": {
+            "rootNodeId": "p0",
+            "outputType": "vec4",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "vec4",
+                "exposedName": "EmissionMapColor",
+                "defaultValue": {
+                  "r": 0,
+                  "g": 7.0331497,
+                  "b": 25.992073,
+                  "a": 1
+                }
+              }
+            }
+          },
+          "_MaterializeProgress": {
+            "rootNodeId": "n2",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "Curve",
+                "value": {
+                  "frames": [
+                    {
+                      "time": 0,
+                      "value": 1,
+                      "inTangent": -2.0199592113494873,
+                      "outTangent": -2.0199592113494873,
+                      "tangentMode": 0,
+                      "leftTangentMode": 0,
+                      "rightTangentMode": 0,
+                      "broken": false
+                    },
+                    {
+                      "time": 1,
+                      "value": 0,
+                      "inTangent": -1.0073803663253784,
+                      "outTangent": -1.0073803663253784,
+                      "tangentMode": 0,
+                      "leftTangentMode": 0,
+                      "rightTangentMode": 0,
+                      "broken": false
+                    }
+                  ],
+                  "preWrapMode": 8,
+                  "postWrapMode": 8,
+                  "version": 1
+                },
+                "slotName": "curve"
+              },
+              "c1": {
+                "kind": "GlobalTimeRatio",
+                "outputType": "float",
+                "duration": 4,
+                "continuous": false
+              },
+              "n2": {
+                "kind": "SampleCurve",
+                "outputType": "float",
+                "inputs": [
+                  "c0",
+                  "c1"
+                ]
+              }
+            }
+          },
+          "_MaterializeProgressFuzzyness": {
+            "rootNodeId": "p0",
+            "outputType": "float",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "float",
+                "exposedName": "MaterializeFuzzyness",
+                "defaultValue": 0.5
+              }
+            }
+          },
+          "_MaterializeOverlayColor": {
+            "rootNodeId": "n2",
+            "outputType": "vec3",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "Gradient",
+                "exposedName": "ColorOverLife",
+                "defaultValue": {
+                  "colorKeys": [
+                    {
+                      "color": {
+                        "r": 2.9960784912109375,
+                        "g": 1.7087767124176025,
+                        "b": 0.10980395972728729,
+                        "a": 1
+                      },
+                      "time": 0
+                    },
+                    {
+                      "color": {
+                        "r": 5.992156982421875,
+                        "g": 3.4196078777313232,
+                        "b": 0.250980406999588,
+                        "a": 1
+                      },
+                      "time": 0.20000000298023224
+                    },
+                    {
+                      "color": {
+                        "r": 5.216474533081055,
+                        "g": 0.49444159865379333,
+                        "b": 0,
+                        "a": 1
+                      },
+                      "time": 0.4000000059604645
+                    },
+                    {
+                      "color": {
+                        "r": 0.7264150977134705,
+                        "g": 0.006395251024514437,
+                        "b": 0,
+                        "a": 1
+                      },
+                      "time": 0.7499961853027344
+                    }
+                  ],
+                  "alphaKeys": [
+                    {
+                      "alpha": 1,
+                      "time": 0
+                    },
+                    {
+                      "alpha": 1,
+                      "time": 1
+                    }
+                  ],
+                  "gradientMode": 0
+                }
+              },
+              "c1": {
+                "kind": "GlobalTimeRatio",
+                "outputType": "float",
+                "duration": 4,
+                "continuous": false
+              },
+              "n2": {
+                "kind": "SampleGradient",
+                "outputType": "vec4",
+                "inputs": [
+                  "p0",
+                  "c1"
+                ]
+              }
+            }
+          },
+          "_MaterializeOverlayAdditive": {
+            "rootNodeId": "c0",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 0
+              }
+            }
+          },
+          "_MaterializeOverlayAnimationMultiplier": {
+            "rootNodeId": "p0",
+            "outputType": "float",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "float",
+                "exposedName": "OverlayAnimationOffsetMultiplier",
+                "defaultValue": -0.03
+              }
+            }
+          },
+          "_MaterializeEdgeThickness": {
+            "rootNodeId": "n4",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "Curve",
+                "value": {
+                  "frames": [
+                    {
+                      "time": 0,
+                      "value": 0.10000000149011612,
+                      "inTangent": 0,
+                      "outTangent": 0,
+                      "tangentMode": 0,
+                      "leftTangentMode": 0,
+                      "rightTangentMode": 0,
+                      "broken": false
+                    },
+                    {
+                      "time": 1,
+                      "value": 1,
+                      "inTangent": 2.139594554901123,
+                      "outTangent": 2.139594554901123,
+                      "tangentMode": 0,
+                      "leftTangentMode": 0,
+                      "rightTangentMode": 0,
+                      "broken": false
+                    }
+                  ],
+                  "preWrapMode": 8,
+                  "postWrapMode": 8,
+                  "version": 1
+                },
+                "slotName": "curve"
+              },
+              "c1": {
+                "kind": "GlobalTimeRatio",
+                "outputType": "float",
+                "duration": 4,
+                "continuous": false
+              },
+              "n2": {
+                "kind": "SampleCurve",
+                "outputType": "float",
+                "inputs": [
+                  "c0",
+                  "c1"
+                ]
+              },
+              "p3": {
+                "kind": "VFXParameter",
+                "outputType": "float",
+                "exposedName": "EdgeThickness",
+                "defaultValue": 0.6
+              },
+              "n4": {
+                "kind": "Mul",
+                "outputType": "float",
+                "inputs": [
+                  "n2",
+                  "p3"
+                ]
+              }
+            }
+          },
+          "_MaterializeEdgeColor": {
+            "rootNodeId": "n2",
+            "outputType": "vec4",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "Gradient",
+                "exposedName": "ColorOverLife",
+                "defaultValue": {
+                  "colorKeys": [
+                    {
+                      "color": {
+                        "r": 2.9960784912109375,
+                        "g": 1.7087767124176025,
+                        "b": 0.10980395972728729,
+                        "a": 1
+                      },
+                      "time": 0
+                    },
+                    {
+                      "color": {
+                        "r": 5.992156982421875,
+                        "g": 3.4196078777313232,
+                        "b": 0.250980406999588,
+                        "a": 1
+                      },
+                      "time": 0.20000000298023224
+                    },
+                    {
+                      "color": {
+                        "r": 5.216474533081055,
+                        "g": 0.49444159865379333,
+                        "b": 0,
+                        "a": 1
+                      },
+                      "time": 0.4000000059604645
+                    },
+                    {
+                      "color": {
+                        "r": 0.7264150977134705,
+                        "g": 0.006395251024514437,
+                        "b": 0,
+                        "a": 1
+                      },
+                      "time": 0.7499961853027344
+                    }
+                  ],
+                  "alphaKeys": [
+                    {
+                      "alpha": 1,
+                      "time": 0
+                    },
+                    {
+                      "alpha": 1,
+                      "time": 1
+                    }
+                  ],
+                  "gradientMode": 0
+                }
+              },
+              "c1": {
+                "kind": "GlobalTimeRatio",
+                "outputType": "float",
+                "duration": 4,
+                "continuous": false
+              },
+              "n2": {
+                "kind": "SampleGradient",
+                "outputType": "vec4",
+                "inputs": [
+                  "p0",
+                  "c1"
+                ]
+              }
+            }
+          },
+          "_MaterializePatternSpeed": {
+            "rootNodeId": "p0",
+            "outputType": "vec2",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "vec2",
+                "exposedName": "PatternSpeedXY",
+                "defaultValue": {
+                  "x": 0.20000000298023224,
+                  "y": -0.4000000059604645
+                }
+              }
+            }
+          },
+          "_MaterializePatternOffset": {
+            "rootNodeId": "n8",
+            "outputType": "vec2",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 0,
+                "slotName": "Min"
+              },
+              "c1": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 1,
+                "slotName": "Max"
+              },
+              "c2": {
+                "kind": "Constant",
+                "outputType": "int",
+                "value": 101,
+                "slotName": "seed"
+              },
+              "c3": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 0.5,
+                "slotName": "constRandom"
+              },
+              "c4": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 0,
+                "slotName": "Min"
+              },
+              "c5": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 1,
+                "slotName": "Max"
+              },
+              "c6": {
+                "kind": "Constant",
+                "outputType": "int",
+                "value": 102,
+                "slotName": "seed"
+              },
+              "c7": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 0.5,
+                "slotName": "constRandom"
+              },
+              "n8": {
+                "kind": "CombineVec2",
+                "outputType": "vec2",
+                "inputs": [
+                  "c3",
+                  "c7"
+                ]
+              }
+            }
+          },
+          "_DisplacementMultiplier": {
+            "rootNodeId": "n4",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "Curve",
+                "value": {
+                  "frames": [
+                    {
+                      "time": 0,
+                      "value": 0,
+                      "inTangent": 0,
+                      "outTangent": 0,
+                      "tangentMode": 0,
+                      "leftTangentMode": 0,
+                      "rightTangentMode": 0,
+                      "broken": false
+                    },
+                    {
+                      "time": 1,
+                      "value": 1,
+                      "inTangent": 0,
+                      "outTangent": 0,
+                      "tangentMode": 0,
+                      "leftTangentMode": 0,
+                      "rightTangentMode": 0,
+                      "broken": false
+                    }
+                  ],
+                  "preWrapMode": 8,
+                  "postWrapMode": 8,
+                  "version": 1
+                },
+                "slotName": "curve"
+              },
+              "c1": {
+                "kind": "GlobalTimeRatio",
+                "outputType": "float",
+                "duration": 4,
+                "continuous": false
+              },
+              "n2": {
+                "kind": "SampleCurve",
+                "outputType": "float",
+                "inputs": [
+                  "c0",
+                  "c1"
+                ]
+              },
+              "p3": {
+                "kind": "VFXParameter",
+                "outputType": "float",
+                "exposedName": "DisplacementMultiplier",
+                "defaultValue": 0
+              },
+              "n4": {
+                "kind": "Mul",
+                "outputType": "float",
+                "inputs": [
+                  "n2",
+                  "p3"
+                ]
+              }
+            }
+          },
+          "_DisplacementNoiseScale": {
+            "rootNodeId": "p0",
+            "outputType": "float",
+            "nodes": {
+              "p0": {
+                "kind": "VFXParameter",
+                "outputType": "float",
+                "exposedName": "DisplacementNoiseScale",
+                "defaultValue": 1
+              }
+            }
+          }
+        },
+        "shaderBindingLinks": {
+          "Mesh": 123,
+          "MeshTexture": 124,
+          "PatternTexture": 139,
+          "OverlayTexture": 138,
+          "MeshNormalMap": 125,
+          "UseMetalicSmoothnessTexture": 126,
+          "MetalicSmoothnessTexture": 128,
+          "Smoothness": 129,
+          "UseAmbientOcclusionTexture": 130,
+          "AmbientOcclusionTexture": 131,
+          "UseEmissionMap": 132,
+          "EmissionMap": 133,
+          "EmissionMapColor": 134,
+          "_MaterializeProgress": 51,
+          "MaterializeFuzzyness": 143,
+          "MaterializeGradient": 142,
+          "_MaterializeOverlayColor": 56,
+          "OverlayAnimationOffsetMultiplier": 135,
+          "_MaterializeEdgeThickness": 55,
+          "_MaterializeEdgeColor": 53,
+          "PatternSpeedXY": 140,
+          "_MaterializePatternOffset": [
+            59,
+            60
+          ],
+          "_DisplacementMultiplier": 58,
+          "DisplacementNoiseScale": 141
+        },
+        "_meshProperty": "Mesh",
+        "blendMode": "Alpha",
+        "mainTexture": "",
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "softParticleFade": 0,
+        "uvMode": "Default",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "cameraSort": false,
+        "frustumCull": false,
+        "mesh": "res://f042c66d-1de8-44b5-af1b-0058442f1316@lm0",
+        "shaderPropertyDefaults": {
+          "_Texture": "res://64acda2d-b3c1-4241-9fc0-1987014dfc11",
+          "_MaterializePattern": "res://7aa85175-cbe6-4e7e-9f3f-eb37f70e3164",
+          "_MaterializeOverlay": "res://8dc3dde4-ca90-44bb-8732-3488f0772fba",
+          "_NormalMap": "res://b2c377bc-a64b-4b66-a06c-f9921196e978",
+          "_MetalicSmoothnessTexture": "res://d61f8f3f-4184-4510-98fa-642e1ab005f0",
+          "_AmbientOcclusionTexture": "res://2d38c12e-adc0-48af-8c0f-c8a0272b0bf3",
+          "_EmissionMap": "res://6196ad29-048f-43ff-bc58-77ae1b6c4485",
+          "_MaterializeGradient": "res://496186cb-ae50-48e1-bf1e-e4fed898a014"
+        }
+      }
+    }
+  ],
+  "operators": [
+    {
+      "id": 25,
+      "typeId": "ageOverLifetime",
+      "uiData": {
+        "x": 53,
+        "y": 1951
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 26,
+              "slotId": "t"
+            },
+            {
+              "nodeId": 30,
+              "slotId": "t"
+            },
+            {
+              "nodeId": 40,
+              "slotId": "t"
+            },
+            {
+              "nodeId": 41,
+              "slotId": "t"
+            },
+            {
+              "nodeId": 44,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {}
+    },
+    {
+      "id": 26,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 532,
+        "y": 2511
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 27,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            1,
+            -2.8264994621276855,
+            -2.8264994621276855,
+            0.333,
+            0.333,
+            0,
+            1,
+            0,
+            0.03938144072890282,
+            0.03938144072890282,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 27,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 768,
+        "y": 2511
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "b": 0
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 28,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 768,
+        "y": 2347
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "min": 0,
+          "max": 1,
+          "seed": 101
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 29,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 768,
+        "y": 2424
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "min": 0,
+          "max": 1,
+          "seed": 102
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 30,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 715,
+        "y": 1931
+      },
+      "output": {},
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            0,
+            0.20467734336853027,
+            0.20467734336853027,
+            0.333,
+            0.333,
+            0,
+            1,
+            1,
+            0.7694374322891235,
+            0.7694374322891235,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 31,
+      "typeId": "ageOverLifetime",
+      "uiData": {
+        "x": 1503,
+        "y": 1984
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 32,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {}
+    },
+    {
+      "id": 32,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 1722,
+        "y": 1964
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 33,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            0.15000000596046448,
+            0,
+            0,
+            0.333,
+            0.333,
+            0,
+            1,
+            1,
+            1.9355376958847046,
+            1.9355376958847046,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 33,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 1966,
+        "y": 1964
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 4,
+              "slotId": "block_158_intensity"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 4
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 34,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 1657,
+        "y": 922
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 36,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            0.4000000059604645,
+            0.3764060437679291,
+            0.3764060437679291,
+            0.333,
+            0.333,
+            0,
+            0.8799999952316284,
+            0.6000000238418579,
+            0.6614921689033508,
+            0.6614921689033508,
+            0.333,
+            0.333,
+            0,
+            1,
+            1,
+            0.03854428604245186,
+            0.03854428604245186,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 35,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 1474,
+        "y": 892
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 34,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "min": 0,
+          "max": 1,
+          "seed": 909
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 36,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 1923,
+        "y": 922
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 6,
+              "slotId": "block_163_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 1.2
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 37,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 1744,
+        "y": 320
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "a": 4,
+          "b": 0.6
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 38,
+      "typeId": "branch",
+      "uiData": {
+        "x": 771,
+        "y": 406
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 1,
+              "slotId": "block_154_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "trueVal": 1
+        }
+      }
+    },
+    {
+      "id": 39,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2892,
+        "y": 310
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "a": 4,
+          "b": 0.5
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 40,
+      "typeId": "sampleGradient",
+      "uiData": {
+        "x": 265,
+        "y": 2120
+      },
+      "output": {},
+      "props": {
+        "gradient": {
+          "stops": [
+            {
+              "t": 0,
+              "color": {
+                "r": 0.3745098,
+                "g": 0.21372549,
+                "b": 0.015686275,
+                "a": 1
+              }
+            },
+            {
+              "t": 0.2,
+              "color": {
+                "r": 5.992157,
+                "g": 3.4196079,
+                "b": 0.2509804,
+                "a": 1
+              }
+            },
+            {
+              "t": 0.4,
+              "color": {
+                "r": 5.2164745,
+                "g": 0.49444160000000004,
+                "b": 0,
+                "a": 1
+              }
+            },
+            {
+              "t": 0.749996,
+              "color": {
+                "r": 0.7264174764799716,
+                "g": 0.006395509311142522,
+                "b": 0,
+                "a": 1
+              }
+            },
+            {
+              "t": 1,
+              "color": {
+                "r": 0.7264151,
+                "g": 0.006395251,
+                "b": 0,
+                "a": 1
+              }
+            }
+          ]
+        },
+        "property": ""
+      }
+    },
+    {
+      "id": 41,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 265,
+        "y": 2245
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 42,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            0.10000000149011612,
+            0,
+            0,
+            0.333,
+            0.333,
+            0,
+            1,
+            1,
+            2.139594554901123,
+            2.139594554901123,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 42,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 499,
+        "y": 2245
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "b": 0.6
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 43,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 456,
+        "y": 2029
+      },
+      "output": {},
+      "props": {
+        "attribute": "color",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 44,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 804,
+        "y": 2909
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 23,
+              "slotId": "block_203_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0.10000000149011612,
+            1,
+            0,
+            0,
+            0.333,
+            0.333,
+            0,
+            0.5,
+            0,
+            -0.026378335431218147,
+            -0.026378335431218147,
+            0.333,
+            0.333,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 45,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 3882,
+        "y": 1271
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 47,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 48,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "a": 1,
+          "b": 0.25
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 46,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 4254,
+        "y": 1379
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 14,
+              "slotId": "block_189_value_y"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "seed": 0
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 47,
+      "typeId": "add",
+      "uiData": {
+        "x": 4076,
+        "y": 1514
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 46,
+              "slotId": "max"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "a": 0.25
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 48,
+      "typeId": "subtract",
+      "uiData": {
+        "x": 4067,
+        "y": 1389
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 46,
+              "slotId": "min"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 0.25
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 49,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 4236,
+        "y": 310
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "a": 4,
+          "b": 0.65
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 50,
+      "typeId": "ageOverLifetime",
+      "uiData": {
+        "x": 5117,
+        "y": 1951
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 57,
+              "slotId": "t"
+            },
+            {
+              "nodeId": 51,
+              "slotId": "t"
+            },
+            {
+              "nodeId": 53,
+              "slotId": "t"
+            },
+            {
+              "nodeId": 54,
+              "slotId": "t"
+            },
+            {
+              "nodeId": 61,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {}
+    },
+    {
+      "id": 51,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 5779,
+        "y": 1931
+      },
+      "output": {},
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            1,
+            -2.0199592113494873,
+            -2.0199592113494873,
+            0.333,
+            0.333,
+            0,
+            1,
+            0,
+            -1.0073803663253784,
+            -1.0073803663253784,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 52,
+      "typeId": "branch",
+      "uiData": {
+        "x": 5835,
+        "y": 406
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 17,
+              "slotId": "block_197_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "trueVal": 1,
+          "falseVal": 0
+        }
+      }
+    },
+    {
+      "id": 53,
+      "typeId": "sampleGradient",
+      "uiData": {
+        "x": 5329,
+        "y": 2120
+      },
+      "output": {},
+      "props": {
+        "gradient": {
+          "stops": [
+            {
+              "t": 0,
+              "color": {
+                "r": 0.3745098,
+                "g": 0.21372549,
+                "b": 0.015686275,
+                "a": 1
+              }
+            },
+            {
+              "t": 0.2,
+              "color": {
+                "r": 5.992157,
+                "g": 3.4196079,
+                "b": 0.2509804,
+                "a": 1
+              }
+            },
+            {
+              "t": 0.4,
+              "color": {
+                "r": 5.2164745,
+                "g": 0.49444160000000004,
+                "b": 0,
+                "a": 1
+              }
+            },
+            {
+              "t": 0.749996,
+              "color": {
+                "r": 0.7264174764799716,
+                "g": 0.006395509311142522,
+                "b": 0,
+                "a": 1
+              }
+            },
+            {
+              "t": 1,
+              "color": {
+                "r": 0.7264151,
+                "g": 0.006395251,
+                "b": 0,
+                "a": 1
+              }
+            }
+          ]
+        },
+        "property": ""
+      }
+    },
+    {
+      "id": 54,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 5329,
+        "y": 2245
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 55,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            0.10000000149011612,
+            0,
+            0,
+            0.333,
+            0.333,
+            0,
+            1,
+            1,
+            2.139594554901123,
+            2.139594554901123,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 55,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 5563,
+        "y": 2245
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "b": 0.6
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 56,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 5520,
+        "y": 2029
+      },
+      "output": {},
+      "props": {
+        "attribute": "color",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 57,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 5596,
+        "y": 2511
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 58,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            0,
+            0,
+            0,
+            0.333,
+            0.333,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 58,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 5832,
+        "y": 2511
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "b": 0
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 59,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 5832,
+        "y": 2347
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "min": 0,
+          "max": 1,
+          "seed": 101
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 60,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 5832,
+        "y": 2424
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "min": 0,
+          "max": 1,
+          "seed": 102
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 61,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 5868,
+        "y": 2909
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 24,
+              "slotId": "block_204_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            0,
+            0,
+            0,
+            0.333,
+            0.333,
+            0,
+            0.6499999761581421,
+            0,
+            -0.026378335431218147,
+            -0.026378335431218147,
+            0.333,
+            0.333,
+            0,
+            0.949999988079071,
+            1,
+            0,
+            0,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 62,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2372,
+        "y": 97
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "a": 4,
+          "b": 0.1
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 63,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 4684,
+        "y": 89
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "a": 4,
+          "b": 0.25
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 120,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 530
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 5,
+              "slotId": "block_161_value"
+            },
+            {
+              "nodeId": 40,
+              "slotId": "t"
+            },
+            {
+              "nodeId": 53,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "ColorOverLife"
+      }
+    },
+    {
+      "id": 121,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 594
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 27,
+              "slotId": "b"
+            },
+            {
+              "nodeId": 58,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "DisplacementMultiplier"
+      }
+    },
+    {
+      "id": 122,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 658
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 38,
+              "slotId": "predicate"
+            },
+            {
+              "nodeId": 52,
+              "slotId": "predicate"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "EnableMesh"
+      }
+    },
+    {
+      "id": 123,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 722
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 6,
+              "slotId": "block_164_value"
+            },
+            {
+              "nodeId": 11,
+              "slotId": "block_180_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "Mesh"
+      }
+    },
+    {
+      "id": 124,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 786
+      },
+      "output": {},
+      "props": {
+        "property": "MeshTexture"
+      }
+    },
+    {
+      "id": 125,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 850
+      },
+      "output": {},
+      "props": {
+        "property": "MeshNormalMap"
+      }
+    },
+    {
+      "id": 126,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 914
+      },
+      "output": {},
+      "props": {
+        "property": "UseMetalicSmoothnessTexture"
+      }
+    },
+    {
+      "id": 127,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 978
+      },
+      "output": {},
+      "props": {
+        "property": "Bounds"
+      }
+    },
+    {
+      "id": 128,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1042
+      },
+      "output": {},
+      "props": {
+        "property": "MetalicSmoothnessTexture"
+      }
+    },
+    {
+      "id": 129,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1106
+      },
+      "output": {},
+      "props": {
+        "property": "Smoothness"
+      }
+    },
+    {
+      "id": 130,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1170
+      },
+      "output": {},
+      "props": {
+        "property": "UseAmbientOcclusionTexture"
+      }
+    },
+    {
+      "id": 131,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1234
+      },
+      "output": {},
+      "props": {
+        "property": "AmbientOcclusionTexture"
+      }
+    },
+    {
+      "id": 132,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1298
+      },
+      "output": {},
+      "props": {
+        "property": "UseEmissionMap"
+      }
+    },
+    {
+      "id": 133,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1362
+      },
+      "output": {},
+      "props": {
+        "property": "EmissionMap"
+      }
+    },
+    {
+      "id": 134,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1426
+      },
+      "output": {},
+      "props": {
+        "property": "EmissionMapColor"
+      }
+    },
+    {
+      "id": 135,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1490
+      },
+      "output": {},
+      "props": {
+        "property": "OverlayAnimationOffsetMultiplier"
+      }
+    },
+    {
+      "id": 136,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1554
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 23,
+              "slotId": "block_203_value"
+            },
+            {
+              "nodeId": 24,
+              "slotId": "block_204_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SecondaryColor"
+      }
+    },
+    {
+      "id": 137,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1618
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 42,
+              "slotId": "b"
+            },
+            {
+              "nodeId": 55,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "EdgeThickness"
+      }
+    },
+    {
+      "id": 138,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1682
+      },
+      "output": {},
+      "props": {
+        "property": "OverlayTexture"
+      }
+    },
+    {
+      "id": 139,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1746
+      },
+      "output": {},
+      "props": {
+        "property": "PatternTexture"
+      }
+    },
+    {
+      "id": 140,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1810
+      },
+      "output": {},
+      "props": {
+        "property": "PatternSpeedXY"
+      }
+    },
+    {
+      "id": 141,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1874
+      },
+      "output": {},
+      "props": {
+        "property": "DisplacementNoiseScale"
+      }
+    },
+    {
+      "id": 142,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1938
+      },
+      "output": {},
+      "props": {
+        "property": "MaterializeGradient"
+      }
+    },
+    {
+      "id": 143,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 2002
+      },
+      "output": {},
+      "props": {
+        "property": "MaterializeFuzzyness"
+      }
+    },
+    {
+      "id": 144,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 2066
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 37,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 39,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 62,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 49,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 63,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 2,
+              "slotId": "block_155_value"
+            },
+            {
+              "nodeId": 18,
+              "slotId": "block_198_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "Duration"
+      }
+    },
+    {
+      "id": 145,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 2130
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 7,
+              "slotId": "block_170_value"
+            },
+            {
+              "nodeId": 21,
+              "slotId": "block_201_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SwarmSpawnRate"
+      }
+    },
+    {
+      "id": 146,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 2194
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 33,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SwarmTurbulenceMultiplier"
+      }
+    },
+    {
+      "id": 147,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 2258
+      },
+      "output": {
+        "value_x": {
+          "infoArr": [
+            {
+              "nodeId": 14,
+              "slotId": "block_189_value_x"
+            }
+          ]
+        },
+        "value_y": {
+          "infoArr": [
+            {
+              "nodeId": 47,
+              "slotId": "b"
+            },
+            {
+              "nodeId": 48,
+              "slotId": "a"
+            }
+          ]
+        },
+        "value_z": {
+          "infoArr": [
+            {
+              "nodeId": 14,
+              "slotId": "block_189_value_z"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "VFXCenterOffset"
+      }
+    },
+    {
+      "id": 148,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 2322
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 45,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "VFXSpawnHeight"
+      }
+    },
+    {
+      "id": 149,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 2386
+      },
+      "output": {
+        "value_x": {
+          "infoArr": [
+            {
+              "nodeId": 6,
+              "slotId": "block_165_value"
+            }
+          ]
+        },
+        "value_y": {
+          "infoArr": [
+            {
+              "nodeId": 6,
+              "slotId": "block_165_b_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SwarmSizeMinMax"
+      }
+    },
+    {
+      "id": 150,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 2450
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 10,
+              "slotId": "block_172_value"
+            },
+            {
+              "nodeId": 13,
+              "slotId": "block_184_value"
+            },
+            {
+              "nodeId": 22,
+              "slotId": "block_202_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SmokeSpawnRate"
+      }
+    },
+    {
+      "id": 151,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 2514
+      },
+      "output": {
+        "value_x": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "block_173_value"
+            },
+            {
+              "nodeId": 14,
+              "slotId": "block_185_value"
+            }
+          ]
+        },
+        "value_y": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "block_173_b_value"
+            },
+            {
+              "nodeId": 14,
+              "slotId": "block_185_b_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SmokeLifetimeMinMax"
+      }
+    },
+    {
+      "id": 152,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 2578
+      },
+      "output": {
+        "value_x": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "block_174_value"
+            },
+            {
+              "nodeId": 14,
+              "slotId": "block_186_value"
+            }
+          ]
+        },
+        "value_y": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "block_174_b_value"
+            },
+            {
+              "nodeId": 14,
+              "slotId": "block_186_b_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SmokeSizeMinMax"
+      }
+    },
+    {
+      "id": 153,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 2642
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 36,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SwarmLifetimeMax"
+      }
+    }
+  ],
+  "props": {
+    "fixedDeltaTime": false,
+    "exactFixedTime": false,
+    "ignoreTimeScale": false,
+    "preWarmTotalTime": 0,
+    "preWarmStepCount": 0,
+    "preWarmDeltaTime": 0,
+    "initialEventName": "in"
+  },
+  "properties": [
+    {
+      "name": "ColorOverLife",
+      "type": "Gradient",
+      "exposed": true,
+      "group": "Main VFX",
+      "default": {
+        "stops": [
+          {
+            "t": 0,
+            "color": {
+              "r": 0.3745098,
+              "g": 0.21372549,
+              "b": 0.015686275,
+              "a": 1
+            }
+          },
+          {
+            "t": 0.2,
+            "color": {
+              "r": 5.992157,
+              "g": 3.4196079,
+              "b": 0.2509804,
+              "a": 1
+            }
+          },
+          {
+            "t": 0.4,
+            "color": {
+              "r": 5.2164745,
+              "g": 0.49444160000000004,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "t": 0.749996,
+            "color": {
+              "r": 0.7264174764799716,
+              "g": 0.006395509311142522,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "t": 1,
+            "color": {
+              "r": 0.7264151,
+              "g": 0.006395251,
+              "b": 0,
+              "a": 1
+            }
+          }
+        ]
+      },
+      "prefabOverridden": true
+    },
+    {
+      "name": "DisplacementMultiplier",
+      "type": "float",
+      "exposed": true,
+      "group": "Mesh Materialize",
+      "default": 0
+    },
+    {
+      "name": "EnableMesh",
+      "type": "bool",
+      "exposed": true,
+      "group": "Mesh",
+      "default": [
+        1
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "Mesh",
+      "type": "Mesh",
+      "exposed": true,
+      "group": "Main VFX",
+      "default": [
+        "res://f042c66d-1de8-44b5-af1b-0058442f1316@lm0"
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "MeshTexture",
+      "type": "Texture2D",
+      "exposed": true,
+      "group": "Mesh",
+      "default": [
+        "res://64acda2d-b3c1-4241-9fc0-1987014dfc11"
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "MeshNormalMap",
+      "type": "Texture2D",
+      "exposed": true,
+      "group": "Mesh",
+      "default": [
+        "res://b2c377bc-a64b-4b66-a06c-f9921196e978"
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "UseMetalicSmoothnessTexture",
+      "type": "bool",
+      "exposed": true,
+      "group": "Mesh",
+      "default": [
+        1
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "Bounds",
+      "type": "float",
+      "exposed": true,
+      "group": "Main VFX",
+      "default": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "size": {
+          "x": 8,
+          "y": 8,
+          "z": 8
+        }
+      }
+    },
+    {
+      "name": "MetalicSmoothnessTexture",
+      "type": "Texture2D",
+      "exposed": true,
+      "group": "Mesh",
+      "default": [
+        "res://d61f8f3f-4184-4510-98fa-642e1ab005f0"
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "Smoothness",
+      "type": "float",
+      "exposed": true,
+      "group": "Mesh",
+      "default": [
+        0.75
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "UseAmbientOcclusionTexture",
+      "type": "bool",
+      "exposed": true,
+      "group": "Mesh",
+      "default": [
+        1
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "AmbientOcclusionTexture",
+      "type": "Texture2D",
+      "exposed": true,
+      "group": "Mesh",
+      "default": [
+        "res://2d38c12e-adc0-48af-8c0f-c8a0272b0bf3"
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "UseEmissionMap",
+      "type": "bool",
+      "exposed": true,
+      "group": "Mesh",
+      "default": [
+        1
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "EmissionMap",
+      "type": "Texture2D",
+      "exposed": true,
+      "group": "Mesh",
+      "default": [
+        "res://6196ad29-048f-43ff-bc58-77ae1b6c4485"
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "EmissionMapColor",
+      "type": "color",
+      "exposed": true,
+      "group": "Mesh",
+      "default": [
+        0,
+        7.0331497,
+        25.992073,
+        1
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "OverlayAnimationOffsetMultiplier",
+      "type": "float",
+      "exposed": true,
+      "group": "Mesh Materialize",
+      "default": -0.03
+    },
+    {
+      "name": "SecondaryColor",
+      "type": "color",
+      "exposed": true,
+      "group": "Main VFX",
+      "default": {
+        "r": 82.11322784423828,
+        "g": 21.065698623657227,
+        "b": 0,
+        "a": 0
+      }
+    },
+    {
+      "name": "EdgeThickness",
+      "type": "float",
+      "exposed": true,
+      "group": "Mesh Materialize",
+      "default": 0.6
+    },
+    {
+      "name": "OverlayTexture",
+      "type": "Texture2D",
+      "exposed": true,
+      "group": "Mesh Materialize",
+      "default": [
+        "res://8dc3dde4-ca90-44bb-8732-3488f0772fba"
+      ]
+    },
+    {
+      "name": "PatternTexture",
+      "type": "Texture2D",
+      "exposed": true,
+      "group": "Mesh Materialize",
+      "default": [
+        "res://7aa85175-cbe6-4e7e-9f3f-eb37f70e3164"
+      ]
+    },
+    {
+      "name": "PatternSpeedXY",
+      "type": "vec2",
+      "exposed": true,
+      "group": "Mesh Materialize",
+      "default": {
+        "x": 0.20000000298023224,
+        "y": -0.4000000059604645
+      }
+    },
+    {
+      "name": "DisplacementNoiseScale",
+      "type": "float",
+      "exposed": true,
+      "group": "Mesh Materialize",
+      "default": 1
+    },
+    {
+      "name": "MaterializeGradient",
+      "type": "Texture2D",
+      "exposed": true,
+      "group": "Mesh Materialize",
+      "default": [
+        "res://496186cb-ae50-48e1-bf1e-e4fed898a014"
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "MaterializeFuzzyness",
+      "type": "float",
+      "exposed": true,
+      "group": "Mesh Materialize",
+      "range": [
+        0.5,
+        4
+      ],
+      "default": 0.5
+    },
+    {
+      "name": "Duration",
+      "type": "float",
+      "exposed": true,
+      "group": "Main VFX",
+      "default": 4
+    },
+    {
+      "name": "SwarmSpawnRate",
+      "type": "float",
+      "exposed": true,
+      "group": "VFX Animation",
+      "range": [
+        0,
+        1024
+      ],
+      "default": 896
+    },
+    {
+      "name": "SwarmTurbulenceMultiplier",
+      "type": "float",
+      "exposed": true,
+      "group": "VFX Animation",
+      "default": 4
+    },
+    {
+      "name": "VFXCenterOffset",
+      "type": "vec3",
+      "exposed": true,
+      "group": "Main VFX",
+      "default": [
+        0,
+        1.25,
+        0
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "VFXSpawnHeight",
+      "type": "float",
+      "exposed": true,
+      "group": "Main VFX",
+      "default": [
+        2
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "SwarmSizeMinMax",
+      "type": "vec2",
+      "exposed": true,
+      "group": "VFX Animation",
+      "default": [
+        0.08,
+        0.14
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "SmokeSpawnRate",
+      "type": "float",
+      "exposed": true,
+      "group": "VFX Animation",
+      "range": [
+        0,
+        128
+      ],
+      "default": 128
+    },
+    {
+      "name": "SmokeLifetimeMinMax",
+      "type": "vec2",
+      "exposed": true,
+      "group": "VFX Animation",
+      "default": {
+        "x": 0.5,
+        "y": 2
+      }
+    },
+    {
+      "name": "SmokeSizeMinMax",
+      "type": "vec2",
+      "exposed": true,
+      "group": "VFX Animation",
+      "default": {
+        "x": 0.20000000298023224,
+        "y": 0.4000000059604645
+      }
+    },
+    {
+      "name": "SwarmLifetimeMax",
+      "type": "float",
+      "exposed": true,
+      "group": "VFX Animation",
+      "default": 1.2
+    }
+  ],
+  "customAttributes": []
+}

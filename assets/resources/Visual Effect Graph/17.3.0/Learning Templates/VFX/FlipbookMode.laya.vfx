@@ -1,0 +1,1695 @@
+{
+  "autoID": 89,
+  "events": [],
+  "contexts": [
+    {
+      "id": 1,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 2814,
+        "y": 163
+      },
+      "blocks": [
+        {
+          "id": 63,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Constant",
+            "count": 2,
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "countRange": {
+              "x": 0,
+              "y": 10
+            },
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Infinite",
+        "loopDuration": -1,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 2,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 2814,
+        "y": 503
+      },
+      "blocks": [
+        {
+          "id": 64,
+          "typeId": "setPositionShape",
+          "enabled": true,
+          "props": {
+            "shape": "Line",
+            "positionMode": "Surface",
+            "positionComposition": "Overwrite",
+            "directionComposition": "Overwrite",
+            "axesComposition": "Overwrite",
+            "spawnMode": "Custom",
+            "line": {
+              "start": {
+                "x": -0.46000000834465027,
+                "y": 1,
+                "z": 0
+              },
+              "end": {
+                "x": 0.46000000834465027,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "thickness": 0.1,
+            "heightMode": "Volume",
+            "heightSequencer": 0.5,
+            "arcSequencer": 0,
+            "lineSequencer": 0.5,
+            "applyOrientation": 1,
+            "arcSphere": {
+              "sphere": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "orientedBox": {
+              "center": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "angle": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "size": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "arcCone": {
+              "cone": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "baseRadius": 1,
+                "topRadius": 0,
+                "height": 1
+              },
+              "arc": 6.2831853
+            },
+            "arcTorus": {
+              "torus": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "majorRadius": 1,
+                "minorRadius": 0.3
+              },
+              "arc": 6.2831853
+            },
+            "arcCircle": {
+              "circle": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "planeCenter": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "planeNormal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "planeSize": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        },
+        {
+          "id": 65,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.8,
+              "value": 0.8
+            }
+          }
+        },
+        {
+          "id": 66,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "scale",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.25,
+              "y": 0.6000000238418579,
+              "z": 1
+            }
+          }
+        },
+        {
+          "id": 67,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "pivot",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 2,
+            "_values": {
+              "x": 0,
+              "y": -0.5,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 68,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Add",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0.125,
+              "z": 0.029999999329447746
+            }
+          }
+        },
+        {
+          "id": 69,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0,
+              "y": 15,
+              "b_value": 15
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 2,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 3,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "typeId": "update",
+      "uiData": {
+        "x": 2814,
+        "y": 1445
+      },
+      "blocks": [
+        {
+          "id": 70,
+          "typeId": "flipbookPlay",
+          "enabled": true,
+          "props": {
+            "mode": "Constant",
+            "frameRate": 30,
+            "frameCount": 16
+          }
+        },
+        {
+          "id": 71,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angle",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 4,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": -20.7
+            }
+          }
+        },
+        {
+          "id": 72,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": [
+          {
+            "targetId": 5,
+            "targetSlotId": "input"
+          },
+          {
+            "targetId": 4,
+            "targetSlotId": "input"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 3200,
+        "y": 2101
+      },
+      "blocks": [
+        {
+          "id": 73,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Fixed Axis",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 74,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "alive",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 1,
+              "value": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Additive",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "FlipbookBlend",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://7859a580-8e1c-44dd-8062-34865b738df4"
+      }
+    },
+    {
+      "id": 5,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 2608,
+        "y": 2093
+      },
+      "blocks": [
+        {
+          "id": 75,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Fixed Axis",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 76,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "alive",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 1,
+              "value": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Additive",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://7859a580-8e1c-44dd-8062-34865b738df4"
+      }
+    },
+    {
+      "id": 6,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 4664,
+        "y": 1447
+      },
+      "blocks": [
+        {
+          "id": 77,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Face Camera Plane",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 78,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.46000000834465027,
+              "y": 1.6934540271759033,
+              "z": -0.14398689568042755
+            }
+          }
+        },
+        {
+          "id": 79,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.3,
+              "value": 0.3
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 5,
+          "y": 2
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://9cf21367-367c-4f69-870b-4c4f35e0a68c"
+      }
+    },
+    {
+      "id": 7,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 5150,
+        "y": 1447
+      },
+      "blocks": [
+        {
+          "id": 80,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Face Camera Plane",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 81,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": -0.4692322611808777,
+              "y": 1.6934536695480347,
+              "z": -0.14398686587810516
+            }
+          }
+        },
+        {
+          "id": 82,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.3,
+              "value": 0.3
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "FlipbookBlend",
+        "flipbookSize": {
+          "x": 5,
+          "y": 2
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://9cf21367-367c-4f69-870b-4c4f35e0a68c"
+      }
+    },
+    {
+      "id": 8,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 4876,
+        "y": 355
+      },
+      "blocks": [
+        {
+          "id": 83,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Constant",
+            "count": 1,
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "countRange": {
+              "x": 0,
+              "y": 10
+            },
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Infinite",
+        "loopDuration": -1,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 9,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 4876,
+        "y": 747
+      },
+      "blocks": [],
+      "props": {
+        "space": "Local",
+        "capacity": 1,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 10,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "typeId": "update",
+      "uiData": {
+        "x": 4876,
+        "y": 1165
+      },
+      "blocks": [
+        {
+          "id": 84,
+          "typeId": "flipbookPlay",
+          "enabled": true,
+          "props": {
+            "mode": "Constant",
+            "frameRate": 3,
+            "frameCount": 16
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": [
+          {
+            "targetId": 6,
+            "targetSlotId": "input"
+          },
+          {
+            "targetId": 7,
+            "targetSlotId": "input"
+          }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 743,
+        "y": 795
+      },
+      "blocks": [
+        {
+          "id": 85,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Constant",
+            "count": 2,
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "countRange": {
+              "x": 0,
+              "y": 10
+            },
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Infinite",
+        "loopDuration": -1,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Infinite",
+        "loopCount": -1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 12,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 743,
+        "y": 1183
+      },
+      "blocks": [
+        {
+          "id": 86,
+          "typeId": "setPositionShape",
+          "enabled": true,
+          "props": {
+            "shape": "Line",
+            "positionMode": "Surface",
+            "positionComposition": "Overwrite",
+            "directionComposition": "Overwrite",
+            "axesComposition": "Overwrite",
+            "spawnMode": "Custom",
+            "line": {
+              "start": {
+                "x": -0.46000000834465027,
+                "y": 1,
+                "z": 0
+              },
+              "end": {
+                "x": 0.46000000834465027,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "thickness": 0.1,
+            "heightMode": "Volume",
+            "heightSequencer": 0.5,
+            "arcSequencer": 0,
+            "lineSequencer": 0.5,
+            "applyOrientation": 1,
+            "arcSphere": {
+              "sphere": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "orientedBox": {
+              "center": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "angle": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "size": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "arcCone": {
+              "cone": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "baseRadius": 1,
+                "topRadius": 0,
+                "height": 1
+              },
+              "arc": 6.2831853
+            },
+            "arcTorus": {
+              "torus": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "majorRadius": 1,
+                "minorRadius": 0.3
+              },
+              "arc": 6.2831853
+            },
+            "arcCircle": {
+              "circle": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "planeCenter": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "planeNormal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "planeSize": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        },
+        {
+          "id": 687,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "_ppColorIndex": "_Color_Index",
+          "props": {
+            "attribute": "color",
+            "source": "SpawnIndex",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 4
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 2,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 88,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 13,
+      "typeId": "outputShaderGraphMesh",
+      "uiData": {
+        "x": 743,
+        "y": 1647
+      },
+      "blocks": [
+        {
+          "id": 87,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.504,
+              "value": 0.504
+            }
+          },
+          "_meshSizeFix": 0.01
+        }
+      ],
+      "props": {
+        "shaderName": "SG_Candle",
+        "shaderRes": "res://fc67a371-c501-4d16-9dd3-cf01eb1a9083",
+        "shaderPropertyDefaults": {
+          "mesh": "res://e967aaae-7e5a-4d87-910f-8869618df7cc"
+        },
+        "shaderPropertyExpressions": {
+          "subMeshMask": {
+            "rootNodeId": "c0",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 4294967295
+              }
+            }
+          }
+        },
+        "mesh": "res://e967aaae-7e5a-4d87-910f-8869618df7cc",
+        "blendMode": "Alpha",
+        "mainTexture": "",
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "softParticleFade": 0,
+        "uvMode": "Default",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "cameraSort": false,
+        "frustumCull": false
+      }
+    },
+    {
+      "id": 88,
+      "typeId": "update",
+      "uiData": {
+        "x": 843,
+        "y": 1283
+      },
+      "blocks": [],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 13,
+          "targetSlotId": "input"
+        }
+      }
+    }
+  ],
+  "operators": [
+    {
+      "id": 14,
+      "typeId": "noise",
+      "uiData": {
+        "x": 416,
+        "y": 1798
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "frequency": 17.95,
+          "octaves": 2,
+          "roughness": 0.5,
+          "lacunarity": 2,
+          "range": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        "noiseType": "Value"
+      }
+    },
+    {
+      "id": 15,
+      "typeId": "add",
+      "uiData": {
+        "x": 242,
+        "y": 1798
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 14,
+              "slotId": "coord"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 16,
+      "typeId": "add",
+      "uiData": {
+        "x": 1932,
+        "y": 1711
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 17,
+              "slotId": "coord"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 17,
+      "typeId": "noise",
+      "uiData": {
+        "x": 2072,
+        "y": 1711
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 26,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 27,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "frequency": 2,
+          "octaves": 2,
+          "roughness": 0.5,
+          "lacunarity": 2,
+          "range": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        "noiseType": "Value"
+      }
+    },
+    {
+      "id": 18,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 52,
+        "y": 1892
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 15,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "min": 0,
+          "max": 7.04,
+          "seed": 0
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 19,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2473,
+        "y": 1137
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 2,
+              "slotId": "block_68_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "vec3"
+      }
+    },
+    {
+      "id": 20,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2243,
+        "y": 1199
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 19,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "size",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 21,
+      "typeId": "inlineVector3",
+      "uiData": {
+        "x": 2185,
+        "y": 1097
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 19,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "x": 0,
+        "y": 0.25,
+        "z": 0.029999999329447746
+      }
+    },
+    {
+      "id": 22,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2443,
+        "y": 818
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 2,
+              "slotId": "block_64_lineSequencer"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "spawnIndex",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 23,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2316,
+        "y": 2605
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 24,
+              "slotId": "x"
+            },
+            {
+              "nodeId": 5,
+              "slotId": "block_76_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "spawnIndex",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 24,
+      "typeId": "oneMinus",
+      "uiData": {
+        "x": 2950,
+        "y": 2639
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 4,
+              "slotId": "block_74_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 25,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 380,
+        "y": 1465
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 12,
+              "slotId": "block_86_lineSequencer"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "spawnIndex",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 26,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2494,
+        "y": 1589
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_71_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 20
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 27,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2494,
+        "y": 1773
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_72_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 15
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 28,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 470,
+        "y": 1726
+      },
+      "output": {},
+      "props": {
+        "attribute": "spawnIndex",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 29,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 1738,
+        "y": 1629
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 16,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "min": -150,
+          "max": 150,
+          "seed": 787
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 60,
+      "typeId": "builtinTotalTime",
+      "uiData": {
+        "x": 50,
+        "y": 1752
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 15,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {}
+    },
+    {
+      "id": 61,
+      "typeId": "builtinTotalTime",
+      "uiData": {
+        "x": 1766,
+        "y": 1743
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 16,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {}
+    },
+    {
+      "id": 62,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 791,
+        "y": 0
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 2,
+              "slotId": "block_64_value"
+            },
+            {
+              "nodeId": 12,
+              "slotId": "block_86_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "Line_Position"
+      }
+    }
+  ],
+  "props": {
+    "fixedDeltaTime": false,
+    "exactFixedTime": false,
+    "ignoreTimeScale": false,
+    "preWarmTotalTime": 0,
+    "preWarmStepCount": 0,
+    "preWarmDeltaTime": 0,
+    "initialEventName": "OnPlay"
+  },
+  "properties": [
+    {
+      "name": "Line_Position",
+      "type": "float",
+      "exposed": false,
+      "group": "m_Min:",
+      "default": {
+        "start": {
+          "x": -0.46000000834465027,
+          "y": 1,
+          "z": 0
+        },
+        "end": {
+          "x": 0.46000000834465027,
+          "y": 1,
+          "z": 0
+        }
+      }
+    }
+  ],
+  "customAttributes": []
+}

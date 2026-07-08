@@ -1,0 +1,2629 @@
+{
+  "autoID": 140,
+  "events": [
+    {
+      "id": 5,
+      "typeId": "event",
+      "uiData": {
+        "x": 2214,
+        "y": -1063
+      },
+      "props": {
+        "eventName": "in"
+      },
+      "flowLinks": {
+        "evt": [
+          {
+            "targetId": 4,
+            "targetSlotId": "start"
+          },
+          {
+            "targetId": 7,
+            "targetSlotId": "start"
+          },
+          {
+            "targetId": 10,
+            "targetSlotId": "start"
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "typeId": "event",
+      "uiData": {
+        "x": 5686,
+        "y": -831
+      },
+      "props": {
+        "eventName": "out"
+      },
+      "flowLinks": {
+        "evt": [
+          {
+            "targetId": 15,
+            "targetSlotId": "start"
+          },
+          {
+            "targetId": 7,
+            "targetSlotId": "start"
+          },
+          {
+            "targetId": 16,
+            "targetSlotId": "start"
+          }
+        ]
+      }
+    }
+  ],
+  "contexts": [
+    {
+      "id": 1,
+      "typeId": "update",
+      "uiData": {
+        "x": 2167,
+        "y": 1989
+      },
+      "blocks": [
+        {
+          "id": 98,
+          "typeId": "turbulence",
+          "enabled": true,
+          "props": {
+            "mode": "Relative",
+            "noiseType": "Value",
+            "fieldTransform": {
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "angles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "intensity": 0.5,
+            "drag": 1,
+            "frequency": 4,
+            "octaves": 1,
+            "roughness": 0.5,
+            "lacunarity": 2
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 2,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 2167,
+        "y": 2452
+      },
+      "blocks": [
+        {
+          "id": 99,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Along Velocity",
+            "axes": "YX",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 100,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "alpha",
+            "sampleMode": "OverLife",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                0.5,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                1,
+                0,
+                -6.265404224395752,
+                -6.265404224395752,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": 101,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "sampleMode": "OverLife",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.250004,
+                  "color": {
+                    "r": 1.3283786267018445e-7,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 0.6,
+                  "color": {
+                    "r": 0.2509804,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                  }
+                }
+              ]
+            },
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                1,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0.333,
+                0.333,
+                0
+              ]
+            }
+          }
+        },
+        {
+          "id": 102,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "sampleMode": "OverLife",
+            "composition": "Multiply",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                3.1327006816864014,
+                3.1327006816864014,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "Flipbook",
+        "flipbookSize": {
+          "x": 2,
+          "y": 2
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": true,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://5832dd69-ea04-4e08-808a-217716f48539"
+      }
+    },
+    {
+      "id": 3,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 2165,
+        "y": 760
+      },
+      "blocks": [
+        {
+          "id": 103,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0.6,
+              "value": 0.6
+            }
+          }
+        },
+        {
+          "id": 104,
+          "typeId": "setPositionMesh",
+          "enabled": true,
+          "props": {
+            "sampleMode": "Vertex",
+            "skinnedMeshSource": "SkinnedMesh",
+            "skinnedMeshExposedName": "SkinnedMesh",
+            "pointCount": 1024,
+            "composition": "Overwrite"
+          }
+        },
+        {
+          "id": 105,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.03999999910593033,
+              "value": 0.03999999910593033,
+              "y": 0.07999999821186066,
+              "b_value": 0.07999999821186066
+            }
+          }
+        },
+        {
+          "id": 106,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "scale",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 1,
+              "y": 0.25,
+              "z": 1,
+              "b_x": 1.25,
+              "b_y": 1,
+              "b_z": 1
+            }
+          }
+        },
+        {
+          "id": 107,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0,
+              "y": 3,
+              "b_value": 3
+            }
+          }
+        },
+        {
+          "id": 108,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angle",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 4,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "b_x": 0,
+              "b_y": 0,
+              "b_z": 360
+            }
+          }
+        },
+        {
+          "id": 109,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "velocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": -0.6000000238418579,
+              "y": 0.30000001192092896,
+              "z": 0.6000000238418579,
+              "b_x": 0.6000000238418579,
+              "b_y": 0.6000000238418579,
+              "b_z": -0.6000000238418579
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 10240,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        },
+        "shaderBindingLinks": {
+          "BoundsSizeXYZ": 97
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 1,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 2164,
+        "y": 260
+      },
+      "blocks": [
+        {
+          "id": 110,
+          "typeId": "constantRate",
+          "enabled": true,
+          "props": {
+            "rate": 1024
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 2.4,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Constant",
+        "loopCount": 1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 3,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "typeId": "update",
+      "uiData": {
+        "x": 3444,
+        "y": 2176
+      },
+      "blocks": [
+        {
+          "id": 111,
+          "typeId": "flipbookPlay",
+          "enabled": true,
+          "props": {
+            "mode": "Constant",
+            "frameRate": 25,
+            "frameCount": 64
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 9,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 3444,
+        "y": 261
+      },
+      "blocks": [
+        {
+          "id": 112,
+          "typeId": "constantRate",
+          "enabled": true,
+          "props": {
+            "rate": 128
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 2,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Constant",
+        "loopCount": 1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 8,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 3444,
+        "y": 815
+      },
+      "blocks": [
+        {
+          "id": 113,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.5,
+              "value": 0.5,
+              "y": 2,
+              "b_value": 2
+            }
+          }
+        },
+        {
+          "id": 114,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.20000000298023224,
+              "value": 0.20000000298023224,
+              "y": 0.4000000059604645,
+              "b_value": 0.4000000059604645
+            }
+          }
+        },
+        {
+          "id": 115,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "scale",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.800000011920929,
+              "y": 0.800000011920929,
+              "z": 1,
+              "b_x": 1.2000000476837158,
+              "b_y": 1.2000000476837158,
+              "b_z": 1
+            }
+          }
+        },
+        {
+          "id": 116,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "velocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": -0.20000000298023224,
+              "y": 0.30000001192092896,
+              "z": 0.20000000298023224,
+              "b_x": 0.20000000298023224,
+              "b_y": 0.5,
+              "b_z": -0.20000000298023224
+            }
+          }
+        },
+        {
+          "id": 117,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0,
+              "y": 63,
+              "b_value": 63
+            }
+          }
+        },
+        {
+          "id": 118,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angle",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 4,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "b_x": 0,
+              "b_y": 0,
+              "b_z": 360
+            }
+          }
+        },
+        {
+          "id": 119,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "sampleMode": "Random",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "gradient": {
+              "_mode": 0,
+              "_alphaElements": [
+                0,
+                1,
+                1,
+                1
+              ],
+              "_colorAlphaKeysCount": 2,
+              "_rgbElements": [
+                0,
+                0.250980406999588,
+                0.250980406999588,
+                0.250980406999588,
+                1,
+                0,
+                0,
+                0
+              ],
+              "_colorRGBKeysCount": 2,
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 0.250980406999588,
+                    "g": 0.250980406999588,
+                    "b": 0.250980406999588,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                  }
+                }
+              ]
+            },
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                1,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0.333,
+                0.333,
+                0
+              ]
+            }
+          }
+        },
+        {
+          "id": 120,
+          "typeId": "setPositionMesh",
+          "enabled": true,
+          "props": {
+            "sampleMode": "Surface",
+            "skinnedMeshSource": "SkinnedMesh",
+            "skinnedMeshExposedName": "SkinnedMesh",
+            "pointCount": 1024,
+            "composition": "Overwrite"
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 128,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        },
+        "shaderBindingLinks": {
+          "BoundsSizeXYZ": 97
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 6,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 3444,
+        "y": 2512
+      },
+      "blocks": [
+        {
+          "id": 121,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Face Camera Plane",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 122,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "alpha",
+            "sampleMode": "OverLife",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                0.25,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": 123,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "sampleMode": "OverLife",
+            "composition": "Multiply",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                3.1327006816864014,
+                3.1327006816864014,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "FlipbookBlend",
+        "flipbookSize": {
+          "x": 8,
+          "y": 8
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://4b266159-cdb8-47d6-8d8b-eaa3114d3491"
+      }
+    },
+    {
+      "id": 10,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 4788,
+        "y": 261
+      },
+      "blocks": [
+        {
+          "id": 124,
+          "typeId": "constantRate",
+          "enabled": true,
+          "props": {
+            "rate": 128
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 2.6,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Constant",
+        "loopCount": 1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 11,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 4788,
+        "y": 815
+      },
+      "blocks": [
+        {
+          "id": 125,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "lifetime",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.5,
+              "value": 0.5,
+              "y": 2,
+              "b_value": 2
+            }
+          }
+        },
+        {
+          "id": 126,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.20000000298023224,
+              "value": 0.20000000298023224,
+              "y": 0.4000000059604645,
+              "b_value": 0.4000000059604645
+            }
+          }
+        },
+        {
+          "id": 127,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "scale",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0.800000011920929,
+              "y": 0.800000011920929,
+              "z": 1,
+              "b_x": 1.2000000476837158,
+              "b_y": 1.2000000476837158,
+              "b_z": 1
+            }
+          }
+        },
+        {
+          "id": 128,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "velocity",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": -0.4000000059604645,
+              "y": 0.10000000149011612,
+              "z": 0.4000000059604645,
+              "b_x": 0.4000000059604645,
+              "b_y": 0.30000001192092896,
+              "b_z": -0.4000000059604645
+            }
+          }
+        },
+        {
+          "id": 129,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0.44999999999999996,
+              "z": 0,
+              "b_x": 0,
+              "b_y": 1.25,
+              "b_z": 0
+            }
+          }
+        },
+        {
+          "id": 130,
+          "typeId": "transformPosition",
+          "enabled": true,
+          "props": {
+            "transformSource": "VFXTransform"
+          }
+        },
+        {
+          "id": 131,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "texIndex",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0,
+              "y": 63,
+              "b_value": 63
+            }
+          }
+        },
+        {
+          "id": 132,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angle",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Per Component",
+            "channels": 4,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "b_x": 0,
+              "b_y": 0,
+              "b_z": 360
+            }
+          }
+        },
+        {
+          "id": 133,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "sampleMode": "Random",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "gradient": {
+              "_mode": 0,
+              "_alphaElements": [
+                0,
+                1,
+                1,
+                1
+              ],
+              "_colorAlphaKeysCount": 2,
+              "_rgbElements": [
+                0,
+                0.250980406999588,
+                0.250980406999588,
+                0.250980406999588,
+                1,
+                0,
+                0,
+                0
+              ],
+              "_colorRGBKeysCount": 2,
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 0.250980406999588,
+                    "g": 0.250980406999588,
+                    "b": 0.250980406999588,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                  }
+                }
+              ]
+            },
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                1,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0.333,
+                0.333,
+                0
+              ]
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 128,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        },
+        "shaderBindingLinks": {
+          "BoundsSizeXYZ": 97
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 12,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "typeId": "update",
+      "uiData": {
+        "x": 4788,
+        "y": 2176
+      },
+      "blocks": [
+        {
+          "id": 134,
+          "typeId": "flipbookPlay",
+          "enabled": true,
+          "props": {
+            "mode": "Constant",
+            "frameRate": 25,
+            "frameCount": 64
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 13,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 13,
+      "typeId": "outputBillboard",
+      "uiData": {
+        "x": 4788,
+        "y": 2512
+      },
+      "blocks": [
+        {
+          "id": 135,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Face Camera Plane",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 136,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "alpha",
+            "sampleMode": "OverLife",
+            "composition": "Overwrite",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                0.25,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": 137,
+          "typeId": "setAttributeCurve",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "sampleMode": "OverLife",
+            "composition": "Multiply",
+            "value": 0,
+            "minSpeed": 0,
+            "maxSpeed": 1,
+            "curve": {
+              "frameData": [
+                0,
+                0,
+                3.1327006816864014,
+                3.1327006816864014,
+                0.333,
+                0.333,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0.333,
+                0.333,
+                0
+              ]
+            },
+            "gradient": {
+              "stops": [
+                {
+                  "t": 0,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                  }
+                },
+                {
+                  "t": 1,
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "props": {
+        "primitive": "Quad",
+        "blendMode": "Alpha",
+        "cameraSort": false,
+        "frustumCull": false,
+        "uvMode": "FlipbookBlend",
+        "flipbookSize": {
+          "x": 8,
+          "y": 8
+        },
+        "softParticleFade": 0,
+        "cropFactor": 0.146,
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "mainTexture": "res://4b266159-cdb8-47d6-8d8b-eaa3114d3491"
+      }
+    },
+    {
+      "id": 15,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 2588,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": 138,
+          "typeId": "constantRate",
+          "enabled": true,
+          "props": {
+            "rate": 1024
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 2.4,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Constant",
+        "loopCount": 1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0.4,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 3,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 16,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 5212,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": 139,
+          "typeId": "constantRate",
+          "enabled": true,
+          "props": {
+            "rate": 128
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Constant",
+        "loopDuration": 2.6,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Constant",
+        "loopCount": 1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 1,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 11,
+          "targetSlotId": "input"
+        }
+      }
+    }
+  ],
+  "operators": [
+    {
+      "id": 17,
+      "typeId": "ageOverLifetime",
+      "uiData": {
+        "x": 1505,
+        "y": 2118
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 18,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {}
+    },
+    {
+      "id": 18,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 1724,
+        "y": 2098
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 19,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            0.15000000596046448,
+            0,
+            0,
+            0.333,
+            0.333,
+            0,
+            1,
+            1,
+            1.9355376958847046,
+            1.9355376958847046,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 19,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 1968,
+        "y": 2098
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 1,
+              "slotId": "block_98_intensity"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 4
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 20,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 1657,
+        "y": 915
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 22,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            0.4000000059604645,
+            0.3764060437679291,
+            0.3764060437679291,
+            0.333,
+            0.333,
+            0,
+            0.8799999952316284,
+            0.6000000238418579,
+            0.6614921689033508,
+            0.6614921689033508,
+            0.333,
+            0.333,
+            0,
+            1,
+            1,
+            0.03854428604245186,
+            0.03854428604245186,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 21,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 1474,
+        "y": 885
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 20,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "min": 0,
+          "max": 1,
+          "seed": 909
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 22,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 1923,
+        "y": 915
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_103_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 1.2
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 23,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 1744,
+        "y": 313
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "a": 4,
+          "b": 0.6
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 24,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 3219,
+        "y": 310
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "a": 4,
+          "b": 0.5
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 25,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 4204,
+        "y": 1311
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 27,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 28,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "a": 1,
+          "b": 0.25
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 26,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 4576,
+        "y": 1419
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "block_129_value_y"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "seed": 0
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 27,
+      "typeId": "add",
+      "uiData": {
+        "x": 4398,
+        "y": 1554
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 26,
+              "slotId": "max"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "a": 0.25
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 28,
+      "typeId": "subtract",
+      "uiData": {
+        "x": 4389,
+        "y": 1429
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 26,
+              "slotId": "min"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 0.25
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 29,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 4563,
+        "y": 310
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "a": 4,
+          "b": 0.65
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 30,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2372,
+        "y": 90
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "a": 4,
+          "b": 0.1
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 31,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 5011,
+        "y": 89
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "a": 4,
+          "b": 0.25
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 32,
+      "typeId": "transformPosition",
+      "uiData": {
+        "x": 1755,
+        "y": 1159
+      },
+      "output": {},
+      "props": {}
+    },
+    {
+      "id": 33,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 1487,
+        "y": 1277
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 32,
+              "slotId": "position"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "position",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 34,
+      "typeId": "transformPosition",
+      "uiData": {
+        "x": 3075,
+        "y": 1881
+      },
+      "output": {},
+      "props": {}
+    },
+    {
+      "id": 35,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2810,
+        "y": 1964
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 34,
+              "slotId": "position"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "position",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 36,
+      "typeId": "transformPosition",
+      "uiData": {
+        "x": 4394,
+        "y": 1692
+      },
+      "output": {},
+      "props": {}
+    },
+    {
+      "id": 37,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 4129,
+        "y": 1775
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 36,
+              "slotId": "position"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "position",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 85,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 523
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 2,
+              "slotId": "block_101_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "ColorOverLife"
+      }
+    },
+    {
+      "id": 86,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 587
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 23,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 24,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 30,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 29,
+              "slotId": "a"
+            },
+            {
+              "nodeId": 31,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "Duration"
+      }
+    },
+    {
+      "id": 87,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 651
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 4,
+              "slotId": "block_110_value"
+            },
+            {
+              "nodeId": 15,
+              "slotId": "block_138_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SwarmSpawnRate"
+      }
+    },
+    {
+      "id": 88,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 715
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 19,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SwarmTurbulenceMultiplier"
+      }
+    },
+    {
+      "id": 89,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 779
+      },
+      "output": {
+        "value_x": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "block_129_value_x"
+            }
+          ]
+        },
+        "value_y": {
+          "infoArr": [
+            {
+              "nodeId": 27,
+              "slotId": "b"
+            },
+            {
+              "nodeId": 28,
+              "slotId": "a"
+            }
+          ]
+        },
+        "value_z": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "block_129_value_z"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "VFXCenterOffset"
+      }
+    },
+    {
+      "id": 90,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 843
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 25,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "VFXSpawnHeight"
+      }
+    },
+    {
+      "id": 91,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 907
+      },
+      "output": {
+        "value_x": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_105_value"
+            }
+          ]
+        },
+        "value_y": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_105_b_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SwarmSizeMinMax"
+      }
+    },
+    {
+      "id": 92,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 971
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 7,
+              "slotId": "block_112_value"
+            },
+            {
+              "nodeId": 10,
+              "slotId": "block_124_value"
+            },
+            {
+              "nodeId": 16,
+              "slotId": "block_139_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SmokeSpawnRate"
+      }
+    },
+    {
+      "id": 93,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1035
+      },
+      "output": {
+        "value_x": {
+          "infoArr": [
+            {
+              "nodeId": 8,
+              "slotId": "block_113_value"
+            },
+            {
+              "nodeId": 11,
+              "slotId": "block_125_value"
+            }
+          ]
+        },
+        "value_y": {
+          "infoArr": [
+            {
+              "nodeId": 8,
+              "slotId": "block_113_b_value"
+            },
+            {
+              "nodeId": 11,
+              "slotId": "block_125_b_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SmokeLifetimeMinMax"
+      }
+    },
+    {
+      "id": 94,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1099
+      },
+      "output": {
+        "value_x": {
+          "infoArr": [
+            {
+              "nodeId": 8,
+              "slotId": "block_114_value"
+            },
+            {
+              "nodeId": 11,
+              "slotId": "block_126_value"
+            }
+          ]
+        },
+        "value_y": {
+          "infoArr": [
+            {
+              "nodeId": 8,
+              "slotId": "block_114_b_value"
+            },
+            {
+              "nodeId": 11,
+              "slotId": "block_126_b_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SmokeSizeMinMax"
+      }
+    },
+    {
+      "id": 95,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1163
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 22,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SwarmLifetimeMax"
+      }
+    },
+    {
+      "id": 96,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1227
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_104_value"
+            },
+            {
+              "nodeId": 8,
+              "slotId": "block_120_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "property": "SkinnedMesh"
+      }
+    },
+    {
+      "id": 97,
+      "typeId": "getProperty",
+      "uiData": {
+        "x": 50,
+        "y": 1291
+      },
+      "output": {},
+      "props": {
+        "property": "BoundsSizeXYZ"
+      }
+    }
+  ],
+  "props": {
+    "fixedDeltaTime": false,
+    "exactFixedTime": false,
+    "ignoreTimeScale": false,
+    "preWarmTotalTime": 0,
+    "preWarmStepCount": 0,
+    "preWarmDeltaTime": 0,
+    "initialEventName": "in"
+  },
+  "properties": [
+    {
+      "name": "ColorOverLife",
+      "type": "Gradient",
+      "exposed": true,
+      "group": "Main VFX",
+      "default": {
+        "stops": [
+          {
+            "t": 0,
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "t": 0.250004,
+            "color": {
+              "r": 1.3283786267018445e-7,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "t": 0.6,
+            "color": {
+              "r": 0.2509804,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "t": 1,
+            "color": {
+              "r": 1,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            }
+          }
+        ]
+      },
+      "prefabOverridden": true
+    },
+    {
+      "name": "Duration",
+      "type": "float",
+      "exposed": true,
+      "group": "Main VFX",
+      "default": [
+        3
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "SwarmSpawnRate",
+      "type": "float",
+      "exposed": true,
+      "group": "VFX Animation",
+      "range": [
+        0,
+        1024
+      ],
+      "default": [
+        1024
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "SwarmTurbulenceMultiplier",
+      "type": "float",
+      "exposed": true,
+      "group": "VFX Animation",
+      "default": [
+        2
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "VFXCenterOffset",
+      "type": "vec3",
+      "exposed": true,
+      "group": "Main VFX",
+      "default": [
+        0,
+        0.85,
+        0
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "VFXSpawnHeight",
+      "type": "float",
+      "exposed": true,
+      "group": "Main VFX",
+      "default": [
+        1.6
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "SwarmSizeMinMax",
+      "type": "vec2",
+      "exposed": true,
+      "group": "VFX Animation",
+      "default": [
+        0.12,
+        0.24
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "SmokeSpawnRate",
+      "type": "float",
+      "exposed": true,
+      "group": "VFX Animation",
+      "range": [
+        0,
+        128
+      ],
+      "default": 128
+    },
+    {
+      "name": "SmokeLifetimeMinMax",
+      "type": "vec2",
+      "exposed": true,
+      "group": "VFX Animation",
+      "default": [
+        0.5,
+        2.5
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "SmokeSizeMinMax",
+      "type": "vec2",
+      "exposed": true,
+      "group": "VFX Animation",
+      "default": [
+        0.3,
+        0.6
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "SwarmLifetimeMax",
+      "type": "float",
+      "exposed": true,
+      "group": "VFX Animation",
+      "default": [
+        1
+      ],
+      "prefabOverridden": true
+    },
+    {
+      "name": "SkinnedMesh",
+      "type": "Mesh",
+      "exposed": true,
+      "group": "Main VFX"
+    },
+    {
+      "name": "BoundsSizeXYZ",
+      "type": "vec3",
+      "exposed": true,
+      "group": "Main VFX",
+      "default": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+      }
+    }
+  ],
+  "customAttributes": []
+}

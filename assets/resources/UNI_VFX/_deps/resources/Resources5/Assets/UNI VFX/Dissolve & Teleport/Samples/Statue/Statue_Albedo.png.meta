@@ -1,0 +1,15 @@
+{
+  "uuid": "64acda2d-b3c1-4241-9fc0-1987014dfc11",
+  "importer": {
+    "sRGB": true,
+    "wrapMode": 0,
+    "generateMipmap": true,
+    "mipmapFilter": 0,
+    "anisoLevel": 2,
+    "alphaChannel": true,
+    "platformDefault": {
+      "format": 0,
+      "quality": 1
+    }
+  }
+}

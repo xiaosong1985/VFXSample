@@ -1,0 +1,9 @@
+{
+  "uuid": "e38d2d0d-ea52-4bc0-ae3f-09506c2cde20",
+  "importer": {
+    "convertUnits": 1,
+    "remappedMaterials": {
+      "Ellen_Body_Mat": "res://72be5d3f-4825-4b1a-93a7-3afaf3b30104"
+    }
+  }
+}

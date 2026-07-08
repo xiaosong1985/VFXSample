@@ -1,0 +1,1517 @@
+{
+  "autoID": 64,
+  "events": [],
+  "contexts": [
+    {
+      "id": 1,
+      "typeId": "spawn",
+      "uiData": {
+        "x": 3103,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": 49,
+          "typeId": "singleBurst",
+          "enabled": true,
+          "props": {
+            "spawnMode": "Constant",
+            "count": 500,
+            "delayMode": "Constant",
+            "delay": 0,
+            "countFromLoopIndex": false,
+            "countModulo": 0,
+            "countRange": {
+              "x": 0,
+              "y": 10
+            },
+            "delayRange": {
+              "x": 0,
+              "y": 1
+            }
+          }
+        }
+      ],
+      "props": {
+        "durationMode": "Infinite",
+        "loopDuration": -1,
+        "loopDurationRange": {
+          "x": 1,
+          "y": 3
+        },
+        "countMode": "Constant",
+        "loopCount": 1,
+        "loopCountRange": {
+          "x": 1,
+          "y": 3
+        },
+        "delayBeforeLoop": 0,
+        "delayAfterLoop": 0
+      },
+      "flowLinks": {
+        "spawnEvt": {
+          "targetId": 3,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "typeId": "update",
+      "uiData": {
+        "x": 3103,
+        "y": 1746
+      },
+      "blocks": [
+        {
+          "id": 50,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "size",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": -0.07,
+              "value": -0.07
+            }
+          }
+        },
+        {
+          "id": 51,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "position",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 52,
+          "typeId": "collisionCone",
+          "enabled": true,
+          "props": {
+            "mode": "Solid",
+            "center": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "baseRadius": 1,
+            "topRadius": 0,
+            "height": 2,
+            "bounce": 0,
+            "friction": 0,
+            "lifetimeLoss": 0
+          }
+        }
+      ],
+      "props": {
+        "updatePosition": true,
+        "ageParticles": true,
+        "reapParticles": true,
+        "skipZeroDeltaTime": false
+      },
+      "flowLinks": {
+        "output": [
+          {
+            "targetId": 4,
+            "targetSlotId": "input"
+          },
+          {
+            "targetId": 5,
+            "targetSlotId": "input"
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "typeId": "initialize",
+      "uiData": {
+        "x": 3095,
+        "y": 490
+      },
+      "blocks": [
+        {
+          "id": 53,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "stripRatio",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0
+            }
+          }
+        },
+        {
+          "id": 54,
+          "typeId": "setPositionShape",
+          "enabled": true,
+          "props": {
+            "shape": "Sphere",
+            "positionMode": "Surface",
+            "positionComposition": "Overwrite",
+            "directionComposition": "Overwrite",
+            "axesComposition": "Overwrite",
+            "spawnMode": "Custom",
+            "arcSphere": {
+              "sphere": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "angles": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 90
+                  },
+                  "scale": {
+                    "x": 0.00009999999747378752,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 0.7699999809265137
+              },
+              "arc": 3.140000104904175
+            },
+            "thickness": 0.1,
+            "heightMode": "Volume",
+            "heightSequencer": 0.5,
+            "arcSequencer": 0,
+            "lineSequencer": 0.5,
+            "applyOrientation": 1,
+            "orientedBox": {
+              "center": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "angle": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "size": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "arcCone": {
+              "cone": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "baseRadius": 1,
+                "topRadius": 0,
+                "height": 1
+              },
+              "arc": 6.2831853
+            },
+            "arcTorus": {
+              "torus": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "majorRadius": 1,
+                "minorRadius": 0.3
+              },
+              "arc": 6.2831853
+            },
+            "arcCircle": {
+              "circle": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "line": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "planeCenter": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "planeNormal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "planeSize": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        },
+        {
+          "id": 55,
+          "typeId": "setPositionShape",
+          "enabled": true,
+          "props": {
+            "shape": "Line",
+            "positionMode": "Surface",
+            "positionComposition": "Add",
+            "directionComposition": "Overwrite",
+            "axesComposition": "Overwrite",
+            "spawnMode": "Custom",
+            "line": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 3,
+                "z": 0
+              }
+            },
+            "thickness": 0.1,
+            "heightMode": "Volume",
+            "heightSequencer": 0.5,
+            "arcSequencer": 0,
+            "lineSequencer": 0.5,
+            "applyOrientation": 1,
+            "arcSphere": {
+              "sphere": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "orientedBox": {
+              "center": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "angle": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "size": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "arcCone": {
+              "cone": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "baseRadius": 1,
+                "topRadius": 0,
+                "height": 1
+              },
+              "arc": 6.2831853
+            },
+            "arcTorus": {
+              "torus": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "majorRadius": 1,
+                "minorRadius": 0.3
+              },
+              "arc": 6.2831853
+            },
+            "arcCircle": {
+              "circle": {
+                "transform": {
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "radius": 1
+              },
+              "arc": 6.2831853
+            },
+            "planeCenter": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "planeNormal": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "planeSize": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        },
+        {
+          "id": 56,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "color",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": 57,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "initPos",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0
+            }
+          }
+        }
+      ],
+      "props": {
+        "space": "Local",
+        "capacity": 500,
+        "boundsMode": "Manual",
+        "boundsCenter": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "boundsSize": {
+          "x": 4,
+          "y": 4,
+          "z": 4
+        },
+        "shaderBindingLinks": {
+          "input_8926484042661614893": 7
+        }
+      },
+      "flowLinks": {
+        "output": {
+          "targetId": 2,
+          "targetSlotId": "input"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "typeId": "outputComposedParticle",
+      "uiData": {
+        "x": 2594,
+        "y": 2544
+      },
+      "blocks": [
+        {
+          "id": 58,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "angle",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "y": -90,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 59,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Face Camera Position",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        },
+        {
+          "id": 60,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "alive",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 1,
+              "value": 1
+            }
+          }
+        },
+        {
+          "id": 61,
+          "typeId": "setAttribute",
+          "enabled": true,
+          "props": {
+            "attribute": "alpha",
+            "source": "Slot",
+            "composition": "Overwrite",
+            "random": "Off",
+            "channels": 7,
+            "_values": {
+              "x": 0,
+              "value": 0
+            }
+          }
+        }
+      ],
+      "props": {
+        "shaderName": "SG_RobotPliers",
+        "shaderRes": "res://1bf1faa9-2f67-4956-ac12-47a581f0723a",
+        "shaderPropertyDefaults": {
+          "mesh": "res://8f8ff8c1-362e-4eb7-9531-258c8625066d"
+        },
+        "shaderPropertyExpressions": {
+          "subMeshMask": {
+            "rootNodeId": "c0",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 4294967295
+              }
+            }
+          },
+          "_Color": {
+            "rootNodeId": "c0",
+            "outputType": "vec4",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "vec4",
+                "value": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1,
+                  "a": 1
+                },
+                "slotName": "attrDefault_color"
+              }
+            }
+          },
+          "_Smoothness": {
+            "rootNodeId": "c0",
+            "outputType": "float",
+            "nodes": {
+              "c0": {
+                "kind": "Constant",
+                "outputType": "float",
+                "value": 0.6
+              }
+            }
+          }
+        },
+        "shaderBindingLinks": {
+          "_Color": 28
+        },
+        "mesh": "res://8f8ff8c1-362e-4eb7-9531-258c8625066d",
+        "topology": "Quad",
+        "cropFactor": 0.146,
+        "blendMode": "Alpha",
+        "useAlphaClipping": false,
+        "alphaThreshold": 0.5,
+        "softParticleFade": 0,
+        "uvMode": "Default",
+        "flipbookSize": {
+          "x": 4,
+          "y": 4
+        },
+        "cameraSort": false,
+        "frustumCull": false
+      }
+    },
+    {
+      "id": 5,
+      "typeId": "outputTrail",
+      "uiData": {
+        "x": 3627,
+        "y": 2554
+      },
+      "blocks": [
+        {
+          "id": 62,
+          "typeId": "orient",
+          "enabled": true,
+          "props": {
+            "mode": "Face Camera Position",
+            "upAxis": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            "lookAtPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "lookAtLine": {
+              "start": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "end": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              }
+            },
+            "axes": "ZY",
+            "customAxisA": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            },
+            "customAxisB": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        }
+      ],
+      "props": {
+        "blendMode": "Opaque",
+        "stripCapacity": 10,
+        "particlePerStripCount": 50,
+        "colorMapping": "Default",
+        "uvMode": "ScaleAndBias",
+        "tilingMode": "Stretch",
+        "useSoftParticle": false,
+        "softParticleFade": 0,
+        "swapUV": false,
+        "uvScale": {
+          "x": 30,
+          "y": 1
+        },
+        "uvBias": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    }
+  ],
+  "operators": [
+    {
+      "id": 6,
+      "typeId": "divide",
+      "uiData": {
+        "x": 2523,
+        "y": 635
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 7,
+              "slotId": "x"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 50
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 7,
+      "typeId": "floor",
+      "uiData": {
+        "x": 2689,
+        "y": 633
+      },
+      "output": {},
+      "props": {
+        "_type": "float"
+      }
+    },
+    {
+      "id": 8,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2303,
+        "y": 599
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 6,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "spawnIndex",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 9,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2925,
+        "y": 182
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 1,
+              "slotId": "block_49_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "a": 10,
+          "b": 50
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 10,
+      "typeId": "divide",
+      "uiData": {
+        "x": 2683,
+        "y": 904
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_53_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 49
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 11,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 2677,
+        "y": 1737
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 13,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            1,
+            -0.5,
+            -0.5,
+            0.333,
+            0.333,
+            0,
+            1,
+            0.5,
+            0.06894712150096893,
+            0.06894712150096893,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 12,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2459,
+        "y": 1722
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 11,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "stripRatio",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 13,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2911,
+        "y": 1737
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 2,
+              "slotId": "block_50_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 0.25
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 14,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2447,
+        "y": 866
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 10,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "particleIndexInStrip",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 15,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2910,
+        "y": 1516
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_57_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "position",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 16,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 2910,
+        "y": 1182
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_55_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "min": 0.5,
+          "max": 2,
+          "seed": 47
+        },
+        "seed": "PerParticleStrip",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 17,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 1788,
+        "y": 1986
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 22,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "initPos",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 18,
+      "typeId": "curlNoise",
+      "uiData": {
+        "x": 2396,
+        "y": 2104
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 24,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "frequency": 0.5,
+          "octaves": 1,
+          "roughness": 0.5,
+          "lacunarity": 2
+        },
+        "noiseType": "Perlin"
+      }
+    },
+    {
+      "id": 19,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 1698,
+        "y": 2212
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 20,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "stripRatio",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 20,
+      "typeId": "sampleCurve",
+      "uiData": {
+        "x": 1900,
+        "y": 2226
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 21,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "curve": {
+          "frameData": [
+            0,
+            0,
+            1,
+            1,
+            0.333,
+            0.333,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0.333,
+            0.333,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": 21,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 2162,
+        "y": 2122
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 18,
+              "slotId": "amplitude"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 0.2
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 22,
+      "typeId": "add",
+      "uiData": {
+        "x": 2010,
+        "y": 1986
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 18,
+              "slotId": "coord"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "vec3"
+      }
+    },
+    {
+      "id": 23,
+      "typeId": "multiply",
+      "uiData": {
+        "x": 1820,
+        "y": 2090
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 22,
+              "slotId": "b"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 0.4
+        },
+        "_type": "float"
+      }
+    },
+    {
+      "id": 24,
+      "typeId": "add",
+      "uiData": {
+        "x": 2792,
+        "y": 2008
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 2,
+              "slotId": "block_51_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_type": "vec3"
+      }
+    },
+    {
+      "id": 25,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2895,
+        "y": 1266
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_55_lineSequencer"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "stripRatio",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 26,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 2910,
+        "y": 1426
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 63,
+              "slotId": "t"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "min": 0,
+          "max": 1,
+          "seed": 217
+        },
+        "seed": "PerParticleStrip",
+        "constant": true,
+        "_type": "float"
+      }
+    },
+    {
+      "id": 27,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 2895,
+        "y": 1056
+      },
+      "output": {
+        "out_x": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_54_heightSequencer"
+            }
+          ]
+        },
+        "out_y": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_54_arcSequencer"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "min": {
+            "x": 0,
+            "y": 0
+          },
+          "max": {
+            "x": 1,
+            "y": 1
+          },
+          "seed": 995
+        },
+        "seed": "PerParticleStrip",
+        "constant": true,
+        "_type": "vec2"
+      }
+    },
+    {
+      "id": 28,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2396,
+        "y": 2775
+      },
+      "output": {},
+      "props": {
+        "attribute": "color",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 29,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2073,
+        "y": 3007
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 30,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "spawnIndexInStrip",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 30,
+      "typeId": "compare",
+      "uiData": {
+        "x": 2360,
+        "y": 3007
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 4,
+              "slotId": "block_60_value"
+            }
+          ]
+        }
+      },
+      "props": {
+        "_inputs": {
+          "b": 49
+        },
+        "operator": "Equal",
+        "_type": "bool"
+      }
+    },
+    {
+      "id": 31,
+      "typeId": "getAttribute",
+      "uiData": {
+        "x": 2594,
+        "y": 1986
+      },
+      "output": {
+        "value": {
+          "infoArr": [
+            {
+              "nodeId": 24,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {
+        "attribute": "initPos",
+        "location": "Current"
+      }
+    },
+    {
+      "id": 32,
+      "typeId": "randomNumber",
+      "uiData": {
+        "x": 2340,
+        "y": 2586
+      },
+      "output": {},
+      "props": {
+        "_inputs": {
+          "min": {
+            "x": 3.5,
+            "y": -5
+          },
+          "max": {
+            "x": 10,
+            "y": 5
+          },
+          "seed": 559
+        },
+        "seed": "PerParticle",
+        "constant": true,
+        "_type": "vec2"
+      }
+    },
+    {
+      "id": 48,
+      "typeId": "builtinTotalTime",
+      "uiData": {
+        "x": 1668,
+        "y": 2090
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 23,
+              "slotId": "a"
+            }
+          ]
+        }
+      },
+      "props": {}
+    },
+    {
+      "id": 63,
+      "typeId": "sampleGradient",
+      "uiData": {
+        "x": 50,
+        "y": 749
+      },
+      "props": {
+        "gradient": {
+          "stops": [
+            {
+              "t": 0,
+              "color": {
+                "r": 0,
+                "g": 0.44471609592437744,
+                "b": 0.6226415038108826,
+                "a": 1
+              }
+            },
+            {
+              "t": 1,
+              "color": {
+                "r": 1,
+                "g": 0.6077018976211548,
+                "b": 0,
+                "a": 1
+              }
+            }
+          ]
+        },
+        "property": ""
+      },
+      "output": {
+        "out": {
+          "infoArr": [
+            {
+              "nodeId": 3,
+              "slotId": "block_56_value"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "props": {
+    "fixedDeltaTime": false,
+    "exactFixedTime": false,
+    "ignoreTimeScale": false,
+    "preWarmTotalTime": 0,
+    "preWarmStepCount": 0,
+    "preWarmDeltaTime": 0,
+    "initialEventName": "OnPlay"
+  },
+  "properties": [],
+  "customAttributes": [
+    {
+      "name": "stripRatio",
+      "type": "float"
+    },
+    {
+      "name": "initPos",
+      "type": "vec3"
+    }
+  ]
+}

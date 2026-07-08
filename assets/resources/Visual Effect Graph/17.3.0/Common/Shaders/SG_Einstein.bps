@@ -1,0 +1,402 @@
+{
+  "arr": [
+    {
+      "x": 600,
+      "y": 100,
+      "constDataID": "vertex",
+      "id": 1,
+      "inputList": [
+        {
+          "type": "vec3",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "vec3",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "vec4",
+          "defVal": "_remove_"
+        }
+      ],
+      "outputList": [],
+      "select": false
+    },
+    {
+      "x": 600,
+      "y": 400,
+      "ver": 1,
+      "constDataID": "PBR_fragment",
+      "id": 2,
+      "inputList": [
+        {
+          "type": "float",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "vec3",
+          "defVal": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          }
+        },
+        {
+          "type": "vec3",
+          "defVal": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "info": {
+            "id": 8,
+            "index": 0
+          }
+        },
+        {
+          "type": "float"
+        },
+        {
+          "type": "float",
+          "defVal": 0.5
+        },
+        {
+          "type": "vec3",
+          "defVal": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        {
+          "type": "float"
+        },
+        {
+          "type": "float",
+          "defVal": 1,
+          "info": {
+            "id": 3,
+            "index": 0
+          }
+        },
+        {
+          "type": "vec3",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "float",
+          "defVal": 1
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "vec3",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "vec3",
+          "defVal": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": "_remove_"
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 1.3
+        },
+        {
+          "type": "float",
+          "defVal": 400
+        }
+      ],
+      "outputList": [],
+      "select": false
+    },
+    {
+      "x": -221,
+      "y": 401,
+      "constDataID": "math/common/mix",
+      "id": 3,
+      "inputList": [
+        {
+          "type": "float",
+          "defVal": 0.30000001192092896
+        },
+        {
+          "type": "float",
+          "defVal": 1
+        },
+        {
+          "type": "float",
+          "defVal": "_remove_",
+          "info": {
+            "id": 4,
+            "index": 0
+          }
+        }
+      ],
+      "outputList": [
+        {
+          "type": "float",
+          "infoList": [
+            {
+              "id": 2,
+              "index": 7
+            }
+          ]
+        }
+      ],
+      "select": false
+    },
+    {
+      "x": -380.5,
+      "y": 553.5,
+      "constDataID": "math/expression/mask",
+      "id": 4,
+      "inputList": [
+        {
+          "type": "vec4",
+          "defVal": "_remove_",
+          "info": {
+            "id": 6,
+            "index": 0
+          }
+        }
+      ],
+      "outputList": [
+        {
+          "type": "float",
+          "infoList": [
+            {
+              "id": 3,
+              "index": 2
+            }
+          ]
+        }
+      ],
+      "propertyVal": {
+        "R": true,
+        "G": false,
+        "B": false,
+        "A": false
+      },
+      "select": false
+    },
+    {
+      "x": -717.5,
+      "y": 523.5,
+      "constDataID": "inputdata/vertex/VertexColor",
+      "id": 5,
+      "inputList": [],
+      "outputList": [
+        {
+          "type": "vec4",
+          "infoList": [
+            {
+              "id": 6,
+              "index": 0
+            }
+          ]
+        }
+      ],
+      "select": false
+    },
+    {
+      "x": -517.5,
+      "y": 523.5,
+      "ver": 1,
+      "constDataID": "basic/Vector4",
+      "id": 6,
+      "inputList": [
+        {
+          "type": "vec4",
+          "info": {
+            "id": 5,
+            "index": 0
+          }
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        },
+        {
+          "type": "float",
+          "defVal": 0
+        }
+      ],
+      "outputList": [
+        {
+          "name": "XYZW",
+          "type": "vec4",
+          "infoList": [
+            {
+              "id": 4,
+              "index": 0
+            }
+          ]
+        }
+      ],
+      "select": false
+    },
+    {
+      "x": -134,
+      "y": 194,
+      "constDataID": "basic/Vector4",
+      "id": 8,
+      "inputList": [
+        {
+          "type": "vec4",
+          "defVal": {
+            "x": 0.49803924560546875,
+            "y": 0.8392157554626465,
+            "z": 0.988235354423523,
+            "w": 1
+          }
+        },
+        {
+          "type": "float",
+          "defVal": 0.49803924560546875
+        },
+        {
+          "type": "float",
+          "defVal": 0.8392157554626465
+        },
+        {
+          "type": "float",
+          "defVal": 0.988235354423523
+        },
+        {
+          "type": "float",
+          "defVal": 1
+        }
+      ],
+      "outputList": [
+        {
+          "name": "XYZW",
+          "type": "vec4",
+          "infoList": [
+            {
+              "id": 2,
+              "index": 2
+            }
+          ]
+        }
+      ],
+      "uniformDataID": 7,
+      "propertyVal": {},
+      "select": false,
+      "ver": 1
+    }
+  ],
+  "x": 0,
+  "y": 0,
+  "scale": 1,
+  "bluePrintNum": 8,
+  "material": {
+    "twoSided": false,
+    "blendModes": 0,
+    "materialType": 0,
+    "anisotropy": false,
+    "clear coat": false,
+    "sheen": false,
+    "transmission": false,
+    "iridescence": false,
+    "scene fog": false,
+    "alpha test": false,
+    "supportReflectionProbe": true,
+    "enableInstancing": true,
+    "supportVFX": true
+  },
+  "uniformData": {
+    "uniformArr": [
+      {
+        "id": "basic/Vector4",
+        "data": {
+          "x": -134,
+          "y": 194,
+          "constDataID": "basic/Vector4",
+          "id": 7,
+          "inputList": [
+            {
+              "type": "vec4",
+              "defVal": {
+                "x": 0.49803924560546875,
+                "y": 0.8392157554626465,
+                "z": 0.988235354423523,
+                "w": 1
+              }
+            },
+            {
+              "type": "float",
+              "defVal": 0.49803924560546875
+            },
+            {
+              "type": "float",
+              "defVal": 0.8392157554626465
+            },
+            {
+              "type": "float",
+              "defVal": 0.988235354423523
+            },
+            {
+              "type": "float",
+              "defVal": 1
+            }
+          ],
+          "outputList": [
+            {
+              "name": "XYZW",
+              "type": "vec4"
+            }
+          ],
+          "uniformName": "_Color",
+          "propertyVal": {},
+          "select": false,
+          "ver": 1
+        },
+        "index": 0
+      }
+    ]
+  },
+  "customInclude": null,
+  "version": 1783416155153
+}

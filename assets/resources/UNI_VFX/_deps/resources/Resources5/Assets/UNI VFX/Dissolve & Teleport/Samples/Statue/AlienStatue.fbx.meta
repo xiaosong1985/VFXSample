@@ -1,0 +1,10 @@
+{
+  "uuid": "f042c66d-1de8-44b5-af1b-0058442f1316",
+  "importer": {
+    "convertUnits": 1,
+    "readWrite": true,
+    "remappedMaterials": {
+      "Statue_mat": "res://b384501a-87b1-4062-8e2d-ba6f27bb8206"
+    }
+  }
+}
