@@ -1,0 +1,16 @@
+{
+  "version": "LAYAMATERIAL:04",
+  "props": {
+    "type": "VFXStrip",
+    "renderQueue": 3000,
+    "materialRenderMode": 2,
+    "s_Cull": 0,
+    "s_Blend": 1,
+    "s_BlendSrc": 6,
+    "s_BlendDst": 7,
+    "s_DepthTest": 1,
+    "s_DepthWrite": false,
+    "u_Color": [1, 1, 1, 1],
+    "defines": []
+  }
+}

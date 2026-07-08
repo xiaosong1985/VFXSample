@@ -1,0 +1,103 @@
+{
+  "_$ver": 1,
+  "_$id": "vfx_proppanel_root",
+  "_$type": "Widget",
+  "name": "Root",
+  "width": 250,
+  "height": 600,
+  "_$child": [
+    {
+      "_$id": "vfx_proppanel_header",
+      "_$type": "Widget",
+      "name": "header",
+      "width": 250,
+      "height": 30,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_proppanel_root" },
+          "data": [1, 0]
+        }
+      ],
+      "_$child": [
+        {
+          "_$id": "vfx_proppanel_headerbg",
+          "_$type": "Shape",
+          "name": "headerBg",
+          "width": 250,
+          "height": 30,
+          "relations": [
+            {
+              "_$type": "Relation",
+              "target": { "_$ref": "vfx_proppanel_header" },
+              "data": [1, 0, 2, 0]
+            }
+          ],
+          "graphics": {
+            "_$type": "SRect",
+            "lineWidth": 0,
+            "lineColor": { "_$type": "Color", "r": 0, "g": 0, "b": 0 },
+            "fillColor": { "_$type": "Color", "r": 0.165, "g": 0.165, "b": 0.165 },
+            "borderRadius": [0, 0, 0, 0]
+          }
+        },
+        {
+          "_$id": "vfx_proppanel_title",
+          "_$type": "TextField",
+          "name": "title",
+          "x": 10,
+          "y": 6,
+          "width": 150,
+          "height": 20,
+          "text": "Properties",
+          "style": {
+            "fontSize": 13,
+            "bold": true,
+            "color": 14540253
+          }
+        },
+        {
+          "_$id": "vfx_proppanel_addbtn",
+          "_$type": "TextField",
+          "name": "addBtn",
+          "x": 220,
+          "y": 3,
+          "width": 24,
+          "height": 24,
+          "text": "+",
+          "touchable": true,
+          "cursor": "pointer",
+          "relations": [
+            {
+              "_$type": "Relation",
+              "target": { "_$ref": "vfx_proppanel_header" },
+              "data": [5, 3]
+            }
+          ],
+          "style": {
+            "fontSize": 18,
+            "bold": true,
+            "color": 11184810,
+            "align": 1
+          }
+        }
+      ]
+    },
+    {
+      "_$id": "vfx_proppanel_list",
+      "_$type": "Panel",
+      "name": "list",
+      "y": 30,
+      "width": 250,
+      "height": 500,
+      "touchThrough": true,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_proppanel_root" },
+          "data": [1, 0]
+        }
+      ]
+    }
+  ]
+}

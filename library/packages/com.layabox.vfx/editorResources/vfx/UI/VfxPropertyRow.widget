@@ -1,0 +1,66 @@
+{
+  "_$ver": 1,
+  "_$id": "vfx_proprow_root",
+  "_$type": "Widget",
+  "name": "Root",
+  "width": 250,
+  "height": 28,
+  "_$child": [
+    {
+      "_$id": "vfx_proprow_headerbg",
+      "_$type": "Shape",
+      "name": "headerBg",
+      "width": 250,
+      "height": 28,
+      "touchable": true,
+      "relations": [
+        { "_$type": "Relation", "target": { "_$ref": "vfx_proprow_root" }, "data": [1, 0] }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 1,
+        "lineColor": { "_$type": "Color", "r": 0.25, "g": 0.25, "b": 0.25 },
+        "fillColor": { "_$type": "Color", "r": 0.18, "g": 0.18, "b": 0.18 },
+        "borderRadius": [4, 4, 4, 4]
+      }
+    },
+    {
+      "_$id": "vfx_proprow_fold",
+      "_$type": "TextField",
+      "name": "foldBtn",
+      "x": 6,
+      "y": 5,
+      "width": 16,
+      "height": 18,
+      "text": "\u25B6",
+      "touchable": true,
+      "cursor": "pointer",
+      "style": { "fontSize": 10, "color": 6710886, "align": 1 }
+    },
+    {
+      "_$id": "vfx_proprow_name",
+      "_$type": "TextInput",
+      "name": "nameInput",
+      "x": 28,
+      "y": 4,
+      "width": 130,
+      "height": 20,
+      "text": "Property",
+      "style": { "fontSize": 12, "color": 15658734 }
+    },
+    {
+      "_$id": "vfx_proprow_type",
+      "_$type": "TextField",
+      "name": "typeLabel",
+      "x": 180,
+      "y": 6,
+      "width": 64,
+      "height": 16,
+      "text": "float",
+      "style": { "fontSize": 11, "color": 8947848, "align": 2 },
+      "relations": [
+        { "_$type": "Relation", "target": { "_$ref": "vfx_proprow_root" }, "data": [5, 3] }
+      ]
+    }
+  ]
+}

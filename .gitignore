@@ -1,6 +1,10 @@
 .DS_Store
 temp
-library
+# 忽略整个 library 编译缓存，但放行 VFX 插件目录（否则 clone 后 IDE 里缺插件，项目跑不起来）
+library/*
+!library/packages/
+library/packages/*
+!library/packages/com.layabox.vfx/
 local
 release
 node_modules

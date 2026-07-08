@@ -1,0 +1,100 @@
+{
+  "_$ver": 1,
+  "_$id": "vfx_nodepicker_root",
+  "_$type": "Widget",
+  "name": "Root",
+  "width": 260,
+  "height": 200,
+  "_$child": [
+    {
+      "_$id": "vfx_nodepicker_bg",
+      "_$type": "Shape",
+      "name": "bg",
+      "width": 260,
+      "height": 200,
+      "touchable": true,
+      "relations": [
+        { "_$type": "Relation", "target": { "_$ref": "vfx_nodepicker_root" }, "data": [1, 0, 2, 0] }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 1,
+        "lineColor": { "_$type": "Color", "r": 0.3, "g": 0.5, "b": 0.7 },
+        "fillColor": { "_$type": "Color", "r": 0.15, "g": 0.15, "b": 0.15 },
+        "borderRadius": [4, 4, 4, 4]
+      }
+    },
+    {
+      "_$id": "vfx_nodepicker_searchbg",
+      "_$type": "Shape",
+      "name": "searchBg",
+      "x": 4,
+      "y": 4,
+      "width": 252,
+      "height": 24,
+      "relations": [
+        { "_$type": "Relation", "target": { "_$ref": "vfx_nodepicker_root" }, "data": [1, 0] }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 1,
+        "lineColor": { "_$type": "Color", "r": 0.3, "g": 0.5, "b": 0.8 },
+        "fillColor": { "_$type": "Color", "r": 0.12, "g": 0.12, "b": 0.12 },
+        "borderRadius": [3, 3, 3, 3]
+      }
+    },
+    {
+      "_$id": "vfx_nodepicker_searchicon",
+      "_$type": "TextField",
+      "name": "searchIcon",
+      "x": 8,
+      "y": 6,
+      "width": 16,
+      "height": 20,
+      "text": "\uD83D\uDD0D",
+      "style": { "fontSize": 12, "color": 8947848 }
+    },
+    {
+      "_$id": "vfx_nodepicker_input",
+      "_$type": "TextInput",
+      "name": "searchInput",
+      "x": 26,
+      "y": 6,
+      "width": 224,
+      "height": 20,
+      "text": "",
+      "promptText": "",
+      "relations": [
+        { "_$type": "Relation", "target": { "_$ref": "vfx_nodepicker_root" }, "data": [1, 0] }
+      ],
+      "style": { "fontSize": 12, "color": 14540253 }
+    },
+    {
+      "_$id": "vfx_nodepicker_tree",
+      "_$type": "Tree",
+      "name": "tree",
+      "x": 4,
+      "y": 32,
+      "width": 252,
+      "height": 164,
+      "layout": {
+        "type": 1,
+        "stretchX": 1,
+        "foldInvisibles": true
+      },
+      "clipping": true,
+      "scroller": {
+        "_$type": "Scroller",
+        "barDisplay": 2
+      },
+      "selection": {
+        "mode": 4
+      },
+      "indent": 16,
+      "clickToExpand": 0,
+      "relations": [
+        { "_$type": "Relation", "target": { "_$ref": "vfx_nodepicker_root" }, "data": [1, 0, 2, 0] }
+      ]
+    }
+  ]
+}

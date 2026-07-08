@@ -1,0 +1,169 @@
+{
+  "_$ver": 1,
+  "_$id": "vfx_evt_root",
+  "_$type": "Widget",
+  "name": "Root",
+  "width": 140,
+  "height": 60,
+  "_$child": [
+    {
+      "_$id": "vfx_evt_oversel",
+      "_$type": "Shape",
+      "name": "overSelect",
+      "x": -2,
+      "y": -2,
+      "width": 144,
+      "height": 64,
+      "visible": false,
+      "touchable": false,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_evt_root" },
+          "data": [1, 0, 2, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 2,
+        "lineColor": {
+          "_$type": "Color",
+          "r": 0.5,
+          "g": 0.67,
+          "b": 1.0
+        },
+        "fillColor": {
+          "_$type": "Color",
+          "a": 0
+        },
+        "borderRadius": [8, 8, 8, 8]
+      }
+    },
+    {
+      "_$id": "vfx_evt_select",
+      "_$type": "Shape",
+      "name": "select",
+      "x": -2,
+      "y": -2,
+      "width": 144,
+      "height": 64,
+      "visible": false,
+      "touchable": false,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_evt_root" },
+          "data": [1, 0, 2, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 2,
+        "lineColor": {
+          "_$type": "Color",
+          "r": 0.0,
+          "g": 0.93,
+          "b": 0.47
+        },
+        "fillColor": {
+          "_$type": "Color",
+          "a": 0
+        },
+        "borderRadius": [8, 8, 8, 8]
+      }
+    },
+    {
+      "_$id": "vfx_evt_bg",
+      "_$type": "Shape",
+      "name": "bg",
+      "width": 140,
+      "height": 60,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_evt_root" },
+          "data": [1, 0, 2, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 1,
+        "lineColor": {
+          "_$type": "Color",
+          "r": 0.37,
+          "g": 0.37,
+          "b": 0.37
+        },
+        "fillColor": {
+          "_$type": "Color",
+          "r": 0.1,
+          "g": 0.1,
+          "b": 0.1
+        },
+        "borderRadius": [6, 6, 6, 6]
+      }
+    },
+    {
+      "_$id": "vfx_evt_header",
+      "_$type": "Shape",
+      "name": "header",
+      "width": 140,
+      "height": 24,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_evt_root" },
+          "data": [1, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 0,
+        "lineColor": {
+          "_$type": "Color",
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "fillColor": {
+          "_$type": "Color",
+          "r": 0.55,
+          "g": 0.25,
+          "b": 0.25
+        },
+        "borderRadius": [6, 6, 0, 0]
+      }
+    },
+    {
+      "_$id": "vfx_evt_title",
+      "_$type": "TextField",
+      "name": "title",
+      "x": 8,
+      "y": 3,
+      "width": 124,
+      "height": 18,
+      "text": "GPU Event",
+      "style": {
+        "fontSize": 12,
+        "bold": true,
+        "color": 16777215
+      }
+    },
+    {
+      "_$id": "vfx_evt_slots",
+      "_$type": "Widget",
+      "name": "slotContainer",
+      "y": 24,
+      "width": 140,
+      "height": 36,
+      "touchThrough": true,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_evt_root" },
+          "data": [1, 0]
+        }
+      ]
+    }
+  ]
+}

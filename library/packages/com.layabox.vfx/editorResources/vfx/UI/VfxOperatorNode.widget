@@ -1,0 +1,169 @@
+{
+  "_$ver": 1,
+  "_$id": "vfx_op_root",
+  "_$type": "Widget",
+  "name": "Root",
+  "width": 160,
+  "height": 100,
+  "_$child": [
+    {
+      "_$id": "vfx_op_oversel",
+      "_$type": "Shape",
+      "name": "overSelect",
+      "x": -2,
+      "y": -2,
+      "width": 164,
+      "height": 104,
+      "visible": false,
+      "touchable": false,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_op_root" },
+          "data": [1, 0, 2, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 2,
+        "lineColor": {
+          "_$type": "Color",
+          "r": 1.0,
+          "g": 0.6,
+          "b": 0.1
+        },
+        "fillColor": {
+          "_$type": "Color",
+          "a": 0
+        },
+        "borderRadius": [8, 8, 8, 8]
+      }
+    },
+    {
+      "_$id": "vfx_op_select",
+      "_$type": "Shape",
+      "name": "select",
+      "x": -2,
+      "y": -2,
+      "width": 164,
+      "height": 104,
+      "visible": false,
+      "touchable": false,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_op_root" },
+          "data": [1, 0, 2, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 2,
+        "lineColor": {
+          "_$type": "Color",
+          "r": 0.0,
+          "g": 0.93,
+          "b": 0.47
+        },
+        "fillColor": {
+          "_$type": "Color",
+          "a": 0
+        },
+        "borderRadius": [8, 8, 8, 8]
+      }
+    },
+    {
+      "_$id": "vfx_op_bg",
+      "_$type": "Shape",
+      "name": "bg",
+      "width": 160,
+      "height": 100,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_op_root" },
+          "data": [1, 0, 2, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 1,
+        "lineColor": {
+          "_$type": "Color",
+          "r": 0.37,
+          "g": 0.37,
+          "b": 0.37
+        },
+        "fillColor": {
+          "_$type": "Color",
+          "r": 0.1,
+          "g": 0.1,
+          "b": 0.1
+        },
+        "borderRadius": [6, 6, 6, 6]
+      }
+    },
+    {
+      "_$id": "vfx_op_header",
+      "_$type": "Shape",
+      "name": "header",
+      "width": 160,
+      "height": 28,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_op_root" },
+          "data": [1, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 0,
+        "lineColor": {
+          "_$type": "Color",
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "fillColor": {
+          "_$type": "Color",
+          "r": 0.33,
+          "g": 0.33,
+          "b": 0.33
+        },
+        "borderRadius": [6, 6, 0, 0]
+      }
+    },
+    {
+      "_$id": "vfx_op_title",
+      "_$type": "TextField",
+      "name": "title",
+      "x": 10,
+      "y": 5,
+      "width": 140,
+      "height": 20,
+      "text": "Operator",
+      "style": {
+        "fontSize": 13,
+        "bold": true,
+        "color": 16777215
+      }
+    },
+    {
+      "_$id": "vfx_op_slots",
+      "_$type": "Widget",
+      "name": "slotContainer",
+      "y": 28,
+      "width": 160,
+      "height": 72,
+      "touchThrough": true,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_op_root" },
+          "data": [1, 0]
+        }
+      ]
+    }
+  ]
+}

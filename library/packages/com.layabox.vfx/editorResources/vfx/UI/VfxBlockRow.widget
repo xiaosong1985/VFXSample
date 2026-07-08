@@ -1,0 +1,91 @@
+{
+  "_$ver": 1,
+  "_$id": "vfx_blk_root",
+  "_$type": "Widget",
+  "name": "Root",
+  "width": 232,
+  "height": 30,
+  "_$child": [
+    {
+      "_$id": "vfx_blk_bg",
+      "_$type": "Shape",
+      "name": "bgCard",
+      "x": 4,
+      "y": 1,
+      "width": 224,
+      "height": 28,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_blk_root" },
+          "data": [1, 0, 2, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 0,
+        "lineColor": { "_$type": "Color", "r": 0, "g": 0, "b": 0 },
+        "fillColor": { "_$type": "Color", "r": 0.165, "g": 0.165, "b": 0.165 },
+        "borderRadius": [4, 4, 4, 4]
+      }
+    },
+    {
+      "_$id": "vfx_blk_toggle",
+      "_$type": "Shape",
+      "name": "toggle",
+      "x": 10,
+      "y": 7,
+      "width": 15,
+      "height": 15,
+      "touchable": true,
+      "cursor": "pointer",
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 1,
+        "lineColor": { "_$type": "Color", "r": 0.098, "g": 0.098, "b": 0.098 },
+        "fillColor": { "_$type": "Color", "r": 0.318, "g": 0.439, "b": 0.62 },
+        "borderRadius": [4, 4, 4, 4]
+      },
+      "_$child": [
+        {
+          "_$id": "vfx_blk_check",
+          "_$type": "TextField",
+          "name": "check",
+          "x": 1,
+          "y": -1,
+          "width": 13,
+          "height": 15,
+          "text": "\u2713",
+          "touchable": false,
+          "style": { "fontSize": 11, "color": 14540253, "align": 1 }
+        }
+      ]
+    },
+    {
+      "_$id": "vfx_blk_label",
+      "_$type": "TextField",
+      "name": "label",
+      "x": 28,
+      "y": 6,
+      "width": 100,
+      "height": 20,
+      "text": "Block",
+      "style": { "fontSize": 12, "color": 13421772 }
+    },
+    {
+      "_$id": "vfx_blk_slots",
+      "_$type": "Widget",
+      "name": "slotContainer",
+      "width": 232,
+      "height": 30,
+      "touchThrough": true,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_blk_root" },
+          "data": [1, 0, 2, 0]
+        }
+      ]
+    }
+  ]
+}

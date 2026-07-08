@@ -1,0 +1,217 @@
+{
+  "_$ver": 1,
+  "_$id": "vfx_ctx_root",
+  "_$type": "Widget",
+  "name": "Root",
+  "width": 240,
+  "height": 200,
+  "_$child": [
+    {
+      "_$id": "vfx_ctx_oversel",
+      "_$type": "Shape",
+      "name": "overSelect",
+      "x": -2,
+      "y": -2,
+      "width": 244,
+      "height": 204,
+      "visible": false,
+      "touchable": false,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_ctx_root" },
+          "data": [1, 0, 2, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 2,
+        "lineColor": {
+          "_$type": "Color",
+          "r": 0.5,
+          "g": 0.67,
+          "b": 1.0
+        },
+        "fillColor": {
+          "_$type": "Color",
+          "a": 0
+        },
+        "borderRadius": [8, 8, 8, 8]
+      }
+    },
+    {
+      "_$id": "vfx_ctx_select",
+      "_$type": "Shape",
+      "name": "select",
+      "x": -2,
+      "y": -2,
+      "width": 244,
+      "height": 204,
+      "visible": false,
+      "touchable": false,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_ctx_root" },
+          "data": [1, 0, 2, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 2,
+        "lineColor": {
+          "_$type": "Color",
+          "r": 0.0,
+          "g": 0.93,
+          "b": 0.47
+        },
+        "fillColor": {
+          "_$type": "Color",
+          "a": 0
+        },
+        "borderRadius": [8, 8, 8, 8]
+      }
+    },
+    {
+      "_$id": "vfx_ctx_bg",
+      "_$type": "Shape",
+      "name": "bg",
+      "width": 240,
+      "height": 200,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_ctx_root" },
+          "data": [1, 0, 2, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 1,
+        "lineColor": {
+          "_$type": "Color",
+          "r": 0.37,
+          "g": 0.37,
+          "b": 0.37
+        },
+        "fillColor": {
+          "_$type": "Color",
+          "r": 0.13,
+          "g": 0.13,
+          "b": 0.13
+        },
+        "borderRadius": [0, 0, 6, 6]
+      }
+    },
+    {
+      "_$id": "vfx_ctx_header",
+      "_$type": "Shape",
+      "name": "header",
+      "width": 240,
+      "height": 28,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_ctx_root" },
+          "data": [1, 0]
+        }
+      ],
+      "graphics": {
+        "_$type": "SRect",
+        "lineWidth": 0,
+        "lineColor": {
+          "_$type": "Color",
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "fillColor": {
+          "_$type": "Color",
+          "r": 0.4,
+          "g": 0.4,
+          "b": 0.4
+        },
+        "borderRadius": [6, 6, 0, 0]
+      }
+    },
+    {
+      "_$id": "vfx_ctx_title",
+      "_$type": "TextField",
+      "name": "title",
+      "x": 10,
+      "y": 5,
+      "width": 220,
+      "height": 20,
+      "text": "Context",
+      "style": {
+        "fontSize": 13,
+        "bold": true,
+        "color": 16777215
+      }
+    },
+    {
+      "_$id": "vfx_ctx_blocks",
+      "_$type": "Widget",
+      "name": "blockContainer",
+      "y": 28,
+      "width": 240,
+      "height": 100,
+      "touchThrough": true,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_ctx_root" },
+          "data": [1, 0]
+        }
+      ]
+    },
+    {
+      "_$id": "vfx_ctx_addbtn",
+      "_$type": "Widget",
+      "name": "addBlockArea",
+      "y": 128,
+      "width": 240,
+      "height": 24,
+      "touchThrough": true,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_ctx_root" },
+          "data": [1, 0]
+        }
+      ],
+      "_$child": [
+        {
+          "_$id": "vfx_ctx_addbtn_label",
+          "_$type": "TextField",
+          "name": "addLabel",
+          "x": 10,
+          "y": 4,
+          "width": 100,
+          "height": 16,
+          "text": "+ Add Block",
+          "style": {
+            "fontSize": 11,
+            "color": 7829367
+          }
+        }
+      ]
+    },
+    {
+      "_$id": "vfx_ctx_flowout",
+      "_$type": "Widget",
+      "name": "flowOutContainer",
+      "y": 152,
+      "width": 240,
+      "height": 40,
+      "touchThrough": true,
+      "relations": [
+        {
+          "_$type": "Relation",
+          "target": { "_$ref": "vfx_ctx_root" },
+          "data": [1, 0]
+        }
+      ]
+    }
+  ]
+}
