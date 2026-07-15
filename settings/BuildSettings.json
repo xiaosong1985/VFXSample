@@ -1,6 +1,9 @@
 {
   "name": "VFXSample",
   "startupScene": "res://e13ac28a-6bc3-4a66-b660-a19c07c4ef7e",
+  "web": {
+    "keepTextureSourceFile": true
+  },
   "android": {
     "targetArchitectures": {
       "ARMv7": false,
